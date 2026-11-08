@@ -1,0 +1,24 @@
+{
+  "batch_id": "p7-user-heard-confirmation-20260930T112711Z",
+  "evidence_kind": "user_heard_confirmation",
+  "refers_to_batch_id": "p7-user-heard-20260930T112602Z-f840ea69258a46d2",
+  "refers_to_artifact": "p7-user-heard-20260930T112602Z-f840ea69258a46d2.json",
+  "confirmed_at_utc": "2026-09-30T11:27:11Z",
+  "confirmed_by": "user",
+  "confirmation_method": "operator listened to two live-played sentences on the default Windows output device and answered the confirmation question",
+  "user_heard": true,
+  "per_route": {
+    "voicestudio_ws_pcm": true,
+    "edge_sapi_local": true
+  },
+  "spoken_texts": [
+    "主路径听感确认第一句：这是 VoiceStudio 的小饼声线。",
+    "备用声线听感确认第二句：这是本机离线的 Edge 槽声线。"
+  ],
+  "playback_facts_from_referenced_artifact": {
+    "primary": {"route": "voicestudio_ws_pcm", "played_segments": 1, "completed_playback_sentences": 1, "error": null},
+    "edge": {"route": "edge_sapi_local", "voice": "Microsoft Huihui Desktop", "chunks": 32, "playback_state": "COMPLETED"}
+  },
+  "speaker_acoustically_verified": false,
+  "note": "仅人为确认，未做任何声学测量；请勿把本确认推广到其它文本、音量、设备或环境。原始播放 artifact 未修改。"
+}

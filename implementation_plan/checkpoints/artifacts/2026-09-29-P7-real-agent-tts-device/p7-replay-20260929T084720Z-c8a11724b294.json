@@ -1,0 +1,15 @@
+{
+  "replay_id": "p7-replay-20260929T084720Z-c8a11724b294",
+  "source_batch_id": "p7-real-agent-tts-device-20260929T065210Z-8c9922014d2c",
+  "requested_at": "2026-09-29T08:47:20Z",
+  "authorization": "user authorized replay of the exact batch",
+  "requested_scope": "replay only; no new Agent request and no new VoiceStudio synthesis",
+  "source_audio_sha256": "a27394197e10c9556d9067137d6336a8ca0d8205efafa539f6b584f0b9c65baa",
+  "source_audio_bytes": 118604,
+  "source_audio_retained": false,
+  "playback_executed": false,
+  "status": "blocked",
+  "blocked_reason": "exact source WAV is not retained or available on disk; the artifact contains only its hash, so replay cannot be safely performed without synthesizing a new audio file",
+  "safety_boundary": "not substituted with another WAV and no new VoiceStudio request was made",
+  "user_heard": null
+}

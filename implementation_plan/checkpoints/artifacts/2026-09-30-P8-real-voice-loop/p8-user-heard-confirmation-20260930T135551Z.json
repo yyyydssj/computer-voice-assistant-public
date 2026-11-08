@@ -1,0 +1,25 @@
+{
+  "evidence_kind": "p8_user_heard_and_asr_accuracy_confirmation",
+  "batch_id": "p8-real-voice-loop-20260930T135551Z-85388f3ce1264d88",
+  "referenced_artifact": "implementation_plan/checkpoints/artifacts/2026-09-30-P8-real-voice-loop/p8-real-voice-loop-20260930T135551Z-85388f3ce1264d88.json",
+  "referenced_artifact_sha256": "F3E09B72DBA2F31D6D44A4BB8410502A63110189C73E22EAC586B02BDA0B7D61",
+  "referenced_artifact_size_bytes": 2666,
+  "original_artifact_modified": false,
+  "confirmed_at_utc": "2026-09-30T13:58:42Z",
+  "recorded_by": "会话内登记（用户本人口头确认）",
+  "uheard_by": "操作员本人",
+  "host": "xunyang",
+  "platform": "Windows-11-10.0.26100-SP0",
+  "user_heard": true,
+  "user_heard_scope": "两轮语音回复都听到（VoiceStudio /ws/tts 小饼声线，真实 waveOut 设备）",
+  "asr_accuracy_user_judgement": "basic_correct",
+  "asr_accuracy_note": "操作员判断识别文本与实际所说基本一致（仅差个别字），满足按键语音验收",
+  "evidence_class": "operator_listening_judgement",
+  "acoustic_measurement": false,
+  "notes": [
+    "设备完成（completed_sentences）不等于有人听见；本条是操作员本人听感确认。",
+    "识别文本未落盘：artifact 只记录长度与 SHA-256，实际文本仅打印在控制台。",
+    "Agent 为本地脚本回显替身（local_scripted_echo），非真实模型；本轮不涉及任务链路与电脑副作用。",
+    "操作员未使用 --user-heard 参数，故原 artifact 的 user_heard 仍为 unknown；本确认件是唯一的听感登记，未修改原始证据。"
+  ]
+}

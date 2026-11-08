@@ -1,0 +1,50 @@
+{
+  "kind": "p10_aec_real_device_probe",
+  "created_at": "20261002T012631Z",
+  "preflight": {
+    "python": "3.12.10",
+    "platform": "Windows-11-10.0.26100-SP0",
+    "modules": {
+      "pyaudiowpatch": "0.2.12.8",
+      "waveout_backend": "windows_waveout_pcm"
+    }
+  },
+  "devices": {
+    "loopback": {
+      "index": 13,
+      "name": "扬声器 (Realtek(R) Audio) [Loopback]",
+      "rate": 48000,
+      "in": 2,
+      "out": 0,
+      "loopback": true
+    },
+    "mic": {
+      "index": 11,
+      "name": "麦克风阵列 (Realtek(R) Audio)",
+      "rate": 48000,
+      "in": 2,
+      "out": 0,
+      "loopback": false
+    }
+  },
+  "playback": {
+    "backend": "windows_waveout_pcm",
+    "bytes": 288000,
+    "seconds": 6.0,
+    "drained": true
+  },
+  "analysis": {
+    "rate": 48000,
+    "reference_seconds": 6.0,
+    "loopback_seconds": 7.28,
+    "mic_seconds": 7.04,
+    "template_seconds": 0.59,
+    "loopback_offset_samples": 29079,
+    "loopback_alignment": -0.0605,
+    "mic_offset_samples": 128637,
+    "mic_alignment": 0.0636,
+    "status": "alignment_failed",
+    "reason": "template_not_found_in_loopback_or_mic"
+  },
+  "no_audio_persisted": true
+}

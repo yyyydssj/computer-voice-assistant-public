@@ -1,0 +1,97 @@
+{
+  "artifact": "2026-10-09-ws-pcm-sequence-desync",
+  "created_at_local": "2026-10-09",
+  "what": "默认通道 ws_pcm 长回复『静默丢尾』的根因确证与修复：空行切出的纯空白 push 让分段器序号落后，其后每个 chunk 被判越序并被无痕迹丢弃",
+  "environment": {
+    "command": "python -m app.main --voice --auto --tts-mode ws_pcm --tts-autostart off --barge-in-mode off --aec-reference-mode same_process --aec-engine webrtc --device-recovery-mode safe_point --silence-ms 1200",
+    "provider": "deepseek",
+    "route": "voicestudio_ws_pcm",
+    "log_source": "<USER_HOME>\\AppData\\Local\\ComputerVoiceAssistant\\logs\\runtime.jsonl",
+    "fields": "voice_turn 事件；仅脱敏机械事实，不含任何识别/回复文本"
+  },
+  "evidence": [
+    {
+      "turn": 1,
+      "occurred_at_local": "2026-10-09T18:54:59",
+      "phase": "before_fix",
+      "reason": "speech_truncated",
+      "speech_truncation_reason": "played_chars_below_pushed",
+      "speech_text_length": 233,
+      "speech_pushed_chars": 229,
+      "speech_accepted_chars": 74,
+      "speech_played_chars": 74,
+      "speech_played_segments": 2,
+      "speech_accepted_segments": 2,
+      "speech_synthesized_segments": 2,
+      "speech_dequeued_segments": 2,
+      "speech_dequeued_chars": 74,
+      "speech_enqueued_segments": 2,
+      "speech_enqueued_chars": 74,
+      "speech_enqueue_dropped_segments": 0,
+      "speech_segmenter_buffered_chars": 0,
+      "speech_finish_timed_out": true,
+      "speech_overloaded": false,
+      "speech_pending_after_finish": 0,
+      "speech_error": null,
+      "speech_provider_failures": "",
+      "note": "静默丢失 155 字：其余字段全部干净（error 空、无 provider 失败、无丢弃计数、无缓冲残留）；74 字恰为第一段，与用户听感『又只念了一段』一致"
+    },
+    {
+      "turn": 1,
+      "occurred_at_local": "2026-10-09T19:00:15",
+      "phase": "after_fix",
+      "reason": "speech_finished",
+      "speech_text_length": 118,
+      "speech_pushed_chars": 114,
+      "speech_accepted_chars": 114,
+      "speech_played_chars": 114,
+      "speech_played_segments": 3,
+      "speech_accepted_segments": 3,
+      "speech_synthesized_segments": 3,
+      "speech_finish_timed_out": false,
+      "speech_error": null,
+      "note": "played == accepted == pushed"
+    },
+    {
+      "turn": 4,
+      "occurred_at_local": "2026-10-09T19:02:12",
+      "phase": "after_fix",
+      "reason": "speech_finished",
+      "speech_text_length": 404,
+      "speech_pushed_chars": 398,
+      "speech_accepted_chars": 398,
+      "speech_played_chars": 398,
+      "speech_played_segments": 14,
+      "speech_accepted_segments": 14,
+      "speech_synthesized_segments": 14,
+      "speech_finish_timed_out": false,
+      "speech_error": null,
+      "note": "404 字落在历史截断区间（旧记录 394 字只播 10 字），本轮 14 段全播"
+    }
+  ],
+  "root_cause": [
+    "voice_entry 用 split_for_push 切片，而 '\\n' 是句末符 -> 空行切出只有 '\\n' 的纯空白片",
+    "StreamingVoiceSession._submit 先自增 self._sequence，再交给 ReplySegmenter",
+    "分段器对纯空白块返回 EMPTY_TEXT 且不消费序号（_last_sequence 只在接受时推进）",
+    "=> 会话序号永远超前 1，其后每个 chunk 都撞 OUT_OF_ORDER，同样不消费 => 永久卡死",
+    "_submit 当时只对 QUEUE_BUDGET_EXCEEDED 抛错，对 EMPTY_TEXT/OUT_OF_ORDER 什么都不做 => 无 error、无计数、静默丢尾（旧版据此谎报播完）"
+  ],
+  "fix": [
+    "app/tts/streaming_session.py::push_text_chunk：纯空白 push 与空 push 同等对待（直接返回，绝不推进序号）",
+    "app/tts/streaming_session.py::_submit：OUT_OF_ORDER 升级为记录型致命错误，新固定码 streaming_push_out_of_order（已进 __all__）",
+    "tests/tts/test_streaming_session.py：新增 StreamingVoiceSessionBlankPushTests（3 条）"
+  ],
+  "offline_reproduction": {
+    "pieces": "split_for_push('第一句。\\n\\n第二句。') -> ('第一句。', '\\n', '\\n', '第二句。')",
+    "before_fix": "played = ('第一句。',) ; error = None",
+    "after_fix": "played = ('第一句。', '第二句。') ; error = None",
+    "method": "用 tests/tts/test_streaming_session.py 的夹具构造真实 StreamingVoiceSession，并把 push_text_chunk/_submit 换回修复前的实现"
+  },
+  "verification": {
+    "tests/tts": "619 OK (skipped=3)",
+    "tests/foundation": "335 OK",
+    "tests/voice_loop": "144 OK",
+    "compileall": "exit 0",
+    "git_diff_check": "clean"
+  }
+}

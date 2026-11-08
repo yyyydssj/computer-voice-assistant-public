@@ -1,0 +1,46 @@
+{
+  "batch_id": "p7-b11-offline-edge-proxy_drop_no_edge-20260930T112142Z-7d6e7adc65e44e21",
+  "evidence_kind": "offline_edge_voice_acceptance",
+  "live_opt_in": true,
+  "recorded_at_utc": "2026-09-30T11:21:42Z",
+  "host": "xunyang",
+  "platform": "Windows-11-10.0.26100-SP0",
+  "voice": "Microsoft Huihui Desktop",
+  "runs": [
+    {
+      "scenario": "proxy_drop_no_edge",
+      "kill_pid": null,
+      "kill_result": null,
+      "pushed_sentences": 1,
+      "played_segments": 0,
+      "completed_playback_sentences": 0,
+      "edge_attempts": 0,
+      "edge_failures": 0,
+      "error": "VoiceStudioTransportError",
+      "error_code": "connection_closed_before_done",
+      "finish_raised": "VoiceStudioTransportError:connection_closed_before_done",
+      "failure_states": {
+        "segment-1": "PLAYBACK_STARTED"
+      },
+      "routing_decision": {
+        "route": "text",
+        "action": "continue_text_no_replay",
+        "playback_state": "PLAYBACK_STARTED",
+        "replay_current_segment": false,
+        "drop_remaining_segments": true,
+        "next_reply_route": "edge",
+        "reason": "VoiceStudio 已开始或已完成本句边界，禁止半句换声和整句重播；当前回复转文字"
+      },
+      "late_events": [],
+      "timing_sample_count": 0
+    }
+  ],
+  "boundary": {
+    "audio_written_to_disk": false,
+    "microphone_opened": false,
+    "external_network_used": false,
+    "speaker_acoustically_verified": false,
+    "user_heard": null,
+    "note": "a backend completion is not evidence that a person heard the audio"
+  }
+}

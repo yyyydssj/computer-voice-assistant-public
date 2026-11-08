@@ -1,0 +1,62 @@
+{
+  "kind": "p10_aec_real_device_probe",
+  "created_at": "20261002T012218Z",
+  "preflight": {
+    "python": "3.12.10",
+    "platform": "Windows-11-10.0.26100-SP0",
+    "modules": {
+      "pyaudiowpatch": "0.2.12.8",
+      "waveout_backend": "windows_waveout_pcm"
+    }
+  },
+  "devices": {
+    "loopback": {
+      "index": 13,
+      "name": "扬声器 (Realtek(R) Audio) [Loopback]",
+      "rate": 48000,
+      "in": 2,
+      "out": 0,
+      "loopback": true
+    },
+    "mic": {
+      "index": 11,
+      "name": "麦克风阵列 (Realtek(R) Audio)",
+      "rate": 48000,
+      "in": 2,
+      "out": 0,
+      "loopback": false
+    }
+  },
+  "playback": {
+    "backend": "windows_waveout_pcm",
+    "bytes": 288000,
+    "seconds": 6.0,
+    "drained": true
+  },
+  "analysis": {
+    "rate": 48000,
+    "reference_seconds": 6.0,
+    "loopback_seconds": 7.3,
+    "mic_seconds": 7.04,
+    "loopback_offset_samples": 26371,
+    "loopback_alignment": 0.0248,
+    "mic_offset_samples": 5012,
+    "mic_alignment": -0.0238,
+    "offset_delta_samples": -21359,
+    "echo_delay_note": "offset_delta = inter_stream_start_skew + acoustic_delay",
+    "loop_seg_band_ratio": 0.8793,
+    "loop_seg_zero_crossing_rate": 2481.67,
+    "mic_seg_band_ratio": 0.8114,
+    "mic_seg_zero_crossing_rate": 1930.33,
+    "compensation_samples_16k": 0,
+    "loopback_rms": 0.183022,
+    "mic_rms": 0.023562,
+    "erl_db": -17.806,
+    "status": "ok",
+    "frames": 285,
+    "applied_ratio": 0.8561,
+    "erle_tail_db": 0.362,
+    "cumulative_erle_db": 17.927
+  },
+  "no_audio_persisted": true
+}

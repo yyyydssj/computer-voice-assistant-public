@@ -1,0 +1,70 @@
+{
+  "batch_id": "p9-auto-voice-loop-20261001T022009Z-704dcc29d4214fa3",
+  "evidence_kind": "p9_auto_voice_loop_acceptance",
+  "live_opt_in": true,
+  "recorded_at_utc": "2026-10-01T02:20:09Z",
+  "host": "xunyang",
+  "platform": "Windows-11-10.0.26100-SP0",
+  "tts_mode": "edge",
+  "agent": "local_scripted_echo（非真实模型）",
+  "auto_capture": {
+    "speech_threshold_rms": 600.0,
+    "silence_ms": 2500,
+    "speech_start_timeout_ms": 8000,
+    "max_record_seconds": 15
+  },
+  "turns": [
+    {
+      "turn": 1,
+      "boundary": {
+        "voice_session_id": "voice-session-d3d6b10ceaa84e05a147843347ad7228",
+        "utterance_id": "asr-utterance-1c8ec69ec9034c6fa7fa499ae15d820b",
+        "turn_id": "asr-turn-8ef4c06b8c824a45a507ee6c4391b106",
+        "request_id": "asr-request-bd73fef8947c49c3b792619ff5ba2082",
+        "reply_id": "asr-reply-138101c3ff904222a7e9a675ddb357f9"
+      },
+      "frames": 400,
+      "speech_seen": false,
+      "end_reason": "no_speech",
+      "accepted": false,
+      "submitted": false,
+      "spoken": false,
+      "reason": "no_speech_discarded",
+      "seconds": 8.422,
+      "asr_text_length": 0,
+      "asr_text_sha256": null
+    },
+    {
+      "turn": 2,
+      "boundary": {
+        "voice_session_id": "voice-session-83c1820933b5480abbd6a9046af5ac23",
+        "utterance_id": "asr-utterance-47dd5c5067b34928aac791502c7eb456",
+        "turn_id": "asr-turn-2036d8077d2a440c866a1d651e61a82f",
+        "request_id": "asr-request-f93c1f244cfa4fd8a4d6e2c83a76e36e",
+        "reply_id": "asr-reply-ed2281d1bd114e30a41635513df646dc"
+      },
+      "frames": 400,
+      "speech_seen": false,
+      "end_reason": "no_speech",
+      "accepted": false,
+      "submitted": false,
+      "spoken": false,
+      "reason": "no_speech_discarded",
+      "seconds": 8.359,
+      "asr_text_length": 0,
+      "asr_text_sha256": null
+    }
+  ],
+  "valid_turns": 0,
+  "user_heard": "unknown",
+  "user_heard_note": "仅操作员本人确认后填写；设备完成不等于有人听见",
+  "boundary": {
+    "audio_written_to_disk": false,
+    "computer_actions_executed": false,
+    "plan_or_authorization_created": false,
+    "external_network_used": false,
+    "recognized_text_persisted": false,
+    "network_target": "127.0.0.1:3900 / local SAPI",
+    "button_required": false
+  }
+}

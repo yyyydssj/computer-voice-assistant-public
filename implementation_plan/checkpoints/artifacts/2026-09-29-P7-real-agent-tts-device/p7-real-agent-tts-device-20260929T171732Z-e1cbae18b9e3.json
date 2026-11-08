@@ -1,0 +1,74 @@
+{
+  "batch_id": "p7-1702de34f31b47f5",
+  "evidence_kind": "real_device",
+  "request_id": "req-605dec62f7cf44ee89e3",
+  "source_text_sha256": "f8c71c1f27da4aa59d8f35dd0bc4416da9af2e266f4514c2f39c228595bfe910",
+  "audio_sha256": null,
+  "backend_stop_ack": null,
+  "loopback_output_stopped": null,
+  "acoustic_output_stopped": null,
+  "speaker_output_stopped": null,
+  "user_heard": null,
+  "status": "blocked",
+  "blocked_reasons": [
+    "voicestudio_call_failed:LocalPortError",
+    "user_heard_pending",
+    "backend_stop_ack_missing",
+    "speaker_output_stop_not_established"
+  ],
+  "events": [
+    {
+      "name": "RUN_CREATED",
+      "observed_at": "2026-09-29T09:17:32.118897Z",
+      "monotonic_seconds": null,
+      "details": {
+        "request_id": "req-605dec62f7cf44ee89e3",
+        "session_id": "session-8fcaf21eedb64398949b"
+      }
+    },
+    {
+      "name": "AGENT_REQUEST_SUBMITTED",
+      "observed_at": "2026-09-29T09:17:32.118897Z",
+      "monotonic_seconds": null,
+      "details": {
+        "request_id": "req-605dec62f7cf44ee89e3",
+        "session_id": "session-8fcaf21eedb64398949b"
+      }
+    },
+    {
+      "name": "AGENT_REPLY_ACCEPTED",
+      "observed_at": "2026-09-29T09:17:42.387920Z",
+      "monotonic_seconds": null,
+      "details": {
+        "request_id": "req-605dec62f7cf44ee89e3"
+      }
+    },
+    {
+      "name": "BLOCKED",
+      "observed_at": "2026-09-29T09:17:55.918517Z",
+      "monotonic_seconds": null,
+      "details": {
+        "reason": "voicestudio_call_failed:LocalPortError"
+      }
+    }
+  ],
+  "metadata": {
+    "session_id": "session-8fcaf21eedb64398949b",
+    "runner": "live_evidence_runner",
+    "serial": true,
+    "live_opt_in": true,
+    "agent_reply_text": "Your message appears garbled—most characters show as `?`, so I can’t tell what you’re asking.\n\nPlease resend in plain English or clarify:\n- What does **P7** refer to? (e.g., PHP 7, Huawei P7, Pixel 7, PostgreSQL 7, etc.)\n- What do you want to know or do with it?\n\nIf you were typing in another language, try pasting the text again or transliterating it.",
+    "workspace": "<PROJECT_ROOT>",
+    "dsh_home": "<USER_HOME>\\AppData\\Local\\Temp\\p7-agent-dsh-live-e1cbae18b9e3",
+    "profile": "sdk-minimal",
+    "provider": "deepseek-official",
+    "model": "deepseek-v4-flash",
+    "patch": "<PROJECT_ROOT>\\app\\agent\\p3-no-tools.patch.yml",
+    "authorization": {
+      "scope": "one bounded run",
+      "live_opt_in": true,
+      "api_key_value_printed": false,
+      "existing_user_dsh_reused": false
+    }
+  }
+}

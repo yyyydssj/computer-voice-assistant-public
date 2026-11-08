@@ -1,0 +1,33 @@
+# P3 pure-text profile hardening for the official sdk-minimal profile.
+# Stable ids override the matching rows from the shipped profile.
+# P3 must expose no computer tools, no automatic retry, and no durable history.
+- id: session-log-deepseek
+  disabled: true
+- id: plugin-package-inventory-deepseek
+  disabled: true
+- id: sandbox
+  disabled: true
+- id: sandbox-policy
+  disabled: true
+- id: subprocess
+  disabled: true
+- id: pty
+  disabled: true
+- id: terminal-bash
+  disabled: true
+- id: terminal-pwsh
+  disabled: true
+- id: session-title
+  disabled: true
+- id: mcp-resources
+  disabled: true
+- id: llm-retry
+  disabled: true
+- id: jobs
+  disabled: true
+- id: persistent-bash
+  disabled: true
+- id: persistent-pwsh
+  disabled: true
+- id: sessions
+  disabled: true

@@ -1,0 +1,76 @@
+{
+  "batch_id": "p8-real-voice-loop-20260930T135121Z-48b00f8b17994d11",
+  "evidence_kind": "p8_real_voice_loop_acceptance",
+  "live_opt_in": true,
+  "recorded_at_utc": "2026-09-30T13:51:21Z",
+  "host": "xunyang",
+  "platform": "Windows-11-10.0.26100-SP0",
+  "tts_mode": "ws_pcm",
+  "agent": "local_scripted_echo（非真实模型）",
+  "turns": [
+    {
+      "turn": 1,
+      "boundary": {
+        "voice_session_id": "voice-session-37a98cdd793d4173970611056fe2c83e",
+        "utterance_id": "asr-utterance-ca1408c521e5446c8c07986f0bb50975",
+        "turn_id": "asr-turn-3e92f563cbe5490ea0f62b1565e6a064",
+        "request_id": "asr-request-a17eae0fc1a54f68b2692aa43371b86f",
+        "reply_id": "asr-reply-c8eb8934c1ca40b7a8648f4d7af8fa21"
+      },
+      "frames": 144,
+      "speech_seen": true,
+      "end_reason": "button_release",
+      "accepted": true,
+      "submitted": true,
+      "spoken": true,
+      "reason": "speech_finished",
+      "seconds": 23.069,
+      "asr_text_length": 9,
+      "asr_text_sha256": "e676f8bc4fd05eaa34950decefd3898340c6363bc92db35b6b5500e24828525c",
+      "tts": {
+        "route": "voicestudio_ws_pcm",
+        "text_length": 34,
+        "error": null,
+        "played_segments": 2,
+        "completed_sentences": 2
+      }
+    },
+    {
+      "turn": 2,
+      "boundary": {
+        "voice_session_id": "voice-session-3f50f77ae0134f8781f8bbe78f74c5ed",
+        "utterance_id": "asr-utterance-32dee08e1c044fa9b08d535134164590",
+        "turn_id": "asr-turn-fbd050e46b7e431b9a38187670e6f711",
+        "request_id": "asr-request-c97dc52675d748deb0a1570ffd574ce7",
+        "reply_id": "asr-reply-8c4255b19a494b32901603f1d90d0ece"
+      },
+      "frames": 338,
+      "speech_seen": true,
+      "end_reason": "silence_timeout",
+      "accepted": true,
+      "submitted": true,
+      "spoken": true,
+      "reason": "speech_finished",
+      "seconds": 15.834,
+      "asr_text_length": 11,
+      "asr_text_sha256": "d5b2b95256a78ae05e91f3d9b687beed21c0fb599fe22238ff8e8bce10d919e5",
+      "tts": {
+        "route": "voicestudio_ws_pcm",
+        "text_length": 36,
+        "error": null,
+        "played_segments": 2,
+        "completed_sentences": 2
+      }
+    }
+  ],
+  "user_heard": "unknown",
+  "user_heard_note": "仅操作员本人确认后填写；设备完成不等于有人听见",
+  "boundary": {
+    "audio_written_to_disk": false,
+    "computer_actions_executed": false,
+    "plan_or_authorization_created": false,
+    "external_network_used": false,
+    "recognized_text_persisted": false,
+    "network_target": "127.0.0.1:3900 / local SAPI"
+  }
+}

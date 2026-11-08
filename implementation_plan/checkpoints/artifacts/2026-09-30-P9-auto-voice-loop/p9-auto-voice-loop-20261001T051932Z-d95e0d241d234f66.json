@@ -1,0 +1,59 @@
+{
+  "batch_id": "p9-auto-voice-loop-20261001T051932Z-d95e0d241d234f66",
+  "evidence_kind": "p9_auto_voice_loop_acceptance",
+  "live_opt_in": true,
+  "recorded_at_utc": "2026-10-01T05:19:32Z",
+  "host": "xunyang",
+  "platform": "Windows-11-10.0.26100-SP0",
+  "tts_mode": "ws_pcm",
+  "agent": "local_scripted_echo（非真实模型）",
+  "auto_capture": {
+    "speech_threshold_rms": 600.0,
+    "silence_ms": 2500,
+    "speech_start_timeout_ms": 8000,
+    "max_record_seconds": 15,
+    "vad_mode": "silero",
+    "vad_model": "silero_vad.onnx",
+    "vad_threshold": 0.5,
+    "vad_min_silence_duration": 0.5,
+    "vad_min_speech_duration": 0.15,
+    "vad_window_samples": 512,
+    "vad_sample_rate_hz": 16000,
+    "energy_threshold_effective": false
+  },
+  "turns": [
+    {
+      "turn": 1,
+      "boundary": {
+        "voice_session_id": "voice-session-70486d0311924b13bd68feb7baea243a",
+        "utterance_id": "asr-utterance-e1522a68cb2845a88bb7fd98455a1f62",
+        "turn_id": "asr-turn-924b0581d32443859977f30cd1d219db",
+        "request_id": "asr-request-662d5a8b4ad043b7ac9cce606f05c531",
+        "reply_id": "asr-reply-74cb6e91ecf74b69956e82b161c73a7a"
+      },
+      "frames": 750,
+      "speech_seen": true,
+      "vad_hits": 100,
+      "end_reason": "max_utterance_duration",
+      "accepted": true,
+      "submitted": true,
+      "spoken": true,
+      "reason": "speech_finished",
+      "seconds": 25.5,
+      "asr_text_length": 14,
+      "asr_text_sha256": "faf887a7eca6d92c19108e1ada2dbe02162dc1b16e8670e7a7801d653490932c"
+    }
+  ],
+  "valid_turns": 1,
+  "user_heard": "yes",
+  "user_heard_note": "仅操作员本人确认后填写；设备完成不等于有人听见",
+  "boundary": {
+    "audio_written_to_disk": false,
+    "computer_actions_executed": false,
+    "plan_or_authorization_created": false,
+    "external_network_used": false,
+    "recognized_text_persisted": false,
+    "network_target": "127.0.0.1:3900 / local SAPI",
+    "button_required": false
+  }
+}

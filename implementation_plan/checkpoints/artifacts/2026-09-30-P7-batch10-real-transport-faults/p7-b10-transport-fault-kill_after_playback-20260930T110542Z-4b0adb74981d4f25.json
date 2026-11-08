@@ -1,0 +1,55 @@
+{
+  "batch_id": "p7-b10-transport-fault-kill_after_playback-20260930T110542Z-4b0adb74981d4f25",
+  "evidence_kind": "real_transport_fault_drill",
+  "live_opt_in": true,
+  "recorded_at_utc": "2026-09-30T11:05:42Z",
+  "host": "xunyang",
+  "platform": "Windows-11-10.0.26100-SP0",
+  "runs": [
+    {
+      "scenario": "kill_after_playback",
+      "mode": "ws_pcm",
+      "ws_endpoint": "ws://127.0.0.1:3900",
+      "http_endpoint": "http://127.0.0.1:3900",
+      "kill_pid": 22516,
+      "kill_delay_s": null,
+      "kill_result": "terminated",
+      "wall_seconds": 70.01,
+      "pushed_text_count": 2,
+      "pushed_text_unchanged": true,
+      "finish_raised": "VoiceStudioTransportError:sentence_timeout",
+      "played_segments": 0,
+      "played_segment_ids": [],
+      "error": "VoiceStudioTransportError",
+      "error_code": "sentence_timeout",
+      "failure_states": {
+        "segment-1": "NOT_COMMITTED"
+      },
+      "routing_decision": {
+        "route": "text",
+        "action": "continue_text_no_replay",
+        "playback_state": "NOT_COMMITTED",
+        "replay_current_segment": false,
+        "drop_remaining_segments": true,
+        "cancel_previous_provider_request": true,
+        "next_reply_route": "text",
+        "reason": "VoiceStudio 已开始或已完成本句边界，禁止半句换声和整句重播；当前回复转文字"
+      },
+      "timing_sample_count": 0,
+      "late_events": [
+        "push_rejected_failed@generation1"
+      ],
+      "overloaded": false,
+      "dropped_pushes": 1,
+      "verified": true,
+      "finish_timed_out": false
+    }
+  ],
+  "boundary": {
+    "audio_written_to_disk": false,
+    "microphone_opened": false,
+    "speaker_acoustically_verified": false,
+    "user_heard": null,
+    "note": "a transport failure or a backend completion is not evidence that a person heard audio"
+  }
+}

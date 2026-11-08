@@ -1,0 +1,41 @@
+{
+  "kind": "p10_aec_same_process_probe",
+  "created_at": "20261002T020140Z",
+  "preflight": {
+    "python": "3.12.10",
+    "platform": "Windows-11-10.0.26100-SP0"
+  },
+  "devices": {
+    "mic": {
+      "index": 11,
+      "name": "麦克风阵列 (Realtek(R) Audio)",
+      "rate": 48000,
+      "in": 2,
+      "out": 0,
+      "loopback": false
+    }
+  },
+  "reference_source": {
+    "sample_rate": 48000,
+    "frame_duration_ms": 20,
+    "frame_samples": 960,
+    "frames_submitted": 0,
+    "frames_buffered": 0,
+    "device_epoch": 1,
+    "observer_errors": 8,
+    "resets": 0
+  },
+  "playback": {
+    "backend": "windows_waveout_pcm",
+    "bytes": 288000,
+    "seconds": 6.0,
+    "drained": true
+  },
+  "analysis": {
+    "status": "no_reference_frames",
+    "reason": "submit_observer_never_fired",
+    "reference_mode": "same_process_pcm",
+    "reference_frames_submitted": 0
+  },
+  "no_audio_persisted": true
+}

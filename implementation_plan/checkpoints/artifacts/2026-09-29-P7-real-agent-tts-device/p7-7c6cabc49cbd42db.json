@@ -1,0 +1,73 @@
+{
+  "batch_id": "p7-7c6cabc49cbd42db",
+  "evidence_kind": "real_device",
+  "request_id": "p7-real-20260929-request-540e17fd472c4ac0af31a95d901aacf8",
+  "source_text_sha256": "78cf54b55434760a496f3a629a0132683e18e1e18b364196ddacdb3ae142798a",
+  "audio_sha256": null,
+  "backend_stop_ack": null,
+  "loopback_output_stopped": null,
+  "acoustic_output_stopped": null,
+  "speaker_output_stopped": null,
+  "user_heard": null,
+  "status": "blocked",
+  "blocked_reasons": [
+    "voicestudio_call_failed:LocalPortError",
+    "user_heard_pending",
+    "backend_stop_ack_missing",
+    "speaker_output_stop_not_established"
+  ],
+  "events": [
+    {
+      "name": "RUN_CREATED",
+      "observed_at": "2026-09-29T03:02:13.286311Z",
+      "monotonic_seconds": null,
+      "details": {
+        "request_id": "p7-real-20260929-request-540e17fd472c4ac0af31a95d901aacf8",
+        "session_id": "p7-real-20260929-session-1017e3367f854ddc84fa455ce316638a"
+      }
+    },
+    {
+      "name": "AGENT_REQUEST_SUBMITTED",
+      "observed_at": "2026-09-29T03:02:13.286311Z",
+      "monotonic_seconds": null,
+      "details": {
+        "request_id": "p7-real-20260929-request-540e17fd472c4ac0af31a95d901aacf8",
+        "session_id": "p7-real-20260929-session-1017e3367f854ddc84fa455ce316638a"
+      }
+    },
+    {
+      "name": "AGENT_REPLY_ACCEPTED",
+      "observed_at": "2026-09-29T03:02:17.055971Z",
+      "monotonic_seconds": null,
+      "details": {
+        "request_id": "p7-real-20260929-request-540e17fd472c4ac0af31a95d901aacf8"
+      }
+    },
+    {
+      "name": "BLOCKED",
+      "observed_at": "2026-09-29T03:02:28.133758Z",
+      "monotonic_seconds": null,
+      "details": {
+        "reason": "voicestudio_call_failed:LocalPortError"
+      }
+    }
+  ],
+  "metadata": {
+    "session_id": "p7-real-20260929-session-1017e3367f854ddc84fa455ce316638a",
+    "runner": "live_evidence_runner",
+    "serial": true,
+    "live_opt_in": true,
+    "agent_reply_text": "I can’t tell what you’re asking—your message is only question marks. Please resend your question or describe what you need help with.",
+    "batch_tag": "p7-real-20260929",
+    "started_at_utc": "2026-09-29T03:02:13.285244Z",
+    "finished_at_utc": "2026-09-29T03:02:28.133758Z",
+    "agent_runtime": {
+      "provider": "deepseek-official",
+      "model": "deepseek-v4-flash",
+      "profile": "sdk-minimal",
+      "real_request": true,
+      "tool_patch": "p3-no-tools.patch.yml"
+    },
+    "agent_outcome": null
+  }
+}

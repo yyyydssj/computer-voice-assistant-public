@@ -1,0 +1,60 @@
+{
+  "kind": "p10_aec_same_process_probe",
+  "created_at": "20261002T021202Z",
+  "preflight": {
+    "python": "3.12.10",
+    "platform": "Windows-11-10.0.26100-SP0"
+  },
+  "devices": {
+    "mic": {
+      "index": 11,
+      "name": "麦克风阵列 (Realtek(R) Audio)",
+      "rate": 48000,
+      "in": 2,
+      "out": 0,
+      "loopback": false
+    }
+  },
+  "reference_source": {
+    "sample_rate": 48000,
+    "frame_duration_ms": 20,
+    "frame_samples": 960,
+    "frames_submitted": 150,
+    "chunks_submitted": 30,
+    "frames_buffered": 150,
+    "pending_bytes": 0,
+    "device_epoch": 1,
+    "observer_errors": 0,
+    "last_observer_error": "",
+    "resets": 0
+  },
+  "playback": {
+    "backend": "windows_waveout_pcm",
+    "bytes": 288000,
+    "seconds": 6.0,
+    "drained": true
+  },
+  "analysis": {
+    "status": "ok",
+    "rate": 48000,
+    "reference_seconds": 3.0,
+    "reference_frames": 150,
+    "mic_seconds": 6.84,
+    "reference_start_seconds": 9229.273,
+    "mic_start_seconds": 0.0,
+    "mic_reference_offset_samples": 122028,
+    "mic_alignment": 0.0402,
+    "compensation_samples": 126828,
+    "mic_seg_seconds": 2.9,
+    "reference_rms": 0.127982,
+    "mic_rms": 0.043085,
+    "erl_db": -9.456,
+    "frames": 145,
+    "applied_ratio": 0.8276,
+    "erle_tail_db": 0.104,
+    "cumulative_erle_db": 10.007,
+    "reference_mode": "same_process_pcm",
+    "reference_frames_submitted": 150
+  },
+  "no_audio_persisted": true
+}

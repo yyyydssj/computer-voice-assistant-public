@@ -1,0 +1,231 @@
+{
+  "schema": "r-real-provider-probe/v1",
+  "created_at": "2026-09-30T15:00:17Z",
+  "mode": "live",
+  "diagnostic_mode": true,
+  "authorization": {
+    "scope": "minimal_live_probe_only",
+    "runtime_wiring": false,
+    "provider_ready_unchanged": true,
+    "model_id": "deepseek-flash",
+    "credential_source": "process environment DEEPSEEK_API_KEY",
+    "credential_value_logged": false,
+    "credential_written_to_disk": false,
+    "network_target": "https://api.deepseek.com/chat/completions",
+    "allowed_hosts": [
+      "api.deepseek.com"
+    ],
+    "max_requests": 1,
+    "samples": [
+      "ambiguous-1"
+    ],
+    "max_retries": 0,
+    "timeout_seconds": 15.0,
+    "max_tokens": 256,
+    "thinking": "disabled",
+    "diagnostic_mode": true,
+    "cost_cap_cny": 0.05,
+    "log_redaction": "lengths+sha256+enumerated status only",
+    "payload_isolation": true,
+    "computer_side_effects": false
+  },
+  "boundaries": {
+    "default_runtime_touched": false,
+    "conversation_manager_touched": false,
+    "tool_registry_touched": false,
+    "execution_ledger_touched": false,
+    "executor_touched": false,
+    "verification_touched": false,
+    "audit_touched": false,
+    "plan_authorization_created": false,
+    "raw_request_text_persisted": false,
+    "raw_response_body_persisted": false,
+    "credentials_persisted": false
+  },
+  "preflight": {
+    "checks": [
+      {
+        "check": "config_valid",
+        "ok": true,
+        "detail": "host=api.deepseek.com enabled=True",
+        "required": true
+      },
+      {
+        "check": "host_allowlisted",
+        "ok": true,
+        "detail": "api.deepseek.com",
+        "required": true
+      },
+      {
+        "check": "timeout_bounded",
+        "ok": true,
+        "detail": "15.0s <= 15.0s",
+        "required": true
+      },
+      {
+        "check": "no_retry",
+        "ok": true,
+        "detail": "max_retries=0",
+        "required": true
+      },
+      {
+        "check": "max_tokens_sent",
+        "ok": true,
+        "detail": "max_tokens,messages,model,response_format",
+        "required": true
+      },
+      {
+        "check": "thinking_field",
+        "ok": true,
+        "detail": "mode=disabled payload={'type': 'disabled'}",
+        "required": true
+      },
+      {
+        "check": "legacy_payload_unchanged",
+        "ok": true,
+        "detail": "messages,model,response_format",
+        "required": true
+      },
+      {
+        "check": "cost_within_cap",
+        "ok": true,
+        "detail": "estimated_upper=0.002231 CNY <= cap 0.05 CNY",
+        "required": true
+      },
+      {
+        "check": "credential_present",
+        "ok": true,
+        "detail": "DEEPSEEK_API_KEY available=True (value never logged)",
+        "required": false
+      }
+    ],
+    "passed": true,
+    "payload_keys": [
+      "max_tokens",
+      "messages",
+      "model",
+      "response_format"
+    ],
+    "estimated_upper_cny": 0.002231
+  },
+  "rounds": [
+    {
+      "index": 1,
+      "sample_id": "ambiguous-1",
+      "input_chars": 9,
+      "elapsed_ms": 1044.0,
+      "router_status": "success",
+      "failure_code": null,
+      "route": "ambiguous",
+      "intent": "missing_target",
+      "handling_mode": "clarify",
+      "confidence": 0.85,
+      "slot_count": 0,
+      "tool_scope": [],
+      "required_confirmation": "must_clarify",
+      "strict_parse_passed": true,
+      "payload_fields": [
+        "max_tokens",
+        "messages",
+        "model",
+        "response_format",
+        "thinking"
+      ],
+      "request_chars": 9,
+      "response_chars": 213,
+      "response_sha256": "322d3e82995c15ee434120777ae7efbc69bece396b0771559ca213416755704e",
+      "response_structure": {
+        "body_chars": 703,
+        "body_sha256": "1f13dc4ea5b11018b9e47c7b02421f3d5c77aea1718eaaf755a78208bd3d9457",
+        "choice_keys": [
+          "finish_reason",
+          "index",
+          "logprobs",
+          "message"
+        ],
+        "choices_count": 1,
+        "content_chars": 213,
+        "content_shape": {
+          "content_chars": 213,
+          "starts_with_brace": true,
+          "ends_with_brace": true,
+          "has_markdown_fence": false,
+          "line_count": 1,
+          "content_json_valid": true,
+          "content_json_is_object": true,
+          "content_top_keys": [
+            "confidence",
+            "handling_mode",
+            "intent",
+            "required_confirmation",
+            "route",
+            "schema_version",
+            "slots",
+            "status",
+            "tool_scope"
+          ],
+          "content_field_types": {
+            "confidence": "float",
+            "handling_mode": "str",
+            "intent": "str",
+            "required_confirmation": "str",
+            "route": "str",
+            "schema_version": "str",
+            "slots": "dict",
+            "status": "str",
+            "tool_scope": "list"
+          },
+          "missing_contract_fields": [],
+          "schema_version_literal": "deepseek-route/v1",
+          "status_literal": "success",
+          "route_literal": "ambiguous",
+          "intent_literal": "missing_target",
+          "handling_mode_literal": "clarify",
+          "required_confirmation_literal": "must_clarify"
+        },
+        "envelope_is_object": true,
+        "envelope_keys": [
+          "choices",
+          "created",
+          "id",
+          "model",
+          "object",
+          "system_fingerprint",
+          "usage"
+        ],
+        "finish_reason": "stop",
+        "http_status": 200,
+        "json_valid": true,
+        "message_keys": [
+          "content",
+          "role"
+        ],
+        "reasoning_content_chars": null,
+        "usage_keys": [
+          "completion_tokens",
+          "prompt_cache_hit_tokens",
+          "prompt_cache_miss_tokens",
+          "prompt_tokens",
+          "prompt_tokens_details",
+          "total_tokens"
+        ]
+      }
+    }
+  ],
+  "verdict": {
+    "requests_attempted": 1,
+    "strict_parse_passed_count": 1,
+    "routes_observed": [
+      "ambiguous"
+    ],
+    "failure_statuses": [],
+    "all_strict_parse_passed": true,
+    "provider_ready": false,
+    "runtime_wiring_authorized": false,
+    "evidence_limits": [
+      "既有 transport 有意不暴露 HTTP 状态码与响应正文；其 ValueError 同时覆盖 4xx 拒绝、非 JSON 正文与不满足 deepseek-route/v1 的结构，本轮无法据此进一步区分。",
+      "响应正文只在内存中经过严格解析器，artifact 仅保留长度、SHA-256 与枚举化状态。"
+    ],
+    "note": "本轮只证明真实调用链与严格解析表现；未解除 NOT READY，未接入默认运行时。"
+  }
+}

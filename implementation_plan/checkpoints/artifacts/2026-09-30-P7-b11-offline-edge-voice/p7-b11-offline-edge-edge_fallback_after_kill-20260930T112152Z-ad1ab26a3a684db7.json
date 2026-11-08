@@ -1,0 +1,48 @@
+{
+  "batch_id": "p7-b11-offline-edge-edge_fallback_after_kill-20260930T112152Z-ad1ab26a3a684db7",
+  "evidence_kind": "offline_edge_voice_acceptance",
+  "live_opt_in": true,
+  "recorded_at_utc": "2026-09-30T11:21:52Z",
+  "host": "xunyang",
+  "platform": "Windows-11-10.0.26100-SP0",
+  "voice": "Microsoft Huihui Desktop",
+  "runs": [
+    {
+      "scenario": "edge_fallback_after_kill",
+      "kill_pid": 5272,
+      "kill_result": "terminated",
+      "pushed_sentences": 1,
+      "played_segments": 1,
+      "completed_playback_sentences": 1,
+      "edge_attempts": 1,
+      "edge_failures": 0,
+      "error": null,
+      "error_code": null,
+      "finish_raised": null,
+      "failure_states": {
+        "segment-1": "NOT_COMMITTED"
+      },
+      "routing_decision": {
+        "route": "edge",
+        "action": "use_edge_current_segment",
+        "playback_state": "NOT_COMMITTED",
+        "replay_current_segment": false,
+        "drop_remaining_segments": true,
+        "next_reply_route": "edge",
+        "reason": "VoiceStudio 在当前句尚未开始播放，改用已配置 Edge；当前回复剩余旧句丢弃"
+      },
+      "late_events": [
+        "edge_used@generation1"
+      ],
+      "timing_sample_count": 1
+    }
+  ],
+  "boundary": {
+    "audio_written_to_disk": false,
+    "microphone_opened": false,
+    "external_network_used": false,
+    "speaker_acoustically_verified": false,
+    "user_heard": null,
+    "note": "a backend completion is not evidence that a person heard the audio"
+  }
+}

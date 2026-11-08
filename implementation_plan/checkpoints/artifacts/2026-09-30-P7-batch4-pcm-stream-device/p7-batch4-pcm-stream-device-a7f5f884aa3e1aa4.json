@@ -1,0 +1,194 @@
+{
+  "batch_id": "p7-batch4-pcm-stream-device-a7f5f884aa3e1aa4",
+  "recorded_date": "2026-09-30",
+  "evidence_kind": "real_windows_device_pcm_stream_lifecycle",
+  "live_opt_in": true,
+  "device": {
+    "backend": "windows_waveout_pcm",
+    "mapper": "WAVE_MAPPER",
+    "buffer_bytes": 9600,
+    "buffer_count": 3
+  },
+  "audio": {
+    "kind": "synthesized_sine",
+    "frequency_hz": 440.0,
+    "amplitude": 0.1,
+    "sample_rate": 24000,
+    "channels": 1,
+    "sample_width": 2,
+    "phase1_seconds": 1.2,
+    "phase2_seconds": 2.0,
+    "phase1_pcm_sha256": "c2c94db38a7f5672b87a5fc3f904a7d4a7a74dca6daf5c7f91db8572f824c76f",
+    "phase2_pcm_sha256": "da9693f0b5446c2c709a77561d0f76a9324e5b824d9f1cd41c40f65a7e51364d",
+    "audio_written_to_disk": false
+  },
+  "phase1_natural_completion": {
+    "state": "COMPLETED",
+    "chunks_pushed": 12,
+    "diagnostics_before_close": {
+      "open_result": 0,
+      "prepare_results": [
+        0,
+        0,
+        0
+      ],
+      "write_results": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "write_count": 6,
+      "reset_result": null,
+      "unprepare_results": [],
+      "close_result": null,
+      "opened_at": 17362.765,
+      "prepared_at": 17362.765,
+      "last_write_at": 17363.375,
+      "reset_at": null,
+      "last_done_at": 17363.968,
+      "unprepared_at": null,
+      "closed_at": null,
+      "header_addresses": [
+        2969734261920,
+        2969734262016,
+        2969734262064
+      ],
+      "submitted_count": 6,
+      "returned_count": 3,
+      "cleanup_verified": false
+    },
+    "diagnostics_after_close": {
+      "open_result": 0,
+      "prepare_results": [
+        0,
+        0,
+        0
+      ],
+      "write_results": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "write_count": 6,
+      "reset_result": null,
+      "unprepare_results": [
+        0,
+        0,
+        0
+      ],
+      "close_result": 0,
+      "opened_at": 17362.765,
+      "prepared_at": 17362.765,
+      "last_write_at": 17363.375,
+      "reset_at": null,
+      "last_done_at": 17363.968,
+      "unprepared_at": 17363.984,
+      "closed_at": 17363.984,
+      "header_addresses": [
+        2969734261920,
+        2969734262016,
+        2969734262064
+      ],
+      "submitted_count": 6,
+      "returned_count": 3,
+      "cleanup_verified": true
+    },
+    "uncertain_before_close": false,
+    "header_reuse_observed": true
+  },
+  "phase2_real_reset_with_buffers_in_flight": {
+    "state": "STOP_ACKED",
+    "chunks_pushed": 10,
+    "stop_note": "stop_called",
+    "diagnostics_before_close": {
+      "open_result": 0,
+      "prepare_results": [
+        0,
+        0,
+        0
+      ],
+      "write_results": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "write_count": 4,
+      "reset_result": 0,
+      "unprepare_results": [],
+      "close_result": null,
+      "opened_at": 17364.0,
+      "prepared_at": 17364.0,
+      "last_write_at": 17364.218,
+      "reset_at": 17364.296,
+      "last_done_at": 17364.296,
+      "unprepared_at": null,
+      "closed_at": null,
+      "header_addresses": [
+        2969734263264,
+        2969734264224,
+        2969734264752
+      ],
+      "submitted_count": 4,
+      "returned_count": 3,
+      "cleanup_verified": false
+    },
+    "diagnostics_after_close": {
+      "open_result": 0,
+      "prepare_results": [
+        0,
+        0,
+        0
+      ],
+      "write_results": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "write_count": 4,
+      "reset_result": 0,
+      "unprepare_results": [
+        0,
+        0,
+        0
+      ],
+      "close_result": 0,
+      "opened_at": 17364.0,
+      "prepared_at": 17364.0,
+      "last_write_at": 17364.218,
+      "reset_at": 17364.296,
+      "last_done_at": 17364.296,
+      "unprepared_at": 17364.296,
+      "closed_at": 17364.296,
+      "header_addresses": [
+        2969734263264,
+        2969734264224,
+        2969734264752
+      ],
+      "submitted_count": 4,
+      "returned_count": 3,
+      "cleanup_verified": true
+    },
+    "uncertain_before_close": false
+  },
+  "pre_run_defect": {
+    "found_by": "this real device run",
+    "symptom": "phase1 FAILED after the first waveOutWrite (write_count=1)",
+    "cause": "submit() cleared all dwFlags, wiping the driver-set WHDR_PREPARED bit, so the next waveOutWrite was rejected",
+    "fix": "clear only WHDR_DONE and verify WHDR_PREPARED survives; fake WinMM now mirrors the driver and rejects unprepared writes",
+    "regression_test": "tests/tts/test_pcm_playback.py::test_prepared_flag_survives_resubmission"
+  },
+  "claims": {
+    "stop_ack_means": "waveOutReset returned and every submitted buffer came back",
+    "speaker_acoustically_verified": false,
+    "user_heard": null
+  },
+  "playback_device_used": true
+}

@@ -1,0 +1,40 @@
+# Secrets and machine-local configuration
+/.env
+/.env.*
+!/.env.example
+
+# Local Python environment and generated caches
+/.venv/
+/.python312/
+/.python312-embed.zip
+/.wheelhouse/
+/.get-pip.py
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Models and local runtime data
+/models/
+/data/
+/logs/
+/plans/
+/memory.md
+/execution_plan.md
+/plan.json
+/result.md
+/result.json
+
+# Local diagnostic output
+*.log
+*.wav
+*.flac
+*.mp3
+*.ogg
+*.m4a
+
+# 设计过程素材（效果图对照用；不入库，需要时由设计文档 §2 规格重生成）
+/implementation_plan/checkpoints/artifacts/2026-10-01-hud-mockups/

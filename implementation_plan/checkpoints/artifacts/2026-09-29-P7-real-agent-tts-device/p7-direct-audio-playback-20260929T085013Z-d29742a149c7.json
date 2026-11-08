@@ -1,0 +1,44 @@
+﻿{
+    "batch_id":  "p7-direct-audio-playback-20260929T085013Z-d29742a149c7",
+    "kind":  "direct_project_audio_playback",
+    "source_text":  "P7 绗簩娆＄湡瀹炶闊抽摼璺祴璇曞畬鎴愩€?",
+    "request_id":  "req-fd19b63fcf2bd83ee0b8",
+    "session_id":  "session-d0145230bcc0579fc6f3",
+    "voicestudio_profile_id":  "e8572e8e",
+    "audio_sha256":  "a27394197e10c9556d9067137d6336a8ca0d8205efafa539f6b584f0b9c65baa",
+    "audio_bytes":  118604,
+    "audio_duration_seconds":  2.47,
+    "wav_format":  {
+                       "channels":  1,
+                       "sample_width":  2,
+                       "sample_rate":  24000,
+                       "frames":  59280
+                   },
+    "voicestudio_diagnostics":  {
+                                    "protocol":  "local-voicestudio.v1",
+                                    "request_id":  "req-fd19b63fcf2bd83ee0b8",
+                                    "session_id":  "session-d0145230bcc0579fc6f3",
+                                    "content_type":  "audio/wav",
+                                    "audio_bytes":  118604
+                                },
+    "playback_state":  "COMPLETED",
+    "ticket_events":  [
+                          "PLAYING",
+                          "COMPLETED"
+                      ],
+    "playback_error":  null,
+    "waveout_diagnostic":  {
+                               "open_result":  0,
+                               "prepare_result":  0,
+                               "write_result":  0,
+                               "reset_result":  null,
+                               "wom_done_observed":  true,
+                               "cleanup_verified":  true
+                           },
+    "user_heard":  true,
+    "note":  "New VoiceStudio synthesis and direct Windows playback performed under the project audio-playback standing authorization; playback completion was additionally confirmed by the user for this exact batch.",
+    "confirmed_batch_id":  "p7-direct-audio-playback-20260929T085013Z-d29742a149c7",
+    "confirmation_text":  "听到了完整播放",
+    "confirmed_at":  "2026-09-29T16:58:27+08:00",
+    "confirmation_source":  "user"
+}

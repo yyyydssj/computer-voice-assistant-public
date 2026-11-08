@@ -1,0 +1,34 @@
+{
+  "batch_id": "p7-real-waveout-unknown-20260929-cbe0a22a122346dc",
+  "evidence_kind": "controlled_real_waveout_fault",
+  "fault_mode": "unknown",
+  "fault_mode_value": "unknown_after_real_reset",
+  "live_opt_in": true,
+  "real_backend": "windows_waveout",
+  "audio_path": "<PROJECT_ROOT>\\implementation_plan\\checkpoints\\artifacts\\2026-09-28-P7-local-voicestudio\\eff172cb.wav",
+  "audio_sha256": "2d4af518275bbfafe019321c13ba603cee5cf4b9a79508eabcdefa9f976249da",
+  "audio_bytes": 96044,
+  "stop_timeout_s": 0.25,
+  "backend_stop_result": {
+    "acknowledged": false,
+    "confirmation": "unknown",
+    "reason": "fault_shim_after_real_waveOutReset"
+  },
+  "backend_error": null,
+  "waveout_diagnostic": {
+    "open_result": 0,
+    "prepare_result": 0,
+    "write_result": 0,
+    "reset_result": 0,
+    "unprepare_result": null,
+    "close_result": null,
+    "wom_done_observed": true,
+    "cleanup_verified": false
+  },
+  "loopback_output_stopped": null,
+  "acoustic_output_stopped": null,
+  "speaker_output_stopped": null,
+  "user_heard": null,
+  "boundary": "real waveOut backend fault classification only; no physical silence or user-heard claim",
+  "status": "established"
+}

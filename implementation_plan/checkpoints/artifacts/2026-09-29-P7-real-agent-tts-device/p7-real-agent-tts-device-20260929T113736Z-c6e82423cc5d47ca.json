@@ -1,0 +1,79 @@
+{
+  "batch_id": "p7-c6e82423cc5d47ca",
+  "evidence_kind": "real_device",
+  "request_id": "req-p7-real-20260929-8903fc1f3e7f8faa",
+  "source_text_sha256": "abe30b1b73e936acdb03656fcc4126a987007905c382fba4d27828abf295705d",
+  "audio_sha256": null,
+  "backend_stop_ack": null,
+  "loopback_output_stopped": null,
+  "acoustic_output_stopped": null,
+  "speaker_output_stopped": null,
+  "user_heard": null,
+  "status": "blocked",
+  "blocked_reasons": [
+    "voicestudio_call_failed:LocalPortError",
+    "user_heard_pending",
+    "backend_stop_ack_missing",
+    "speaker_output_stop_not_established"
+  ],
+  "events": [
+    {
+      "name": "RUN_CREATED",
+      "observed_at": "2026-09-29T11:37:29.031221Z",
+      "monotonic_seconds": null,
+      "details": {
+        "request_id": "req-p7-real-20260929-8903fc1f3e7f8faa",
+        "session_id": "session-p7-real-20260929-e6f8d36e3424caff"
+      }
+    },
+    {
+      "name": "AGENT_REQUEST_SUBMITTED",
+      "observed_at": "2026-09-29T11:37:29.031221Z",
+      "monotonic_seconds": null,
+      "details": {
+        "request_id": "req-p7-real-20260929-8903fc1f3e7f8faa",
+        "session_id": "session-p7-real-20260929-e6f8d36e3424caff"
+      }
+    },
+    {
+      "name": "AGENT_REPLY_ACCEPTED",
+      "observed_at": "2026-09-29T11:37:32.936634Z",
+      "monotonic_seconds": null,
+      "details": {
+        "request_id": "req-p7-real-20260929-8903fc1f3e7f8faa"
+      }
+    },
+    {
+      "name": "BLOCKED",
+      "observed_at": "2026-09-29T11:37:36.812821Z",
+      "monotonic_seconds": null,
+      "details": {
+        "reason": "voicestudio_call_failed:LocalPortError"
+      }
+    }
+  ],
+  "metadata": {
+    "session_id": "session-p7-real-20260929-e6f8d36e3424caff",
+    "runner": "live_evidence_runner",
+    "serial": true,
+    "live_opt_in": true,
+    "agent_reply_text": "你好，我是小饼。现在我正在接收并播报这段自我测试语音：我会先认真听懂你的话，再清楚、温柔、自然地回应你；如果你能听见这句话，就说明我的语音生成、播放和收尾链路正在稳定工作。",
+    "workspace": "<PROJECT_ROOT>",
+    "dsh_home": "<USER_HOME>\\AppData\\Local\\Temp\\p7-agent-dsh-live-fresh-8ibe60zv",
+    "profile": "sdk-minimal",
+    "provider": "deepseek-official",
+    "model": "deepseek-v4-flash",
+    "patch": "<PROJECT_ROOT>\\app\\agent\\p3-no-tools.patch.yml",
+    "authorization": {
+      "scope": "one bounded run: one real Agent request, one VoiceStudio synthesis, one Windows playback, synchronized loopback and independent microphone capture",
+      "live_opt_in": true,
+      "api_key_value_printed": false,
+      "existing_user_dsh_reused": false
+    },
+    "agent_finish_reason": null,
+    "voice_profile_id": "e8572e8e",
+    "observed_at_local": "2026-09-29T19:37:36+0800",
+    "run_elapsed_seconds": 7.782,
+    "user_confirmation": null
+  }
+}

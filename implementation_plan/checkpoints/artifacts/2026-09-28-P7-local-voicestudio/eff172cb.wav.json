@@ -1,0 +1,11 @@
+{
+  "path": "<PROJECT_ROOT>\\implementation_plan\\checkpoints\\artifacts\\2026-09-28-P7-local-voicestudio\\eff172cb.wav",
+  "bytes": 96044,
+  "sha256": "2d4af518275bbfafe019321c13ba603cee5cf4b9a79508eabcdefa9f976249da",
+  "channels": 1,
+  "sample_width_bytes": 2,
+  "sample_rate_hz": 24000,
+  "frames": 48000,
+  "duration_seconds": 2.0,
+  "comptype": "NONE"
+}

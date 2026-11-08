@@ -1,0 +1,363 @@
+{
+  "batch_id": "p7-agent-preflight-20260929T063803Z-b132c7ffc745",
+  "evidence_kind": "real_agent_text_preflight",
+  "started_at": "2026-09-29T06:38:03.132940Z",
+  "workspace": "<PROJECT_ROOT>",
+  "dsh_home": "<USER_HOME>\\AppData\\Local\\Temp\\p7-agent-dsh-ihzklzt3",
+  "profile": "sdk-minimal",
+  "provider": "deepseek-official",
+  "model": "deepseek-v4-flash",
+  "patch": "<PROJECT_ROOT>\\app\\agent\\p3-no-tools.patch.yml",
+  "api_key_present": true,
+  "api_key_value_printed": false,
+  "request_id": "req-e1508be9edeb49a7",
+  "session_id": "session-32ec92226e1d4f18",
+  "request_text_sha256": "b7b97e5ffe37cbc2d3c37516d0f63f7d8c99a793de95c62aa802467eb4d1adec",
+  "request_text": "Reply exactly: P7-AGENT-PREFLIGHT-OK. Do not call tools or perform computer operations.",
+  "status": "complete",
+  "sdk_start": "ok",
+  "agent_reply": "P7-AGENT-PREFLIGHT-OK.",
+  "agent_reply_sha256": "d05ff9bf52568443144f314130b312ccaa7c8b4dc810725c280a43b17d707743",
+  "exact_reply_match": false,
+  "finish_reason": "completed",
+  "event_count": 11,
+  "notification_count": 13,
+  "events": [
+    {
+      "type": "agent/inbox/spliced",
+      "seq": 0,
+      "time": 1790663884848,
+      "data": {
+        "target": "next-turn",
+        "start": 0,
+        "inserted": [
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "Reply exactly: P7-AGENT-PREFLIGHT-OK. Do not call tools or perform computer operations."
+              }
+            ],
+            "source": {
+              "kind": "user"
+            },
+            "role": "user",
+            "id": "cdb87194-abee-4b3b-b892-ff1197a70bd2"
+          }
+        ]
+      }
+    },
+    {
+      "type": "turn/start",
+      "seq": 1,
+      "time": 1790663884850,
+      "data": {
+        "turn": 1
+      }
+    },
+    {
+      "type": "agent/inbox/spliced",
+      "seq": 2,
+      "time": 1790663884850,
+      "data": {
+        "target": "next-turn",
+        "start": 0,
+        "removedCount": 1,
+        "inserted": []
+      }
+    },
+    {
+      "type": "step/start",
+      "seq": 3,
+      "time": 1790663884851,
+      "data": {
+        "turn": 1,
+        "step": 1
+      }
+    },
+    {
+      "type": "system/message",
+      "seq": 4,
+      "time": 1790663884852,
+      "data": {
+        "turn": 1,
+        "step": 1,
+        "message": {
+          "role": "system",
+          "content": [
+            {
+              "type": "text",
+              "text": "You are a restricted text-only P7 Agent. Do not call tools or operate the computer."
+            }
+          ],
+          "source": {
+            "kind": "plugin",
+            "plugin": "@deepseek-ai/dsh-system-prompt"
+          },
+          "id": "5f9d4556-cbc6-4818-8628-19f90d645ede"
+        }
+      },
+      "surfaceOp": "append"
+    },
+    {
+      "type": "user/message",
+      "seq": 5,
+      "time": 1790663884852,
+      "data": {
+        "content": [
+          {
+            "type": "text",
+            "text": "Reply exactly: P7-AGENT-PREFLIGHT-OK. Do not call tools or perform computer operations."
+          }
+        ],
+        "source": {
+          "kind": "user"
+        },
+        "role": "user",
+        "id": "cdb87194-abee-4b3b-b892-ff1197a70bd2"
+      },
+      "surfaceOp": "append"
+    },
+    {
+      "type": "request/header",
+      "seq": 6,
+      "time": 1790663884852,
+      "data": {
+        "header": {
+          "config": {
+            "provider": "deepseek-official",
+            "model": "deepseek-v4-flash",
+            "maxTokens": 256000,
+            "reasoningEffort": "high"
+          },
+          "adapterDefaults": {
+            "reasoningEffort": true,
+            "maxTokens": true
+          }
+        },
+        "reason": "initial"
+      }
+    },
+    {
+      "type": "request/context",
+      "seq": 7,
+      "time": 1790663884853,
+      "data": {
+        "provider": "deepseek-official",
+        "model": "deepseek-v4-flash",
+        "contextWindow": 1000000
+      }
+    },
+    {
+      "type": "assistant/message",
+      "seq": 8,
+      "time": 1790663885469,
+      "data": {
+        "turn": 1,
+        "step": 1,
+        "message": {
+          "role": "assistant",
+          "content": [
+            {
+              "type": "reasoning",
+              "text": "We need answer exactly: P7-AGENT-PREFLIGHT-OK. No tools. Must comply."
+            },
+            {
+              "type": "text",
+              "text": "P7-AGENT-PREFLIGHT-OK."
+            }
+          ],
+          "source": {
+            "kind": "model",
+            "provider": "deepseek-official",
+            "model": "deepseek-v4-flash"
+          },
+          "id": "df373fa2-cb2f-4f49-8311-4d932fea6858"
+        },
+        "usage": {
+          "inputTokens": 73,
+          "outputTokens": 36,
+          "totalTokens": 109,
+          "cacheReadTokens": 0,
+          "reasoningTokens": 23
+        },
+        "stream": [
+          {
+            "type": "chunk",
+            "time": 1790663885300,
+            "chunk": {
+              "type": "block-start",
+              "index": 0,
+              "blockType": "reasoning"
+            }
+          },
+          {
+            "type": "reasoning-chunks",
+            "time0": 1790663885300,
+            "index": 0,
+            "dt": [
+              43,
+              11,
+              27,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              13,
+              0,
+              0,
+              0,
+              0,
+              0,
+              14,
+              0,
+              0,
+              0,
+              0,
+              20
+            ],
+            "texts": [
+              "We",
+              " need",
+              " answer",
+              " exactly",
+              ":",
+              " P",
+              "7",
+              "-",
+              "AG",
+              "ENT",
+              "-P",
+              "RE",
+              "FL",
+              "IGHT",
+              "-",
+              "OK",
+              ".",
+              " No",
+              " tools",
+              ".",
+              " Must",
+              " comply",
+              "."
+            ]
+          },
+          {
+            "type": "chunk",
+            "time": 1790663885428,
+            "chunk": {
+              "type": "block-start",
+              "index": 1,
+              "blockType": "text"
+            }
+          },
+          {
+            "type": "text-chunks",
+            "time0": 1790663885428,
+            "index": 1,
+            "dt": [
+              0,
+              3,
+              7,
+              0,
+              0,
+              0,
+              0,
+              0,
+              12,
+              0,
+              0
+            ],
+            "texts": [
+              "P",
+              "7",
+              "-",
+              "AG",
+              "ENT",
+              "-P",
+              "RE",
+              "FL",
+              "IGHT",
+              "-",
+              "OK",
+              "."
+            ]
+          },
+          {
+            "type": "chunk",
+            "time": 1790663885464,
+            "chunk": {
+              "type": "block-end",
+              "index": 0,
+              "block": {
+                "type": "reasoning",
+                "text": "We need answer exactly: P7-AGENT-PREFLIGHT-OK. No tools. Must comply."
+              }
+            }
+          },
+          {
+            "type": "chunk",
+            "time": 1790663885464,
+            "chunk": {
+              "type": "block-end",
+              "index": 1,
+              "block": {
+                "type": "text",
+                "text": "P7-AGENT-PREFLIGHT-OK."
+              }
+            }
+          },
+          {
+            "type": "chunk",
+            "time": 1790663885464,
+            "chunk": {
+              "type": "usage",
+              "usage": {
+                "inputTokens": 73,
+                "outputTokens": 36,
+                "totalTokens": 109,
+                "cacheReadTokens": 0,
+                "reasoningTokens": 23
+              }
+            }
+          },
+          {
+            "type": "chunk",
+            "time": 1790663885464,
+            "chunk": {
+              "type": "finish",
+              "reason": {
+                "kind": "stop"
+              }
+            }
+          }
+        ]
+      },
+      "surfaceOp": "append"
+    },
+    {
+      "type": "step/end",
+      "seq": 9,
+      "time": 1790663885469,
+      "data": {
+        "turn": 1,
+        "step": 1
+      }
+    },
+    {
+      "type": "turn/end",
+      "seq": 10,
+      "time": 1790663885470,
+      "data": {
+        "turn": 1,
+        "reason": {
+          "kind": "completed"
+        }
+      }
+    }
+  ],
+  "finished_at": "2026-09-29T06:38:05.513868Z"
+}

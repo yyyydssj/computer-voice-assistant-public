@@ -1,0 +1,276 @@
+{
+  "batch_id": "p7-b9-sentence-p95-20260930T105816Z-27ecc4fe309941ac",
+  "evidence_kind": "real_sentence_timing_p95",
+  "live_opt_in": true,
+  "recorded_at_utc": "2026-09-30T10:58:16Z",
+  "host": "xunyang",
+  "platform": "Windows-11-10.0.26100-SP0",
+  "clock": "perf_counter",
+  "voicestudio": {
+    "status": "ok",
+    "device": "cuda (NVIDIA GeForce RTX 3050 Laptop GPU)",
+    "version": "0.5.6"
+  },
+  "voice_profile": {
+    "profile_id": "e8572e8e",
+    "speed": 1.0,
+    "pause_ms": 400,
+    "fade_ms": 80,
+    "version": 2
+  },
+  "sentence_set": {
+    "sentences": 20,
+    "warmup": true
+  },
+  "runs": [
+    {
+      "mode": "ws_pcm",
+      "pace": "paced",
+      "clock": "perf_counter",
+      "start_buffer_ms": 160,
+      "wall_seconds": 64.714,
+      "played_segments": 20,
+      "error": null,
+      "overloaded": false,
+      "dropped_pushes": 0,
+      "pending_sentences": 0,
+      "verified": true,
+      "finish_timed_out": false,
+      "late_events": [],
+      "pace_wait_ms_after_push": [
+        3562.7768999997897,
+        3540.614999999889,
+        3545.8905000000414,
+        3163.698600000316,
+        3510.20010000002,
+        3424.037700000099,
+        3704.8236000000543,
+        3143.7285000001793,
+        2893.019899999672,
+        2843.7042999998994,
+        3450.9462999999414,
+        3280.5192999999235,
+        3414.421500000117,
+        3170.880500000294,
+        2633.8964999999916,
+        3360.545600000023,
+        3337.189700000181,
+        2731.5951000000496,
+        2927.8536000001623,
+        3068.566799999644
+      ],
+      "samples": [
+        {
+          "segment_index": 1,
+          "generation": 1,
+          "ready_to_submit_ms": 20.20409999977346,
+          "submit_to_first_pcm_ms": 1449.98970000006,
+          "first_pcm_to_device_ms": 0.04850000004807953,
+          "first_pcm_to_gate_ms": 0.03569999989849748,
+          "gate_to_device_ms": 0.012800000149582047
+        },
+        {
+          "segment_index": 2,
+          "generation": 1,
+          "ready_to_submit_ms": 0.07129999994504033,
+          "submit_to_first_pcm_ms": 1600.1117000000704,
+          "first_pcm_to_device_ms": 0.0766999996812956,
+          "first_pcm_to_gate_ms": 0.06349999966914766,
+          "gate_to_device_ms": 0.013200000012147939
+        },
+        {
+          "segment_index": 3,
+          "generation": 1,
+          "ready_to_submit_ms": 0.13100000023769098,
+          "submit_to_first_pcm_ms": 1471.5305999998236,
+          "first_pcm_to_device_ms": 0.045900000259280205,
+          "first_pcm_to_gate_ms": 0.03329999981360743,
+          "gate_to_device_ms": 0.012600000445672777
+        },
+        {
+          "segment_index": 4,
+          "generation": 1,
+          "ready_to_submit_ms": 0.0918999999157677,
+          "submit_to_first_pcm_ms": 1224.1463999998814,
+          "first_pcm_to_device_ms": 0.04540000009001233,
+          "first_pcm_to_gate_ms": 0.032300000384566374,
+          "gate_to_device_ms": 0.013099999705445953
+        },
+        {
+          "segment_index": 5,
+          "generation": 1,
+          "ready_to_submit_ms": 0.08410000009462237,
+          "submit_to_first_pcm_ms": 1451.2110999999095,
+          "first_pcm_to_device_ms": 0.09210000007442432,
+          "first_pcm_to_gate_ms": 0.06780000012440723,
+          "gate_to_device_ms": 0.02429999995001708
+        },
+        {
+          "segment_index": 6,
+          "generation": 1,
+          "ready_to_submit_ms": 0.11459999996077386,
+          "submit_to_first_pcm_ms": 1451.1282999997093,
+          "first_pcm_to_device_ms": 0.06540000003951718,
+          "first_pcm_to_gate_ms": 0.04870000020673615,
+          "gate_to_device_ms": 0.01669999983278103
+        },
+        {
+          "segment_index": 7,
+          "generation": 1,
+          "ready_to_submit_ms": 0.10550000024522888,
+          "submit_to_first_pcm_ms": 1525.3333000000566,
+          "first_pcm_to_device_ms": 0.051799999710056,
+          "first_pcm_to_gate_ms": 0.03639999977167463,
+          "gate_to_device_ms": 0.01539999993838137
+        },
+        {
+          "segment_index": 8,
+          "generation": 1,
+          "ready_to_submit_ms": 0.1343000003544148,
+          "submit_to_first_pcm_ms": 1218.4134999997696,
+          "first_pcm_to_device_ms": 0.08089999982985319,
+          "first_pcm_to_gate_ms": 0.059500000133994035,
+          "gate_to_device_ms": 0.02139999969585915
+        },
+        {
+          "segment_index": 9,
+          "generation": 1,
+          "ready_to_submit_ms": 0.06409999969037017,
+          "submit_to_first_pcm_ms": 1203.0792999998994,
+          "first_pcm_to_device_ms": 0.06340000027194037,
+          "first_pcm_to_gate_ms": 0.043900000036956044,
+          "gate_to_device_ms": 0.019500000234984327
+        },
+        {
+          "segment_index": 10,
+          "generation": 1,
+          "ready_to_submit_ms": 0.05499999997482519,
+          "submit_to_first_pcm_ms": 1219.5901999998568,
+          "first_pcm_to_device_ms": 0.09480000016992562,
+          "first_pcm_to_gate_ms": 0.08230000003095483,
+          "gate_to_device_ms": 0.01250000013897079
+        },
+        {
+          "segment_index": 11,
+          "generation": 1,
+          "ready_to_submit_ms": 0.06619999976464896,
+          "submit_to_first_pcm_ms": 1562.781200000245,
+          "first_pcm_to_device_ms": 0.08650000017951243,
+          "first_pcm_to_gate_ms": 0.0752999999349413,
+          "gate_to_device_ms": 0.011200000244571129
+        },
+        {
+          "segment_index": 12,
+          "generation": 1,
+          "ready_to_submit_ms": 0.11040000026696362,
+          "submit_to_first_pcm_ms": 1453.53729999988,
+          "first_pcm_to_device_ms": 0.06050000001778244,
+          "first_pcm_to_gate_ms": 0.045900000259280205,
+          "gate_to_device_ms": 0.014599999758502236
+        },
+        {
+          "segment_index": 13,
+          "generation": 1,
+          "ready_to_submit_ms": 0.11150000000270666,
+          "submit_to_first_pcm_ms": 1441.9009000002916,
+          "first_pcm_to_device_ms": 0.042499999835854396,
+          "first_pcm_to_gate_ms": 0.031199999739328632,
+          "gate_to_device_ms": 0.011300000096525764
+        },
+        {
+          "segment_index": 14,
+          "generation": 1,
+          "ready_to_submit_ms": 0.07849999974496313,
+          "submit_to_first_pcm_ms": 1446.7693999999938,
+          "first_pcm_to_device_ms": 0.06410000014511752,
+          "first_pcm_to_gate_ms": 0.0449000003754918,
+          "gate_to_device_ms": 0.01919999976962572
+        },
+        {
+          "segment_index": 15,
+          "generation": 1,
+          "ready_to_submit_ms": 0.06269999994401587,
+          "submit_to_first_pcm_ms": 1191.0030999997616,
+          "first_pcm_to_device_ms": 0.04060000037497957,
+          "first_pcm_to_gate_ms": 0.029400000130408444,
+          "gate_to_device_ms": 0.011200000244571129
+        },
+        {
+          "segment_index": 16,
+          "generation": 1,
+          "ready_to_submit_ms": 0.10310000016033882,
+          "submit_to_first_pcm_ms": 1440.9719000000223,
+          "first_pcm_to_device_ms": 0.06410000014511752,
+          "first_pcm_to_gate_ms": 0.04959999978382257,
+          "gate_to_device_ms": 0.014500000361294951
+        },
+        {
+          "segment_index": 17,
+          "generation": 1,
+          "ready_to_submit_ms": 0.07430000005115289,
+          "submit_to_first_pcm_ms": 1580.0169999997706,
+          "first_pcm_to_device_ms": 0.07370000002993038,
+          "first_pcm_to_gate_ms": 0.05400000009103678,
+          "gate_to_device_ms": 0.019699999938893598
+        },
+        {
+          "segment_index": 18,
+          "generation": 1,
+          "ready_to_submit_ms": 0.12980000019524596,
+          "submit_to_first_pcm_ms": 1186.377199999697,
+          "first_pcm_to_device_ms": 0.0629000001026725,
+          "first_pcm_to_gate_ms": 0.04370000033304677,
+          "gate_to_device_ms": 0.01919999976962572
+        },
+        {
+          "segment_index": 19,
+          "generation": 1,
+          "ready_to_submit_ms": 0.06570000005012844,
+          "submit_to_first_pcm_ms": 1282.016300000123,
+          "first_pcm_to_device_ms": 0.055499999689345714,
+          "first_pcm_to_gate_ms": 0.03689999994094251,
+          "gate_to_device_ms": 0.018599999748403206
+        },
+        {
+          "segment_index": 20,
+          "generation": 1,
+          "ready_to_submit_ms": 0.23570000030304072,
+          "submit_to_first_pcm_ms": 1457.5926999996227,
+          "first_pcm_to_device_ms": 0.10070000007544877,
+          "first_pcm_to_gate_ms": 0.07660000028408831,
+          "gate_to_device_ms": 0.02409999979136046
+        }
+      ],
+      "percentiles": {
+        "ready_to_submit": {
+          "count": 20,
+          "p50": 0.0918999999157677,
+          "p95": 0.23570000030304072
+        },
+        "first_pcm_to_device": {
+          "count": 20,
+          "p50": 0.06340000027194037,
+          "p95": 0.09480000016992562
+        },
+        "submit_to_first_pcm": {
+          "count": 20,
+          "p50": 1446.7693999999938,
+          "p95": 1580.0169999997706
+        },
+        "gate_to_device": {
+          "count": 20,
+          "p50": 0.014599999758502236,
+          "p95": 0.02409999979136046
+        }
+      }
+    }
+  ],
+  "boundary": {
+    "audio_written_to_disk": false,
+    "microphone_opened": false,
+    "network_target": "127.0.0.1:3900 only",
+    "speaker_acoustically_verified": false,
+    "user_heard": null,
+    "note": "backend completion is not evidence that a person heard the audio"
+  }
+}

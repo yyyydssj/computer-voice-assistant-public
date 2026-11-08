@@ -1,0 +1,112 @@
+{
+  "batch_id": "p7-real-waveout-unknown-acoustic-20260929-c1b42be7114e420c",
+  "evidence_kind": "real_device_acoustic_fault_correlation",
+  "fault_batch_kind": "unknown",
+  "live_opt_in": true,
+  "fault_backend": {
+    "acknowledged": false,
+    "confirmation": "unknown",
+    "reason": "fault_shim_after_real_waveOutReset"
+  },
+  "backend_error": null,
+  "waveout_diagnostic": {
+    "open_result": 0,
+    "prepare_result": 0,
+    "write_result": 0,
+    "reset_result": 0,
+    "wom_done_observed": true,
+    "cleanup_verified": false
+  },
+  "audio_path": "<PROJECT_ROOT>\\implementation_plan\\checkpoints\\artifacts\\2026-09-28-P7-local-voicestudio\\eff172cb.wav",
+  "audio_sha256": "2d4af518275bbfafe019321c13ba603cee5cf4b9a79508eabcdefa9f976249da",
+  "endpoint_pair": {
+    "loopback": {
+      "index": 13,
+      "name": "扬声器 (Realtek(R) Audio) [Loopback]",
+      "host_api": "2",
+      "is_loopback": true,
+      "channels": 2,
+      "sample_rate_hz": 48000
+    },
+    "microphone": {
+      "index": 11,
+      "name": "麦克风阵列 (Realtek(R) Audio)",
+      "host_api": "2",
+      "is_loopback": false,
+      "channels": 2,
+      "sample_rate_hz": 48000
+    }
+  },
+  "capture_config": {
+    "lead_s": 0.7,
+    "active_s": 2.0,
+    "post_s": 1.5,
+    "quiet_dbfs": -55.0
+  },
+  "capture_errors": {},
+  "loopback_summary": {
+    "endpoint": {
+      "valid": true,
+      "reason": null,
+      "endpoint": {
+        "index": 13,
+        "name": "扬声器 (Realtek(R) Audio) [Loopback]",
+        "host_api": "2",
+        "is_loopback": true,
+        "max_input_channels": 2,
+        "default_sample_rate": 48000.0,
+        "host_api_index": 2
+      },
+      "sample_rate_hz": 48000,
+      "channels": 2,
+      "frames": 251904,
+      "lead_in_rms_dbfs": -96.69621846973543,
+      "active_rms_dbfs": -26.31843242676262,
+      "post_rms_dbfs": -96.70143463489859,
+      "active_nonzero": true,
+      "post_quiet": true,
+      "correlation_observed": null
+    },
+    "raw_audio_retained": false,
+    "raw_bytes": 1007616,
+    "rms_dbfs": {
+      "active": -26.31843242676262,
+      "post": -96.70143463489859
+    }
+  },
+  "microphone_summary": {
+    "endpoint": {
+      "valid": true,
+      "reason": null,
+      "endpoint": {
+        "index": 11,
+        "name": "麦克风阵列 (Realtek(R) Audio)",
+        "host_api": "2",
+        "is_loopback": false,
+        "max_input_channels": 2,
+        "default_sample_rate": 48000.0,
+        "host_api_index": 2
+      },
+      "sample_rate_hz": 48000,
+      "channels": 2,
+      "frames": 249856,
+      "lead_in_rms_dbfs": -54.98114556279376,
+      "active_rms_dbfs": -42.11399638144165,
+      "post_rms_dbfs": -56.461997779699274,
+      "active_nonzero": true,
+      "post_quiet": true,
+      "correlation_observed": null
+    },
+    "raw_audio_retained": false,
+    "raw_bytes": 999424,
+    "rms_dbfs": {
+      "active": -42.11399638144165,
+      "post": -56.461997779699274
+    }
+  },
+  "loopback_output_stopped": true,
+  "acoustic_output_stopped": true,
+  "speaker_output_stopped": true,
+  "user_heard": null,
+  "status": "established"
+}

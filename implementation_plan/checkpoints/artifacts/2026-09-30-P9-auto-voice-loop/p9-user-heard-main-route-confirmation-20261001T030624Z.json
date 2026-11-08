@@ -1,0 +1,30 @@
+{
+  "confirmation_kind": "p9_auto_voice_loop_user_heard_main_route",
+  "confirmed_at_utc": "2026-10-01T03:06:24Z",
+  "confirmed_by": "user",
+  "user_heard": true,
+  "user_heard_note": "用户本人确认：听到主路线 VoiceStudio 的播报，声音清楚",
+  "route": "voicestudio_ws_pcm",
+  "tts_provider": "VoiceStudio v0.5.6 @ 127.0.0.1:3900 (cuda / RTX 3050 Laptop)",
+  "run_artifact": "p9-auto-voice-loop-20261001T030624Z-e30162aab0024500.json",
+  "vad": {
+    "mode": "silero",
+    "model": "models/openwakeword/silero_vad.onnx",
+    "threshold": 0.5,
+    "vad_frames": 2
+  },
+  "recognized_text_length": 75,
+  "recognized_text_matches_user_speech": true,
+  "playback_state_mechanically": "COMPLETED",
+  "playback_error": null,
+  "played_segments": 3,
+  "completed_sentences": 3,
+  "end_reason": "max_utterance_duration",
+  "isolation_evidence": {
+    "sapi_direct_speak_heard": true,
+    "raw_winmm_waveout_tone_heard": true,
+    "edge_route_heard_earlier": true
+  },
+  "acoustic_measurement": false,
+  "note": "听感结论仅由用户本人确认；设备完成不等于有人听见；本件不做声学推断"
+}

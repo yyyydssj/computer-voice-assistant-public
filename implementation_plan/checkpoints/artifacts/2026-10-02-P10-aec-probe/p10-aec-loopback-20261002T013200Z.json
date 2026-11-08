@@ -1,0 +1,31 @@
+{
+  "kind": "p10_aec_loopback_only_probe",
+  "created_at": "20261002T013200Z",
+  "devices": {
+    "loopback": {
+      "index": 13,
+      "name": "扬声器 (Realtek(R) Audio) [Loopback]",
+      "rate": 48000,
+      "in": 2,
+      "out": 0,
+      "loopback": true
+    }
+  },
+  "playback": {
+    "backend": "windows_waveout_pcm",
+    "bytes": 288000,
+    "seconds": 6.0,
+    "drained": true
+  },
+  "summary": {
+    "mode": "loopback_only",
+    "rate": 48000,
+    "loopback_seconds": 7.02,
+    "template_offset_samples": 48142,
+    "template_alignment": 0.0408,
+    "loopback_rms": 0.230481,
+    "loopback_peak": 0.999939,
+    "band_ratio": 0.8746
+  },
+  "no_audio_persisted": false
+}

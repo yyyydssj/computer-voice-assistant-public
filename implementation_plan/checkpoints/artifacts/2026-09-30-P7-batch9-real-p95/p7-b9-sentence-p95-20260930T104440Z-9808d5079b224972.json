@@ -1,0 +1,247 @@
+{
+  "batch_id": "p7-b9-sentence-p95-20260930T104440Z-9808d5079b224972",
+  "evidence_kind": "real_sentence_timing_p95",
+  "live_opt_in": true,
+  "recorded_at_utc": "2026-09-30T10:44:40Z",
+  "host": "xunyang",
+  "platform": "Windows-11-10.0.26100-SP0",
+  "clock": "perf_counter",
+  "voicestudio": {
+    "status": "ok",
+    "device": "cuda (NVIDIA GeForce RTX 3050 Laptop GPU)",
+    "version": "0.5.6"
+  },
+  "voice_profile": {
+    "profile_id": "e8572e8e",
+    "speed": 1.0,
+    "pause_ms": 400,
+    "fade_ms": 80,
+    "version": 2
+  },
+  "sentence_set": {
+    "sentences": 20,
+    "warmup": true
+  },
+  "runs": [
+    {
+      "mode": "http_wav",
+      "pace": "paced",
+      "clock": "perf_counter",
+      "start_buffer_ms": 160,
+      "wall_seconds": 61.149,
+      "played_segments": 20,
+      "error": null,
+      "overloaded": false,
+      "late_events": [],
+      "pace_wait_ms_after_push": [
+        3570.846200000233,
+        3326.754400000027,
+        3535.499300000083,
+        2931.9601000001967,
+        3090.654799999811,
+        3371.0808999999244,
+        3427.8426999999283,
+        2961.376200000359,
+        2819.812700000057,
+        2629.3181999999433,
+        3427.8129999997873,
+        2634.3747999999323,
+        3155.461599999853,
+        3192.950899999687,
+        2296.699699999863,
+        3182.0622999998704,
+        3103.4965000003467,
+        2469.601100000091,
+        2763.1458999999268,
+        3254.117800000131
+      ],
+      "samples": [
+        {
+          "segment_index": 1,
+          "generation": 1,
+          "ready_to_submit_ms": 31.05679999998756,
+          "first_pcm_to_device_ms": 0.1250999998774205,
+          "first_pcm_to_gate_ms": 0.1021999996737577,
+          "gate_to_device_ms": 0.022900000203662785
+        },
+        {
+          "segment_index": 2,
+          "generation": 1,
+          "ready_to_submit_ms": 30.62550000004194,
+          "first_pcm_to_device_ms": 0.09940000018104911,
+          "first_pcm_to_gate_ms": 0.07689999983995222,
+          "gate_to_device_ms": 0.022500000341096893
+        },
+        {
+          "segment_index": 3,
+          "generation": 1,
+          "ready_to_submit_ms": 29.33919999986756,
+          "first_pcm_to_device_ms": 0.08299999990413198,
+          "first_pcm_to_gate_ms": 0.06869999970149365,
+          "gate_to_device_ms": 0.01430000020263833
+        },
+        {
+          "segment_index": 4,
+          "generation": 1,
+          "ready_to_submit_ms": 28.90530000013314,
+          "first_pcm_to_device_ms": 0.17389999993611127,
+          "first_pcm_to_gate_ms": 0.15309999980672728,
+          "gate_to_device_ms": 0.02080000012938399
+        },
+        {
+          "segment_index": 5,
+          "generation": 1,
+          "ready_to_submit_ms": 29.783899999983987,
+          "first_pcm_to_device_ms": 0.08030000026337802,
+          "first_pcm_to_gate_ms": 0.06639999992330559,
+          "gate_to_device_ms": 0.013900000340072438
+        },
+        {
+          "segment_index": 6,
+          "generation": 1,
+          "ready_to_submit_ms": 29.225600000245322,
+          "first_pcm_to_device_ms": 0.08269999989352073,
+          "first_pcm_to_gate_ms": 0.06780000012440723,
+          "gate_to_device_ms": 0.014899999769113492
+        },
+        {
+          "segment_index": 7,
+          "generation": 1,
+          "ready_to_submit_ms": 30.12669999998252,
+          "first_pcm_to_device_ms": 0.058399999943503644,
+          "first_pcm_to_gate_ms": 0.0463000001218461,
+          "gate_to_device_ms": 0.012099999821657548
+        },
+        {
+          "segment_index": 8,
+          "generation": 1,
+          "ready_to_submit_ms": 28.660500000114553,
+          "first_pcm_to_device_ms": 0.08059999981924193,
+          "first_pcm_to_gate_ms": 0.05999999984851456,
+          "gate_to_device_ms": 0.020599999970727367
+        },
+        {
+          "segment_index": 9,
+          "generation": 1,
+          "ready_to_submit_ms": 20.836299999700714,
+          "first_pcm_to_device_ms": 0.1609999999345746,
+          "first_pcm_to_gate_ms": 0.1432999997632578,
+          "gate_to_device_ms": 0.017700000171316788
+        },
+        {
+          "segment_index": 10,
+          "generation": 1,
+          "ready_to_submit_ms": 10.233099999823025,
+          "first_pcm_to_device_ms": 0.06329999996523838,
+          "first_pcm_to_gate_ms": 0.0511000002916262,
+          "gate_to_device_ms": 0.012199999673612183
+        },
+        {
+          "segment_index": 11,
+          "generation": 1,
+          "ready_to_submit_ms": 28.054299999894283,
+          "first_pcm_to_device_ms": 0.06470000016634003,
+          "first_pcm_to_gate_ms": 0.049000000217347406,
+          "gate_to_device_ms": 0.015699999948992627
+        },
+        {
+          "segment_index": 12,
+          "generation": 1,
+          "ready_to_submit_ms": 29.382900000200607,
+          "first_pcm_to_device_ms": 0.05270000019663712,
+          "first_pcm_to_gate_ms": 0.04070000022693421,
+          "gate_to_device_ms": 0.011999999969702912
+        },
+        {
+          "segment_index": 13,
+          "generation": 1,
+          "ready_to_submit_ms": 29.916799999682553,
+          "first_pcm_to_device_ms": 0.1111999999920954,
+          "first_pcm_to_gate_ms": 0.0839000003907131,
+          "gate_to_device_ms": 0.027299999601382297
+        },
+        {
+          "segment_index": 14,
+          "generation": 1,
+          "ready_to_submit_ms": 20.961199999874225,
+          "first_pcm_to_device_ms": 0.15729999995528487,
+          "first_pcm_to_gate_ms": 0.14220000002751476,
+          "gate_to_device_ms": 0.015099999927770114
+        },
+        {
+          "segment_index": 15,
+          "generation": 1,
+          "ready_to_submit_ms": 28.48020000010365,
+          "first_pcm_to_device_ms": 0.06520000033560791,
+          "first_pcm_to_gate_ms": 0.05050000027040369,
+          "gate_to_device_ms": 0.014700000065204222
+        },
+        {
+          "segment_index": 16,
+          "generation": 1,
+          "ready_to_submit_ms": 31.138999999711814,
+          "first_pcm_to_device_ms": 0.14469999996435945,
+          "first_pcm_to_gate_ms": 0.12289999995118706,
+          "gate_to_device_ms": 0.021800000013172394
+        },
+        {
+          "segment_index": 17,
+          "generation": 1,
+          "ready_to_submit_ms": 20.08990000013,
+          "first_pcm_to_device_ms": 0.059499999679246685,
+          "first_pcm_to_gate_ms": 0.04769999986820039,
+          "gate_to_device_ms": 0.011799999811046291
+        },
+        {
+          "segment_index": 18,
+          "generation": 1,
+          "ready_to_submit_ms": 31.462800000099378,
+          "first_pcm_to_device_ms": 0.08709999974598759,
+          "first_pcm_to_gate_ms": 0.07299999970200588,
+          "gate_to_device_ms": 0.014100000043981709
+        },
+        {
+          "segment_index": 19,
+          "generation": 1,
+          "ready_to_submit_ms": 21.411799999896175,
+          "first_pcm_to_device_ms": 0.05939999982729205,
+          "first_pcm_to_gate_ms": 0.04619999981514411,
+          "gate_to_device_ms": 0.013200000012147939
+        },
+        {
+          "segment_index": 20,
+          "generation": 1,
+          "ready_to_submit_ms": 31.43529999988459,
+          "first_pcm_to_device_ms": 0.06140000004961621,
+          "first_pcm_to_gate_ms": 0.048099999730766285,
+          "gate_to_device_ms": 0.013300000318849925
+        }
+      ],
+      "percentiles": {
+        "ready_to_submit": {
+          "count": 20,
+          "p50": 29.225600000245322,
+          "p95": 31.43529999988459
+        },
+        "first_pcm_to_device": {
+          "count": 20,
+          "p50": 0.08059999981924193,
+          "p95": 0.1609999999345746
+        },
+        "gate_to_device": {
+          "count": 20,
+          "p50": 0.014700000065204222,
+          "p95": 0.022900000203662785
+        }
+      }
+    }
+  ],
+  "boundary": {
+    "audio_written_to_disk": false,
+    "microphone_opened": false,
+    "network_target": "127.0.0.1:3900 only",
+    "speaker_acoustically_verified": false,
+    "user_heard": null,
+    "note": "backend completion is not evidence that a person heard the audio"
+  }
+}

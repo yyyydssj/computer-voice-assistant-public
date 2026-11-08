@@ -1,0 +1,387 @@
+{
+  "batch_id": "p9-auto-voice-loop-20261001T064855Z-cd9559ed714545d1",
+  "evidence_kind": "p9_auto_voice_loop_acceptance",
+  "live_opt_in": true,
+  "recorded_at_utc": "2026-10-01T06:48:55Z",
+  "host": "xunyang",
+  "platform": "Windows-11-10.0.26100-SP0",
+  "tts_mode": "ws_pcm",
+  "agent": "local_scripted_echo（非真实模型）",
+  "auto_capture": {
+    "speech_threshold_rms": 600.0,
+    "silence_ms": 2500,
+    "speech_start_timeout_ms": 8000,
+    "max_record_seconds": 15,
+    "audio_capacity_frames": 500,
+    "input_stall_ms": 5000,
+    "min_utterance_ms": 300,
+    "kws_mode": "off",
+    "voiceprint_threshold": 0.5,
+    "voiceprint_seconds": 8,
+    "voiceprint": {
+      "mode": "filter",
+      "enabled": true,
+      "threshold": 0.5,
+      "profile": "<PROJECT_ROOT>\\data\\voiceprint-owner.json",
+      "errors": 0,
+      "enrolled_speakers": [
+        "owner"
+      ],
+      "verified_count": 3,
+      "rejected_count": 0
+    },
+    "vad_mode": "silero",
+    "vad_model": "silero_vad.onnx",
+    "vad_threshold": 0.5,
+    "vad_min_silence_duration": 0.5,
+    "vad_min_speech_duration": 0.15,
+    "vad_window_samples": 512,
+    "vad_sample_rate_hz": 16000,
+    "vad_min_silence_ms": 500,
+    "segment_endpoint_available": true,
+    "segment_probe_errors": 0,
+    "segment_flush_calls": 3,
+    "energy_threshold_effective": false
+  },
+  "turns": [
+    {
+      "turn": 1,
+      "boundary": {
+        "voice_session_id": "voice-session-f95def84156f477c8bbd9876ebab5f22",
+        "utterance_id": "asr-utterance-874f3381d6834be6adfcb3d01fc3cfe2",
+        "turn_id": "asr-turn-bc48a9bf5bba43b08248fa13f91943ba",
+        "request_id": "asr-request-63b6a28852434aa1aa5c9ee9780a9cfb",
+        "reply_id": "asr-reply-1d85e982f5e941fb95b861d443aeb789"
+      },
+      "frames": 186,
+      "speech_seen": true,
+      "vad_hits": 62,
+      "end_reason": "silence_timeout",
+      "accepted": true,
+      "submitted": true,
+      "spoken": true,
+      "reason": "speech_finished",
+      "seconds": 12.516,
+      "idle_seconds": 0.0,
+      "asr_text_length": 12,
+      "asr_text_sha256": "c3bf0142d60f5ed9befdf365bba7b8883e7a9897964a17a62e5d5ee46d56f5c8",
+      "end_decision": {
+        "frames": 188,
+        "elapsed_ms": 3760,
+        "frame_ms": 20,
+        "hits": 101,
+        "last_hit_elapsed_ms": 3760,
+        "max_silence_run_frames": 0,
+        "max_silence_run_ms": 0,
+        "silence_ms": 2500,
+        "spoken_silence_ms": 0,
+        "speech_started": true,
+        "segment_end_available": true,
+        "segment_ends": 1,
+        "segment_probe_failures": 0,
+        "end_source": "segment",
+        "stop_reason": "silence_timeout"
+      },
+      "hud_timeline": {
+        "entries": [
+          {
+            "state": "listening",
+            "t_ms": 0
+          },
+          {
+            "state": "hearing",
+            "t_ms": 2110
+          },
+          {
+            "state": "transcribing",
+            "t_ms": 4063
+          },
+          {
+            "state": "thinking",
+            "t_ms": 4125
+          },
+          {
+            "state": "speaking",
+            "t_ms": 4344
+          },
+          {
+            "state": "listening",
+            "t_ms": 12516
+          }
+        ],
+        "durations_ms": {
+          "listening": 2110,
+          "hearing": 1953,
+          "transcribing": 62,
+          "thinking": 219,
+          "speaking": 8172
+        },
+        "truncated": false
+      }
+    },
+    {
+      "turn": 2,
+      "boundary": {
+        "voice_session_id": "voice-session-aad683d658a44da4b43cc50754f45cb4",
+        "utterance_id": "asr-utterance-fe1ba650faf0481babcbec14d9138dd3",
+        "turn_id": "asr-turn-339a0cc28ba448d481ad5ef07d2508f9",
+        "request_id": "asr-request-e879fa019bd44d2bb90da7626a492392",
+        "reply_id": "asr-reply-a5bae380a8b5459b9acc5b35a02a3562"
+      },
+      "frames": 400,
+      "speech_seen": false,
+      "vad_hits": 0,
+      "end_reason": "no_speech",
+      "accepted": false,
+      "submitted": false,
+      "spoken": false,
+      "reason": "no_speech_discarded",
+      "seconds": 8.359,
+      "idle_seconds": 0.0,
+      "asr_text_length": 0,
+      "asr_text_sha256": null,
+      "end_decision": {
+        "frames": 400,
+        "elapsed_ms": 8000,
+        "frame_ms": 20,
+        "hits": 0,
+        "last_hit_elapsed_ms": 0,
+        "max_silence_run_frames": 0,
+        "max_silence_run_ms": 0,
+        "silence_ms": 2500,
+        "spoken_silence_ms": 0,
+        "speech_started": false,
+        "segment_end_available": true,
+        "segment_ends": 0,
+        "segment_probe_failures": 0,
+        "end_source": "speech_start_timeout",
+        "stop_reason": "no_speech"
+      },
+      "hud_timeline": {
+        "entries": [
+          {
+            "state": "listening",
+            "t_ms": 0
+          }
+        ],
+        "durations_ms": {
+          "listening": 8359
+        },
+        "truncated": false
+      }
+    },
+    {
+      "turn": 3,
+      "boundary": {
+        "voice_session_id": "voice-session-e7d873112083441cb5e7e7eded69c563",
+        "utterance_id": "asr-utterance-59ead9f04b514f36bfbe756867ba8b6d",
+        "turn_id": "asr-turn-f5d0b740182246dfb8f2943ff5628e10",
+        "request_id": "asr-request-af639dd00b3f448d8ca2f5155183b570",
+        "reply_id": "asr-reply-dd29d484a056417bbdf113ed379c86a1"
+      },
+      "frames": 262,
+      "speech_seen": true,
+      "vad_hits": 135,
+      "end_reason": "silence_timeout",
+      "accepted": true,
+      "submitted": true,
+      "spoken": true,
+      "reason": "speech_finished",
+      "seconds": 14.094,
+      "idle_seconds": 0.0,
+      "asr_text_length": 12,
+      "asr_text_sha256": "c3bf0142d60f5ed9befdf365bba7b8883e7a9897964a17a62e5d5ee46d56f5c8",
+      "end_decision": {
+        "frames": 266,
+        "elapsed_ms": 5320,
+        "frame_ms": 20,
+        "hits": 220,
+        "last_hit_elapsed_ms": 5320,
+        "max_silence_run_frames": 0,
+        "max_silence_run_ms": 0,
+        "silence_ms": 2500,
+        "spoken_silence_ms": 0,
+        "speech_started": true,
+        "segment_end_available": true,
+        "segment_ends": 1,
+        "segment_probe_failures": 0,
+        "end_source": "segment",
+        "stop_reason": "silence_timeout"
+      },
+      "hud_timeline": {
+        "entries": [
+          {
+            "state": "listening",
+            "t_ms": 0
+          },
+          {
+            "state": "hearing",
+            "t_ms": 1219
+          },
+          {
+            "state": "transcribing",
+            "t_ms": 5516
+          },
+          {
+            "state": "thinking",
+            "t_ms": 5594
+          },
+          {
+            "state": "speaking",
+            "t_ms": 5922
+          },
+          {
+            "state": "listening",
+            "t_ms": 14094
+          }
+        ],
+        "durations_ms": {
+          "listening": 1219,
+          "hearing": 4297,
+          "transcribing": 78,
+          "thinking": 328,
+          "speaking": 8172
+        },
+        "truncated": false
+      }
+    },
+    {
+      "turn": 4,
+      "boundary": {
+        "voice_session_id": "voice-session-16d6bc2b59a2466394d94bca0a84832d",
+        "utterance_id": "asr-utterance-3e02b2ce8837438b87a386d3731b0fb0",
+        "turn_id": "asr-turn-a37132cde9d94a238ffddb157a63351e",
+        "request_id": "asr-request-384cb13a386b4c649ae3bb419425f053",
+        "reply_id": "asr-reply-478a2a14051a4ee491789b8a3f86f1a6"
+      },
+      "frames": 400,
+      "speech_seen": false,
+      "vad_hits": 0,
+      "end_reason": "no_speech",
+      "accepted": false,
+      "submitted": false,
+      "spoken": false,
+      "reason": "no_speech_discarded",
+      "seconds": 8.359,
+      "idle_seconds": 0.0,
+      "asr_text_length": 0,
+      "asr_text_sha256": null,
+      "end_decision": {
+        "frames": 400,
+        "elapsed_ms": 8000,
+        "frame_ms": 20,
+        "hits": 0,
+        "last_hit_elapsed_ms": 0,
+        "max_silence_run_frames": 0,
+        "max_silence_run_ms": 0,
+        "silence_ms": 2500,
+        "spoken_silence_ms": 0,
+        "speech_started": false,
+        "segment_end_available": true,
+        "segment_ends": 0,
+        "segment_probe_failures": 0,
+        "end_source": "speech_start_timeout",
+        "stop_reason": "no_speech"
+      },
+      "hud_timeline": {
+        "entries": [
+          {
+            "state": "listening",
+            "t_ms": 0
+          }
+        ],
+        "durations_ms": {
+          "listening": 8359
+        },
+        "truncated": false
+      }
+    },
+    {
+      "turn": 5,
+      "boundary": {
+        "voice_session_id": "voice-session-7a04b13afca147b7b69297e3e6555c47",
+        "utterance_id": "asr-utterance-2143962234894f89afde13ffc6eb45ed",
+        "turn_id": "asr-turn-2e5d142d62f24e0982f5a8f9661749e9",
+        "request_id": "asr-request-2c702691d03e450d84ff315f13dc2308",
+        "reply_id": "asr-reply-475bfddc68c44d6f9434f4076d38c206"
+      },
+      "frames": 256,
+      "speech_seen": true,
+      "vad_hits": 81,
+      "end_reason": "silence_timeout",
+      "accepted": true,
+      "submitted": true,
+      "spoken": true,
+      "reason": "speech_finished",
+      "seconds": 13.516,
+      "idle_seconds": 0.0,
+      "asr_text_length": 10,
+      "asr_text_sha256": "05a503167744b5a4caaff6d279d069a3639823ac623c353bffbb547b97bfe8b9",
+      "end_decision": {
+        "frames": 260,
+        "elapsed_ms": 5200,
+        "frame_ms": 20,
+        "hits": 133,
+        "last_hit_elapsed_ms": 5200,
+        "max_silence_run_frames": 0,
+        "max_silence_run_ms": 0,
+        "silence_ms": 2500,
+        "spoken_silence_ms": 0,
+        "speech_started": true,
+        "segment_end_available": true,
+        "segment_ends": 1,
+        "segment_probe_failures": 0,
+        "end_source": "segment",
+        "stop_reason": "silence_timeout"
+      },
+      "hud_timeline": {
+        "entries": [
+          {
+            "state": "listening",
+            "t_ms": 0
+          },
+          {
+            "state": "hearing",
+            "t_ms": 2828
+          },
+          {
+            "state": "transcribing",
+            "t_ms": 5391
+          },
+          {
+            "state": "thinking",
+            "t_ms": 5453
+          },
+          {
+            "state": "speaking",
+            "t_ms": 5750
+          },
+          {
+            "state": "listening",
+            "t_ms": 13516
+          }
+        ],
+        "durations_ms": {
+          "listening": 2828,
+          "hearing": 2563,
+          "transcribing": 62,
+          "thinking": 297,
+          "speaking": 7766
+        },
+        "truncated": false
+      }
+    }
+  ],
+  "valid_turns": 3,
+  "user_heard": "yes",
+  "user_heard_note": "仅操作员本人确认后填写；设备完成不等于有人听见",
+  "boundary": {
+    "audio_written_to_disk": false,
+    "computer_actions_executed": false,
+    "plan_or_authorization_created": false,
+    "external_network_used": false,
+    "recognized_text_persisted": false,
+    "network_target": "127.0.0.1:3900 / local SAPI",
+    "button_required": false
+  }
+}

@@ -1,0 +1,282 @@
+{
+  "batch_id": "p7-batch5-live-streaming-3c16284ba9e8453d",
+  "recorded_date": "2026-09-30",
+  "evidence_kind": "real_voicestudio_streaming_playback_and_transport_fallback",
+  "live_opt_in": true,
+  "voice_studio": {
+    "status": "ok",
+    "device": "cuda (NVIDIA GeForce RTX 3050 Laptop GPU)",
+    "version": "0.5.6"
+  },
+  "profile": {
+    "id_sha256_12": "fd9316f9483b",
+    "speed": 1.0
+  },
+  "selection_source": "in_memory_confirmed_values_file_missing",
+  "phases": [
+    {
+      "phase": "A_real_ws_streaming",
+      "endpoint": "ws://127.0.0.1:3900",
+      "mode": "auto",
+      "sentences_pushed": 3,
+      "sentences_played": 3,
+      "played_text_sha256": "a44d146f7676f26867ea9b73682bc1a839f1d3e5db71e1a728db268960b6a57c",
+      "error": null,
+      "elapsed_ms": 17625.0,
+      "transport_snapshot": {
+        "mode": "auto",
+        "last_transport": "ws_pcm",
+        "ws_attempts": 3,
+        "http_attempts": 0,
+        "fallbacks": 0,
+        "last_failure_code": null,
+        "last_failure_stage": null
+      },
+      "fallbacks": [],
+      "device_diagnostics": {
+        "open_result": 0,
+        "prepare_results": [
+          0,
+          0,
+          0
+        ],
+        "write_results": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "write_count": 32,
+        "reset_result": null,
+        "unprepare_results": [],
+        "close_result": null,
+        "opened_at": 18168.421,
+        "prepared_at": 18168.421,
+        "last_write_at": 18185.609,
+        "reset_at": null,
+        "last_done_at": 18186.015,
+        "unprepared_at": null,
+        "closed_at": null,
+        "header_addresses": [
+          2406275976960,
+          2406275977008,
+          2406275977056
+        ],
+        "submitted_count": 32,
+        "returned_count": 3,
+        "cleanup_verified": false
+      },
+      "device_uncertain": false,
+      "device_diagnostics_after_close": {
+        "open_result": 0,
+        "prepare_results": [
+          0,
+          0,
+          0
+        ],
+        "write_results": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "write_count": 32,
+        "reset_result": null,
+        "unprepare_results": [
+          0,
+          0,
+          0
+        ],
+        "close_result": 0,
+        "opened_at": 18168.421,
+        "prepared_at": 18168.421,
+        "last_write_at": 18185.609,
+        "reset_at": null,
+        "last_done_at": 18186.015,
+        "unprepared_at": 18186.015,
+        "closed_at": 18186.015,
+        "header_addresses": [
+          2406275976960,
+          2406275977008,
+          2406275977056
+        ],
+        "submitted_count": 32,
+        "returned_count": 3,
+        "cleanup_verified": true
+      }
+    },
+    {
+      "phase": "B_real_ws_to_http_fallback",
+      "endpoint": "ws://127.0.0.1:3999",
+      "mode": "auto",
+      "sentences_pushed": 1,
+      "sentences_played": 1,
+      "played_text_sha256": "3f2e26d44a182c04eeb1c2e37ce0ced99f4c7a5c040d05b84145ebe5692e3373",
+      "error": null,
+      "elapsed_ms": 4844.0,
+      "transport_snapshot": {
+        "mode": "auto",
+        "last_transport": "http_wav",
+        "ws_attempts": 1,
+        "http_attempts": 1,
+        "fallbacks": 1,
+        "last_failure_code": "connect_failed",
+        "last_failure_stage": "connect"
+      },
+      "fallbacks": [
+        {
+          "reply_id": "stream-7cec5365c79d2c48",
+          "segment_id": "segment-1",
+          "provider_request_id": "stream-stream-7cec5365c79d2c48-1",
+          "provider_generation": 1,
+          "from_transport": "ws_pcm",
+          "to_transport": "http_wav",
+          "stage": "connect",
+          "reason": "connect_failed",
+          "latency_ms": 2000.0
+        }
+      ],
+      "device_diagnostics": {
+        "open_result": 0,
+        "prepare_results": [
+          0,
+          0,
+          0
+        ],
+        "write_results": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "write_count": 8,
+        "reset_result": null,
+        "unprepare_results": [],
+        "close_result": null,
+        "opened_at": 18186.031,
+        "prepared_at": 18186.031,
+        "last_write_at": 18190.468,
+        "reset_at": null,
+        "last_done_at": 18190.859,
+        "unprepared_at": null,
+        "closed_at": null,
+        "header_addresses": [
+          2406275976768,
+          2406275975664,
+          2406275976624
+        ],
+        "submitted_count": 8,
+        "returned_count": 3,
+        "cleanup_verified": false
+      },
+      "device_uncertain": false,
+      "device_diagnostics_after_close": {
+        "open_result": 0,
+        "prepare_results": [
+          0,
+          0,
+          0
+        ],
+        "write_results": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "write_count": 8,
+        "reset_result": null,
+        "unprepare_results": [
+          0,
+          0,
+          0
+        ],
+        "close_result": 0,
+        "opened_at": 18186.031,
+        "prepared_at": 18186.031,
+        "last_write_at": 18190.468,
+        "reset_at": null,
+        "last_done_at": 18190.859,
+        "unprepared_at": 18190.875,
+        "closed_at": 18190.875,
+        "header_addresses": [
+          2406275976768,
+          2406275975664,
+          2406275976624
+        ],
+        "submitted_count": 8,
+        "returned_count": 3,
+        "cleanup_verified": true
+      }
+    }
+  ],
+  "claims": {
+    "stop_ack_means": "waveOutReset returned and every submitted buffer came back",
+    "speaker_acoustically_verified": false,
+    "user_heard": null
+  },
+  "playback_device_used": true
+}

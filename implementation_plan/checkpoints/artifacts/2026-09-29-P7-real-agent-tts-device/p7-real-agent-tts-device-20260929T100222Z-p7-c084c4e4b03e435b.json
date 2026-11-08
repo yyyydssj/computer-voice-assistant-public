@@ -1,0 +1,76 @@
+{
+  "batch_id": "p7-c084c4e4b03e435b",
+  "evidence_kind": "real_device",
+  "request_id": "req-p7-real-20260929-0f21a2dbb1cf0bff",
+  "source_text_sha256": "4dc73a8d3e2f9fea17477c5547bae320d9254923e6a7555571eeecd93f782b69",
+  "audio_sha256": null,
+  "backend_stop_ack": null,
+  "loopback_output_stopped": null,
+  "acoustic_output_stopped": null,
+  "speaker_output_stopped": null,
+  "user_heard": null,
+  "status": "blocked",
+  "blocked_reasons": [
+    "voicestudio_call_failed:LocalPortError",
+    "user_heard_pending",
+    "backend_stop_ack_missing",
+    "speaker_output_stop_not_established"
+  ],
+  "events": [
+    {
+      "name": "RUN_CREATED",
+      "observed_at": "2026-09-29T10:01:34.901539Z",
+      "monotonic_seconds": null,
+      "details": {
+        "request_id": "req-p7-real-20260929-0f21a2dbb1cf0bff",
+        "session_id": "session-p7-real-20260929-b05805e806ddbbe9"
+      }
+    },
+    {
+      "name": "AGENT_REQUEST_SUBMITTED",
+      "observed_at": "2026-09-29T10:01:34.901539Z",
+      "monotonic_seconds": null,
+      "details": {
+        "request_id": "req-p7-real-20260929-0f21a2dbb1cf0bff",
+        "session_id": "session-p7-real-20260929-b05805e806ddbbe9"
+      }
+    },
+    {
+      "name": "AGENT_REPLY_ACCEPTED",
+      "observed_at": "2026-09-29T10:01:37.806846Z",
+      "monotonic_seconds": null,
+      "details": {
+        "request_id": "req-p7-real-20260929-0f21a2dbb1cf0bff"
+      }
+    },
+    {
+      "name": "BLOCKED",
+      "observed_at": "2026-09-29T10:02:22.833634Z",
+      "monotonic_seconds": null,
+      "details": {
+        "reason": "voicestudio_call_failed:LocalPortError"
+      }
+    }
+  ],
+  "metadata": {
+    "session_id": "session-p7-real-20260929-b05805e806ddbbe9",
+    "runner": "live_evidence_runner",
+    "serial": true,
+    "live_opt_in": true,
+    "agent_reply_text": "P7 真实语音链路采集测试完成。",
+    "workspace": "<PROJECT_ROOT>",
+    "dsh_home": "<USER_HOME>\\AppData\\Local\\Temp\\p7-agent-dsh-live-m2j7uxtj",
+    "profile": "sdk-minimal",
+    "provider": "deepseek-official",
+    "model": "deepseek-v4-flash",
+    "patch": "<PROJECT_ROOT>\\app\\agent\\p3-no-tools.patch.yml",
+    "authorization": {
+      "scope": "one bounded run: one real Agent request, one VoiceStudio synthesis, one Windows playback, synchronized loopback and independent microphone capture",
+      "live_opt_in": true,
+      "api_key_value_printed": false,
+      "existing_user_dsh_reused": false
+    },
+    "agent_finish_reason": null,
+    "user_confirmation": null
+  }
+}

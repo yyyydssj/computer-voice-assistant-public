@@ -1,0 +1,132 @@
+{
+  "batch_id": "p7-batch7-restart-recovery-54c36491aa8aa4f0",
+  "recorded_date": "2026-09-30",
+  "evidence_kind": "real_voicestudio_restart_and_next_turn_recovery",
+  "live_opt_in": true,
+  "restart": {
+    "method": "all VoiceStudio processes stopped by the operator-then-agent session, restarted manually by the user",
+    "port_released_before_restart": true,
+    "agent_could_not_start_the_gui_app": true
+  },
+  "voice_studio": {
+    "status": "ok",
+    "device": "cuda (NVIDIA GeForce RTX 3050 Laptop GPU)",
+    "version": "0.5.6"
+  },
+  "cases": [
+    {
+      "case": "cold_first_sentence_after_restart",
+      "played": 1,
+      "error": null,
+      "elapsed_ms": 5297.0,
+      "audio_seconds": 2.69,
+      "ws_sentences": 1,
+      "http_sentences": 0,
+      "device": {
+        "open_result": 0,
+        "prepare_results": [
+          0,
+          0,
+          0
+        ],
+        "write_results": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "write_count": 14,
+        "reset_result": null,
+        "unprepare_results": [],
+        "close_result": null,
+        "opened_at": 19766.625,
+        "prepared_at": 19766.625,
+        "last_write_at": 19771.39,
+        "reset_at": null,
+        "last_done_at": 19771.859,
+        "unprepared_at": null,
+        "closed_at": null,
+        "header_addresses": [
+          1388060519728,
+          1388046003360,
+          1388060518624
+        ],
+        "submitted_count": 14,
+        "returned_count": 3,
+        "cleanup_verified": false
+      },
+      "device_uncertain": false,
+      "cleanup_verified_after_close": true
+    },
+    {
+      "case": "warm_second_sentence_after_restart",
+      "played": 1,
+      "error": null,
+      "elapsed_ms": 4281.0,
+      "audio_seconds": 2.72,
+      "ws_sentences": 1,
+      "http_sentences": 0,
+      "device": {
+        "open_result": 0,
+        "prepare_results": [
+          0,
+          0,
+          0
+        ],
+        "write_results": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "write_count": 14,
+        "reset_result": null,
+        "unprepare_results": [],
+        "close_result": null,
+        "opened_at": 19771.89,
+        "prepared_at": 19771.89,
+        "last_write_at": 19775.64,
+        "reset_at": null,
+        "last_done_at": 19776.156,
+        "unprepared_at": null,
+        "closed_at": null,
+        "header_addresses": [
+          1388060694624,
+          1388060694720,
+          1388060694768
+        ],
+        "submitted_count": 14,
+        "returned_count": 3,
+        "cleanup_verified": false
+      },
+      "device_uncertain": false,
+      "cleanup_verified_after_close": true
+    }
+  ],
+  "claims": {
+    "speaker_acoustically_verified": false,
+    "user_heard": null,
+    "stop_ack_means": "waveOutReset returned and every submitted buffer came back"
+  },
+  "audio_written_to_disk": false
+}

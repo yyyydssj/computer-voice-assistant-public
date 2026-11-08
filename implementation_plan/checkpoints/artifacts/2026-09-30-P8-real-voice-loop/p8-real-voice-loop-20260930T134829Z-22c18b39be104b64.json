@@ -1,0 +1,40 @@
+{
+  "batch_id": "p8-real-voice-loop-20260930T134829Z-22c18b39be104b64",
+  "evidence_kind": "p8_real_voice_loop_acceptance",
+  "live_opt_in": true,
+  "recorded_at_utc": "2026-09-30T13:48:29Z",
+  "host": "xunyang",
+  "platform": "Windows-11-10.0.26100-SP0",
+  "tts_mode": "none",
+  "agent": "local_scripted_echo（非真实模型）",
+  "turns": [
+    {
+      "turn": 1,
+      "boundary": {
+        "voice_session_id": "voice-session-2b34b45904d7467f9ac429a30a7b07c9",
+        "utterance_id": "asr-utterance-1071fb6cbd4e489c96a2a3c93add9d6c",
+        "turn_id": "asr-turn-305a5bd7b7254e27a4bf45e76fc9e60a",
+        "request_id": "asr-request-a57ac8dbfc864da489c5318aacb3347e",
+        "reply_id": "asr-reply-3c20bc735d844c768b82ffb43a2654f9"
+      },
+      "frames": 134,
+      "speech_seen": false,
+      "end_reason": "no_speech",
+      "accepted": false,
+      "submitted": false,
+      "spoken": false,
+      "reason": "no_speech_discarded",
+      "seconds": 3.1
+    }
+  ],
+  "user_heard": "unknown",
+  "user_heard_note": "仅操作员本人确认后填写；设备完成不等于有人听见",
+  "boundary": {
+    "audio_written_to_disk": false,
+    "computer_actions_executed": false,
+    "plan_or_authorization_created": false,
+    "external_network_used": false,
+    "recognized_text_persisted": false,
+    "network_target": "127.0.0.1:3900 / local SAPI"
+  }
+}

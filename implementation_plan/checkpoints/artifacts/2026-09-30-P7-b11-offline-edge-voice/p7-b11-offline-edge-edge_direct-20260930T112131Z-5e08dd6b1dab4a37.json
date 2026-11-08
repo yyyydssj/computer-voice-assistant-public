@@ -1,0 +1,27 @@
+{
+  "batch_id": "p7-b11-offline-edge-edge_direct-20260930T112131Z-5e08dd6b1dab4a37",
+  "evidence_kind": "offline_edge_voice_acceptance",
+  "live_opt_in": true,
+  "recorded_at_utc": "2026-09-30T11:21:31Z",
+  "host": "xunyang",
+  "platform": "Windows-11-10.0.26100-SP0",
+  "voice": "Microsoft Huihui Desktop",
+  "runs": [
+    {
+      "scenario": "edge_direct",
+      "voice": "Microsoft Huihui Desktop",
+      "chunks": 17,
+      "playback_state": "COMPLETED",
+      "first_pcm_after_s": 0.42,
+      "wall_seconds": 3.688
+    }
+  ],
+  "boundary": {
+    "audio_written_to_disk": false,
+    "microphone_opened": false,
+    "external_network_used": false,
+    "speaker_acoustically_verified": false,
+    "user_heard": null,
+    "note": "a backend completion is not evidence that a person heard the audio"
+  }
+}

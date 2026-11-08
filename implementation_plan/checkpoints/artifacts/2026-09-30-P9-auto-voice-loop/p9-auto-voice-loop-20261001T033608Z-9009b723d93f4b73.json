@@ -1,0 +1,51 @@
+{
+  "batch_id": "p9-auto-voice-loop-20261001T033608Z-9009b723d93f4b73",
+  "evidence_kind": "p9_auto_voice_loop_acceptance",
+  "live_opt_in": true,
+  "recorded_at_utc": "2026-10-01T03:36:08Z",
+  "host": "xunyang",
+  "platform": "Windows-11-10.0.26100-SP0",
+  "tts_mode": "ws_pcm",
+  "agent": "local_scripted_echo（非真实模型）",
+  "auto_capture": {
+    "speech_threshold_rms": 600.0,
+    "silence_ms": 3000,
+    "speech_start_timeout_ms": 40000,
+    "max_record_seconds": 15
+  },
+  "turns": [
+    {
+      "turn": 1,
+      "boundary": {
+        "voice_session_id": "voice-session-144435136676450e9509a4b40a2ecb58",
+        "utterance_id": "asr-utterance-508eca6cb3ad441d98bf49641bc9548c",
+        "turn_id": "asr-turn-4735fc080c73423a8217f8f16c316435",
+        "request_id": "asr-request-6be00553488f49b4ab3449c0759a3092",
+        "reply_id": "asr-reply-4d7a88e02ee843e88e567ce83770de15"
+      },
+      "frames": 304,
+      "speech_seen": true,
+      "vad_hits": 0,
+      "end_reason": "silence_timeout",
+      "accepted": true,
+      "submitted": true,
+      "spoken": true,
+      "reason": "speech_finished",
+      "seconds": 14.719,
+      "asr_text_length": 11,
+      "asr_text_sha256": "12ffa4a607569c94c0da6ebd2741ce3c219440c0aac1599cebdf59714fde78b3"
+    }
+  ],
+  "valid_turns": 1,
+  "user_heard": "yes",
+  "user_heard_note": "仅操作员本人确认后填写；设备完成不等于有人听见",
+  "boundary": {
+    "audio_written_to_disk": false,
+    "computer_actions_executed": false,
+    "plan_or_authorization_created": false,
+    "external_network_used": false,
+    "recognized_text_persisted": false,
+    "network_target": "127.0.0.1:3900 / local SAPI",
+    "button_required": false
+  }
+}

@@ -1,0 +1,438 @@
+{
+  "schema": "r-real-provider-probe/v1",
+  "created_at": "2026-09-30T14:58:06Z",
+  "mode": "live",
+  "diagnostic_mode": true,
+  "authorization": {
+    "scope": "minimal_live_probe_only",
+    "runtime_wiring": false,
+    "provider_ready_unchanged": true,
+    "model_id": "deepseek-flash",
+    "credential_source": "process environment DEEPSEEK_API_KEY",
+    "credential_value_logged": false,
+    "credential_written_to_disk": false,
+    "network_target": "https://api.deepseek.com/chat/completions",
+    "allowed_hosts": [
+      "api.deepseek.com"
+    ],
+    "max_requests": 3,
+    "max_retries": 0,
+    "timeout_seconds": 15.0,
+    "max_tokens": 256,
+    "thinking": "disabled",
+    "diagnostic_mode": true,
+    "cost_cap_cny": 0.05,
+    "log_redaction": "lengths+sha256+enumerated status only",
+    "payload_isolation": true,
+    "computer_side_effects": false
+  },
+  "boundaries": {
+    "default_runtime_touched": false,
+    "conversation_manager_touched": false,
+    "tool_registry_touched": false,
+    "execution_ledger_touched": false,
+    "executor_touched": false,
+    "verification_touched": false,
+    "audit_touched": false,
+    "plan_authorization_created": false,
+    "raw_request_text_persisted": false,
+    "raw_response_body_persisted": false,
+    "credentials_persisted": false
+  },
+  "preflight": {
+    "checks": [
+      {
+        "check": "config_valid",
+        "ok": true,
+        "detail": "host=api.deepseek.com enabled=True",
+        "required": true
+      },
+      {
+        "check": "host_allowlisted",
+        "ok": true,
+        "detail": "api.deepseek.com",
+        "required": true
+      },
+      {
+        "check": "timeout_bounded",
+        "ok": true,
+        "detail": "15.0s <= 15.0s",
+        "required": true
+      },
+      {
+        "check": "no_retry",
+        "ok": true,
+        "detail": "max_retries=0",
+        "required": true
+      },
+      {
+        "check": "max_tokens_sent",
+        "ok": true,
+        "detail": "max_tokens,messages,model,response_format",
+        "required": true
+      },
+      {
+        "check": "thinking_field",
+        "ok": true,
+        "detail": "mode=disabled payload={'type': 'disabled'}",
+        "required": true
+      },
+      {
+        "check": "legacy_payload_unchanged",
+        "ok": true,
+        "detail": "messages,model,response_format",
+        "required": true
+      },
+      {
+        "check": "cost_within_cap",
+        "ok": true,
+        "detail": "estimated_upper=0.006694 CNY <= cap 0.05 CNY",
+        "required": true
+      },
+      {
+        "check": "credential_present",
+        "ok": true,
+        "detail": "DEEPSEEK_API_KEY available=True (value never logged)",
+        "required": false
+      }
+    ],
+    "passed": true,
+    "payload_keys": [
+      "max_tokens",
+      "messages",
+      "model",
+      "response_format"
+    ],
+    "estimated_upper_cny": 0.006694
+  },
+  "rounds": [
+    {
+      "index": 1,
+      "sample_id": "chat-1",
+      "input_chars": 11,
+      "elapsed_ms": 650.8,
+      "router_status": "success",
+      "failure_code": null,
+      "route": "chat",
+      "intent": "general_chat",
+      "handling_mode": "chat_reply",
+      "confidence": 0.95,
+      "slot_count": 0,
+      "tool_scope": [],
+      "required_confirmation": "none",
+      "strict_parse_passed": true,
+      "payload_fields": [
+        "max_tokens",
+        "messages",
+        "model",
+        "response_format",
+        "thinking"
+      ],
+      "request_chars": 11,
+      "response_chars": 201,
+      "response_sha256": "4c99f7a4b2152a3f10155851895d422b152319aaf3f1631f99cf9770ae2ba398",
+      "response_structure": {
+        "body_chars": 687,
+        "body_sha256": "277e4569bb485db8f96c83ad3374977c1bc5dc17d3d60fcd90d6f922763df3b5",
+        "choice_keys": [
+          "finish_reason",
+          "index",
+          "logprobs",
+          "message"
+        ],
+        "choices_count": 1,
+        "content_chars": 201,
+        "content_shape": {
+          "content_chars": 201,
+          "starts_with_brace": true,
+          "ends_with_brace": true,
+          "has_markdown_fence": false,
+          "line_count": 1,
+          "content_json_valid": true,
+          "content_json_is_object": true,
+          "content_top_keys": [
+            "confidence",
+            "handling_mode",
+            "intent",
+            "required_confirmation",
+            "route",
+            "schema_version",
+            "slots",
+            "status",
+            "tool_scope"
+          ],
+          "content_field_types": {
+            "confidence": "float",
+            "handling_mode": "str",
+            "intent": "str",
+            "required_confirmation": "str",
+            "route": "str",
+            "schema_version": "str",
+            "slots": "dict",
+            "status": "str",
+            "tool_scope": "list"
+          },
+          "missing_contract_fields": [],
+          "schema_version_literal": "deepseek-route/v1",
+          "status_literal": "success",
+          "route_literal": "chat",
+          "intent_literal": "general_chat",
+          "handling_mode_literal": "chat_reply",
+          "required_confirmation_literal": "none"
+        },
+        "envelope_is_object": true,
+        "envelope_keys": [
+          "choices",
+          "created",
+          "id",
+          "model",
+          "object",
+          "system_fingerprint",
+          "usage"
+        ],
+        "finish_reason": "stop",
+        "http_status": 200,
+        "json_valid": true,
+        "message_keys": [
+          "content",
+          "role"
+        ],
+        "reasoning_content_chars": null,
+        "usage_keys": [
+          "completion_tokens",
+          "prompt_cache_hit_tokens",
+          "prompt_cache_miss_tokens",
+          "prompt_tokens",
+          "prompt_tokens_details",
+          "total_tokens"
+        ]
+      }
+    },
+    {
+      "index": 2,
+      "sample_id": "task-1",
+      "input_chars": 7,
+      "elapsed_ms": 1183.4,
+      "router_status": "success",
+      "failure_code": null,
+      "route": "task",
+      "intent": "open_application",
+      "handling_mode": "plan_then_execute",
+      "confidence": 0.95,
+      "slot_count": 1,
+      "tool_scope": [
+        "start_whitelisted_application"
+      ],
+      "required_confirmation": "defer_to_safety",
+      "strict_parse_passed": true,
+      "payload_fields": [
+        "max_tokens",
+        "messages",
+        "model",
+        "response_format",
+        "thinking"
+      ],
+      "request_chars": 7,
+      "response_chars": 345,
+      "response_sha256": "72a18c62c5f88a28d24feedb62ffb2922674a0719467acf60887205e848e64ba",
+      "response_structure": {
+        "body_chars": 857,
+        "body_sha256": "83a8380c078073d1416d15282e35a63f9966c3729537dc39eaef96ad337f4fb7",
+        "choice_keys": [
+          "finish_reason",
+          "index",
+          "logprobs",
+          "message"
+        ],
+        "choices_count": 1,
+        "content_chars": 345,
+        "content_shape": {
+          "content_chars": 345,
+          "starts_with_brace": true,
+          "ends_with_brace": true,
+          "has_markdown_fence": false,
+          "line_count": 1,
+          "content_json_valid": true,
+          "content_json_is_object": true,
+          "content_top_keys": [
+            "confidence",
+            "handling_mode",
+            "intent",
+            "required_confirmation",
+            "route",
+            "schema_version",
+            "slots",
+            "status",
+            "tool_scope"
+          ],
+          "content_field_types": {
+            "confidence": "float",
+            "handling_mode": "str",
+            "intent": "str",
+            "required_confirmation": "str",
+            "route": "str",
+            "schema_version": "str",
+            "slots": "dict",
+            "status": "str",
+            "tool_scope": "list"
+          },
+          "missing_contract_fields": [],
+          "schema_version_literal": "deepseek-route/v1",
+          "status_literal": "success",
+          "route_literal": "task",
+          "intent_literal": "open_application",
+          "handling_mode_literal": "plan_then_execute",
+          "required_confirmation_literal": "defer_to_safety"
+        },
+        "envelope_is_object": true,
+        "envelope_keys": [
+          "choices",
+          "created",
+          "id",
+          "model",
+          "object",
+          "system_fingerprint",
+          "usage"
+        ],
+        "finish_reason": "stop",
+        "http_status": 200,
+        "json_valid": true,
+        "message_keys": [
+          "content",
+          "role"
+        ],
+        "reasoning_content_chars": null,
+        "usage_keys": [
+          "completion_tokens",
+          "prompt_cache_hit_tokens",
+          "prompt_cache_miss_tokens",
+          "prompt_tokens",
+          "prompt_tokens_details",
+          "total_tokens"
+        ]
+      }
+    },
+    {
+      "index": 3,
+      "sample_id": "ambiguous-1",
+      "input_chars": 9,
+      "elapsed_ms": 925.3,
+      "router_status": "invalid_response",
+      "failure_code": "invalid_router_output",
+      "route": "ambiguous",
+      "intent": "invalid_router_output",
+      "handling_mode": "clarify",
+      "confidence": 0.0,
+      "slot_count": 0,
+      "tool_scope": [],
+      "required_confirmation": "must_clarify",
+      "strict_parse_passed": false,
+      "payload_fields": [
+        "max_tokens",
+        "messages",
+        "model",
+        "response_format",
+        "thinking"
+      ],
+      "request_chars": 9,
+      "response_chars": 219,
+      "response_sha256": "d29bbbed88163d282d2870cef6bfd0ac86dba401c989466b828653efeb46f8c3",
+      "response_structure": {
+        "body_chars": 709,
+        "body_sha256": "03e7f467d5a5e2646a0ca4e21515c0cf9da1f2b1c321e55dbb110513be1a453b",
+        "choice_keys": [
+          "finish_reason",
+          "index",
+          "logprobs",
+          "message"
+        ],
+        "choices_count": 1,
+        "content_chars": 219,
+        "content_shape": {
+          "content_chars": 219,
+          "starts_with_brace": true,
+          "ends_with_brace": true,
+          "has_markdown_fence": false,
+          "line_count": 1,
+          "content_json_valid": true,
+          "content_json_is_object": true,
+          "content_top_keys": [
+            "confidence",
+            "handling_mode",
+            "intent",
+            "required_confirmation",
+            "route",
+            "schema_version",
+            "slots",
+            "status",
+            "tool_scope"
+          ],
+          "content_field_types": {
+            "confidence": "float",
+            "handling_mode": "str",
+            "intent": "str",
+            "required_confirmation": "str",
+            "route": "str",
+            "schema_version": "str",
+            "slots": "dict",
+            "status": "str",
+            "tool_scope": "list"
+          },
+          "missing_contract_fields": [],
+          "schema_version_literal": "deepseek-route/v1",
+          "status_literal": "low_confidence",
+          "route_literal": "ambiguous",
+          "intent_literal": "low_confidence",
+          "handling_mode_literal": "clarify",
+          "required_confirmation_literal": "must_clarify"
+        },
+        "envelope_is_object": true,
+        "envelope_keys": [
+          "choices",
+          "created",
+          "id",
+          "model",
+          "object",
+          "system_fingerprint",
+          "usage"
+        ],
+        "finish_reason": "stop",
+        "http_status": 200,
+        "json_valid": true,
+        "message_keys": [
+          "content",
+          "role"
+        ],
+        "reasoning_content_chars": null,
+        "usage_keys": [
+          "completion_tokens",
+          "prompt_cache_hit_tokens",
+          "prompt_cache_miss_tokens",
+          "prompt_tokens",
+          "prompt_tokens_details",
+          "total_tokens"
+        ]
+      }
+    }
+  ],
+  "verdict": {
+    "requests_attempted": 3,
+    "strict_parse_passed_count": 2,
+    "routes_observed": [
+      "chat",
+      "task",
+      "ambiguous"
+    ],
+    "failure_statuses": [
+      "invalid_response"
+    ],
+    "all_strict_parse_passed": false,
+    "provider_ready": false,
+    "runtime_wiring_authorized": false,
+    "evidence_limits": [
+      "既有 transport 有意不暴露 HTTP 状态码与响应正文；其 ValueError 同时覆盖 4xx 拒绝、非 JSON 正文与不满足 deepseek-route/v1 的结构，本轮无法据此进一步区分。",
+      "响应正文只在内存中经过严格解析器，artifact 仅保留长度、SHA-256 与枚举化状态。"
+    ],
+    "note": "本轮只证明真实调用链与严格解析表现；未解除 NOT READY，未接入默认运行时。"
+  }
+}

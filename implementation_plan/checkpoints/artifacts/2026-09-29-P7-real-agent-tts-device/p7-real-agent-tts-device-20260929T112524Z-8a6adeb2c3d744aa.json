@@ -1,0 +1,240 @@
+{
+  "batch_id": "p7-8a6adeb2c3d744aa",
+  "evidence_kind": "real_device",
+  "request_id": "req-p7-real-20260929-06420c169b4d7a56",
+  "source_text_sha256": "2ed9669c4a389a2d1b229ec5816dc461998b99fc53de68d4d08c63682d9f7e5d",
+  "audio_sha256": "8d4cfd513a39f7153d1fbc44a66e5b620eb69ac392e773968e7bdf1f4297da20",
+  "backend_stop_ack": true,
+  "loopback_output_stopped": true,
+  "acoustic_output_stopped": true,
+  "speaker_output_stopped": true,
+  "user_heard": true,
+  "status": "passed",
+  "blocked_reasons": [],
+  "events": [
+    {
+      "name": "RUN_CREATED",
+      "observed_at": "2026-09-29T11:25:14.084620Z",
+      "monotonic_seconds": null,
+      "details": {
+        "request_id": "req-p7-real-20260929-06420c169b4d7a56",
+        "session_id": "session-p7-real-20260929-77ffb528530d69c4"
+      }
+    },
+    {
+      "name": "AGENT_REQUEST_SUBMITTED",
+      "observed_at": "2026-09-29T11:25:14.084620Z",
+      "monotonic_seconds": null,
+      "details": {
+        "request_id": "req-p7-real-20260929-06420c169b4d7a56",
+        "session_id": "session-p7-real-20260929-77ffb528530d69c4"
+      }
+    },
+    {
+      "name": "AGENT_REPLY_ACCEPTED",
+      "observed_at": "2026-09-29T11:25:17.175089Z",
+      "monotonic_seconds": null,
+      "details": {
+        "request_id": "req-p7-real-20260929-06420c169b4d7a56"
+      }
+    },
+    {
+      "name": "VOICESTUDIO_AUDIO_ACCEPTED",
+      "observed_at": "2026-09-29T11:25:19.439584Z",
+      "monotonic_seconds": null,
+      "details": {
+        "audio_id": "sha256:8d4cfd513a39f7153d1fbc44a66e5b620eb69ac392e773968e7bdf1f4297da20"
+      }
+    },
+    {
+      "name": "DEVICE_EVIDENCE_ACCEPTED",
+      "observed_at": "2026-09-29T11:25:24.577751Z",
+      "monotonic_seconds": null,
+      "details": {
+        "batch_id": "p7-8a6adeb2c3d744aa",
+        "capture_valid": true,
+        "backend_stop_ack": true,
+        "loopback_output_stopped": true,
+        "acoustic_output_stopped": true
+      }
+    }
+  ],
+  "metadata": {
+    "session_id": "session-p7-real-20260929-77ffb528530d69c4",
+    "runner": "live_evidence_runner",
+    "serial": true,
+    "live_opt_in": true,
+    "agent_reply_text": "收到，P7真实语音链路收尾测试已完成，不再执行任何操作。",
+    "audio_id": "sha256:8d4cfd513a39f7153d1fbc44a66e5b620eb69ac392e773968e7bdf1f4297da20",
+    "voicestudio_diagnostics": {
+      "protocol": "local-voicestudio.v1",
+      "request_id": "req-p7-real-20260929-06420c169b4d7a56",
+      "session_id": "session-p7-real-20260929-77ffb528530d69c4",
+      "content_type": "audio/wav",
+      "audio_bytes": 192524
+    },
+    "device_evidence": {
+      "backend_stop_ack": true,
+      "loopback_output_stopped": true,
+      "acoustic_output_stopped": true,
+      "capture_valid": true,
+      "diagnostics": {
+        "playback_state": "COMPLETED",
+        "ticket_id": "43e2069406d32e05172c",
+        "ticket_events": [
+          "PLAYING",
+          "COMPLETED"
+        ],
+        "audio_sha256": "8d4cfd513a39f7153d1fbc44a66e5b620eb69ac392e773968e7bdf1f4297da20",
+        "capture_report": {
+          "dependency": {
+            "name": "injected_stream_factory",
+            "available": true,
+            "device_io_enabled": true,
+            "reason": null,
+            "blocked": false
+          },
+          "loopback": {
+            "endpoint": {
+              "index": 13,
+              "name": "扬声器 (Realtek(R) Audio) [Loopback]",
+              "host_api": "2",
+              "is_loopback": true,
+              "max_input_channels": 2,
+              "default_sample_rate": 48000.0,
+              "host_api_index": 2
+            },
+            "summary": {
+              "valid": true,
+              "reason": null,
+              "endpoint": {
+                "index": 13,
+                "name": "扬声器 (Realtek(R) Audio) [Loopback]",
+                "host_api": "2",
+                "is_loopback": true,
+                "max_input_channels": 2,
+                "default_sample_rate": 48000.0,
+                "host_api_index": 2
+              },
+              "sample_rate_hz": 48000,
+              "channels": 2,
+              "frames": 192000,
+              "lead_in_rms_dbfs": -14.187264467625775,
+              "active_rms_dbfs": -13.502171519947064,
+              "post_rms_dbfs": -88.19684743249262,
+              "active_nonzero": true,
+              "post_quiet": true,
+              "post_quiet_basis": "absolute_threshold",
+              "correlation_observed": null
+            },
+            "requested_frames": 192000,
+            "read_frames": 192000,
+            "started": true,
+            "stopped": true,
+            "cleanup_ok": true,
+            "reason": null,
+            "valid": true
+          },
+          "microphone": {
+            "endpoint": {
+              "index": 11,
+              "name": "麦克风阵列 (Realtek(R) Audio)",
+              "host_api": "2",
+              "is_loopback": false,
+              "max_input_channels": 2,
+              "default_sample_rate": 48000.0,
+              "host_api_index": 2
+            },
+            "summary": {
+              "valid": true,
+              "reason": null,
+              "endpoint": {
+                "index": 11,
+                "name": "麦克风阵列 (Realtek(R) Audio)",
+                "host_api": "2",
+                "is_loopback": false,
+                "max_input_channels": 2,
+                "default_sample_rate": 48000.0,
+                "host_api_index": 2
+              },
+              "sample_rate_hz": 48000,
+              "channels": 1,
+              "frames": 192000,
+              "lead_in_rms_dbfs": -48.1246447506835,
+              "active_rms_dbfs": -21.584173156373595,
+              "post_rms_dbfs": -54.77322786929217,
+              "active_nonzero": true,
+              "post_quiet": true,
+              "post_quiet_basis": "lead_noise_floor_margin",
+              "correlation_observed": null
+            },
+            "requested_frames": 192000,
+            "read_frames": 192000,
+            "started": true,
+            "stopped": true,
+            "cleanup_ok": true,
+            "reason": null,
+            "valid": true
+          },
+          "blocked_reasons": [],
+          "serial": false,
+          "blocked": false,
+          "valid": true
+        },
+        "request_batch_id": "p7-8a6adeb2c3d744aa",
+        "raw_audio_retained": false,
+        "endpoint_binding": {
+          "loopback_index": 13,
+          "microphone_index": 11
+        },
+        "capture_config": {
+          "sample_rate_hz": 48000,
+          "lead_in_ms": 400,
+          "active_ms": 2600,
+          "post_ms": 1000,
+          "quiet_dbfs": -55.0,
+          "post_quiet_rule": "absolute_threshold_or_lead_noise_floor_plus_3db"
+        },
+        "waveout_diagnostic": {
+          "open_result": 0,
+          "prepare_result": 0,
+          "write_result": 0,
+          "reset_result": 0,
+          "unprepare_result": 0,
+          "close_result": 0,
+          "opened_at": 32490.078,
+          "prepared_at": 32490.078,
+          "submitted_at": 32490.078,
+          "reset_at": 32494.093,
+          "wom_done_at": 32494.093,
+          "unprepared_at": 32494.093,
+          "closed_at": 32494.093,
+          "header_address": 1755319912656,
+          "cleanup_verified": true
+        }
+      }
+    },
+    "workspace": "<PROJECT_ROOT>",
+    "dsh_home": "<USER_HOME>\\AppData\\Local\\Temp\\p7-agent-dsh-live-fresh-d737t265",
+    "profile": "sdk-minimal",
+    "provider": "deepseek-official",
+    "model": "deepseek-v4-flash",
+    "patch": "<PROJECT_ROOT>\\app\\agent\\p3-no-tools.patch.yml",
+    "authorization": {
+      "scope": "one bounded run: one real Agent request, one VoiceStudio synthesis, one Windows playback, synchronized loopback and independent microphone capture",
+      "live_opt_in": true,
+      "api_key_value_printed": false,
+      "existing_user_dsh_reused": false
+    },
+    "agent_finish_reason": "completed",
+    "voice_profile_id": "e8572e8e",
+    "observed_at_local": "2026-09-29T19:25:24+0800",
+    "run_elapsed_seconds": 10.493,
+    "user_confirmation": {
+      "confirmed_batch_id": "p7-8a6adeb2c3d744aa",
+      "confirmation_source": "user",
+      "confirmed_at_local": "2026-09-29T19:30:00+0800",
+      "statement": "听到了完整播放，batch_id=p7-8a6adeb2c3d744aa"
+    }
+  }
+}

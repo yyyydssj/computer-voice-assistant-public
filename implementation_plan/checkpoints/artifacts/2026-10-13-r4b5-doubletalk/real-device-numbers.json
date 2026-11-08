@@ -1,0 +1,57 @@
+{
+  "schema": "transcribed-real-device-numbers",
+  "note": "由 Lead 从用户回贴的控制台输出转录（不是工具直接写出的文件）；音频未落盘；未伪造任何未观测字段",
+  "date": "2026-10-13",
+  "tool": "tools/p10_r4b5_doubletalk_probe.py",
+  "command": "python tools/p10_r4b5_doubletalk_probe.py --live-opt-in --json artifacts/p10-r4b5/doubletalk.json",
+  "environment": {
+    "input_device": "麦克风阵列 (Realtek(R) Audio) @ 48000 Hz",
+    "output_backend": "windows_waveout_pcm",
+    "speech_threshold": 600.0,
+    "residual_margin": 3.0
+  },
+  "delay": {"ms": 362.25, "samples": 5796},
+  "erle": {"threshold_db": 6.0, "sufficient_frames": 11, "total_frames": 329, "source": "offline_nlms_recompute"},
+  "phases": {
+    "echo_only": {
+      "truth": "single_talk",
+      "frames_analysed": 268,
+      "double_talk_frames": 268,
+      "false_positive_ratio": 1.0,
+      "states": {"unproven": 12, "double_talk": 268, "silent": 9},
+      "correlation_median": 0.022,
+      "correlation_max": 0.113,
+      "reference_rms_p50": 2121,
+      "capture_rms_p50": 895,
+      "erle_sufficient_true_frames": 0,
+      "evidence": {"echo_correlation_low": 238, "erle_insufficient": 238, "near_excess_over_echo_expectation": 39}
+    },
+    "double_talk": {
+      "truth": "double_talk",
+      "frames_analysed": 270,
+      "double_talk_frames": 268,
+      "detection_ratio": 0.993,
+      "states": {"unproven": 12, "double_talk": 268, "possibly_near": 2, "silent": 7},
+      "correlation_median": 0.005,
+      "correlation_max": 0.133,
+      "reference_rms_p50": 2121,
+      "capture_rms_p50": 3526,
+      "evidence": {"echo_correlation_low": 238, "erle_insufficient": 238, "near_excess_over_echo_expectation": 83}
+    },
+    "near_only": {
+      "truth": "near_only_reference_silent",
+      "double_talk_frames": 0,
+      "states": {"possibly_near": 121, "silent": 39}
+    }
+  },
+  "frozen_vs_unfrozen": {"frozen_weight_drift": 727.29626, "unfrozen_weight_drift": 3427.11206},
+  "residual_floor": {"facts_gate_pcm16": 4003.5, "protect_gate_pcm16": 600.0, "gate_delta_pcm16": 3403.5, "caveat": "误报 100% 时该差值无物理意义"},
+  "apm_speech_probability": {
+    "echo_only": {"p50": 0.792, "p90": 0.999, "max": 1.0, "frames_over_0_8": 143, "frames": 289, "residual_rms_p50": 895},
+    "double_talk": {"p50": 0.822, "p90": 0.995, "max": 1.0, "frames_over_0_8": 150, "frames": 289, "residual_rms_p50": 3526},
+    "near_only": {"p50": 0.715, "p90": 1.0, "max": 1.0, "frames_over_0_8": 71, "frames": 160, "residual_rms_p50": 3276}
+  },
+  "decision": "no_go",
+  "decision_detail": "只放音就误判双讲 ⇒ 维持 protect=关闭（避免无谓冻结步长）",
+  "conclusion": "条件性 no-go：本机四类可观察量在单讲/双讲下不可区分，双讲检测无可用判据"
+}

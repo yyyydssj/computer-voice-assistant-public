@@ -1,0 +1,41 @@
+P8 真机声学回环验证输出（2026-09-30）
+====================================
+
+场景：本机离线 Edge 声线朗读测试句 → 真实麦克风（麦克风阵列 Realtek(R) Audio 设备 1）
+采集 → 真实 sherpa-onnx SenseVoice 识别 → 同一个 ConversationManager → 真实默认 Agent
+（UnavailableAgentAdapter，未接模型）。
+
+命令（临时脚本，等价于 app.main --voice 的单轮）：
+    .\.venv\Scripts\python.exe <temp>\p8_loopback_demo.py
+
+------------ 原始输出 ------------
+=== 1) 真实环境装配 ===
+设备： 麦克风阵列 (Realtek(R) Audio) 1
+模型： <PROJECT_ROOT>\models\sense-voice\model.int8.onnx
+TTS 前置检查：通过（VoiceStudio /health）
+会话就绪：state = idle
+
+=== 2) 声学回环：本机离线声线朗读「你好，测试一下。今天天气怎么样？」 ===
+
+=== 3) 真实按键轮次（等价于 app.main --voice 的一轮） ===
+    [播放] chunks=26 state=COMPLETED error=None 用时 5.70s
+  帧数=274 检测到语音=True 结束方式=silence_timeout 用时=6.191s
+  accepted=True submitted=True spoken=False reason=text_only
+  识别结果='你好，测试一下今天天气怎么样。'
+  回复文本=None
+  播报记录=[]
+
+=== 完成 ===
+------------ 输出结束 ------------
+
+结论（如实登记）
+- 真实采集 274 帧（≈5.5 s）且能量阈值判定“检测到语音”= True。
+- 真实 SenseVoice 识别结果与朗读内容一致（仅少了一个句内标点）：识别链路真机成立。
+- accepted/submitted = True：识别文本经 ResultGate 提交给同一个 ConversationManager。
+- spoken = False、reply_text = None：真实 Agent 未接入模型（UnavailableAgentAdapter 返回
+  completed=False），按 P8 设计只有“完整且无故障”的回复才允许播报，因此不播报、且不伪造回复。
+- 播报链路本身已在同日真人实测中验证（见 p8-user-heard-confirmation-20260930T135551Z.json）。
+
+边界
+- 不联网（仅 127.0.0.1:3900 健康检查与本机 SAPI）；不落盘原始音频；不创建计划/授权/执行；
+  不调用任何工具；不修改原始 artifact。

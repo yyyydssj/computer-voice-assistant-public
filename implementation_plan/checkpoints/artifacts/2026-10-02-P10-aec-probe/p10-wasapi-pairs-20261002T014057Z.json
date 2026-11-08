@@ -1,0 +1,29 @@
+{
+  "kind": "p10_wasapi_pair_check",
+  "created_at": "20261002T014057Z",
+  "results": [
+    {
+      "output": {
+        "index": 10,
+        "name": "扬声器 (Realtek(R) Audio)",
+        "rate": 48000,
+        "in": 0,
+        "out": 2,
+        "loopback": false
+      },
+      "loopback": {
+        "index": 13,
+        "name": "扬声器 (Realtek(R) Audio) [Loopback]",
+        "rate": 48000,
+        "in": 2,
+        "out": 0,
+        "loopback": true
+      },
+      "recorded_seconds": 3.712,
+      "recorded_peak": 0.99994,
+      "recorded_rms": 0.21864,
+      "template_offset_ms": 1152.4,
+      "template_alignment": -0.0608
+    }
+  ]
+}

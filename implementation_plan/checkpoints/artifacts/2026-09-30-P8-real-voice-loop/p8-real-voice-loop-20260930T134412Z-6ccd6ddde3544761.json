@@ -1,0 +1,36 @@
+{
+  "batch_id": "p8-real-voice-loop-20260930T134412Z-6ccd6ddde3544761",
+  "evidence_kind": "p8_real_voice_loop_acceptance",
+  "live_opt_in": true,
+  "recorded_at_utc": "2026-09-30T13:44:12Z",
+  "host": "xunyang",
+  "platform": "Windows-11-10.0.26100-SP0",
+  "tts_mode": "ws_pcm",
+  "agent": "local_scripted_echo（非真实模型）",
+  "turns": [
+    {
+      "turn": 1,
+      "accepted": false,
+      "submitted": false,
+      "spoken": false,
+      "reason": "start_rejected"
+    },
+    {
+      "turn": 2,
+      "accepted": false,
+      "submitted": false,
+      "spoken": false,
+      "reason": "start_rejected"
+    }
+  ],
+  "user_heard": "no",
+  "user_heard_note": "仅操作员本人确认后填写；设备完成不等于有人听见",
+  "boundary": {
+    "audio_written_to_disk": false,
+    "computer_actions_executed": false,
+    "plan_or_authorization_created": false,
+    "external_network_used": false,
+    "recognized_text_persisted": false,
+    "network_target": "127.0.0.1:3900 / local SAPI"
+  }
+}

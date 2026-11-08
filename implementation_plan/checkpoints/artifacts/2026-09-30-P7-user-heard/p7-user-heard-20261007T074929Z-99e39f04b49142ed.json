@@ -1,0 +1,35 @@
+{
+  "batch_id": "p7-user-heard-20261007T074929Z-99e39f04b49142ed",
+  "evidence_kind": "user_heard_confirmation",
+  "live_opt_in": true,
+  "recorded_at_utc": "2026-10-07T07:49:29Z",
+  "host": "xunyang",
+  "platform": "Windows-11-10.0.26100-SP0",
+  "runs": [
+    {
+      "route": "voicestudio_ws_pcm",
+      "text": "主路径听感确认第一句：这是 VoiceStudio 的小饼声线。",
+      "played_segments": 1,
+      "completed_playback_sentences": 1,
+      "error": null,
+      "wall_seconds": 5.309
+    },
+    {
+      "route": "edge_sapi_local",
+      "voice": "Microsoft Huihui Desktop",
+      "text": "备用声线听感确认第二句：这是本机离线的 Edge 槽声线。",
+      "chunks": 32,
+      "playback_state": "COMPLETED",
+      "wall_seconds": 6.873
+    }
+  ],
+  "user_heard": null,
+  "user_heard_note": "仅操作员本人确认后填写；设备完成不等于有人听见",
+  "speaker_acoustically_verified": false,
+  "boundary": {
+    "audio_written_to_disk": false,
+    "microphone_opened": false,
+    "external_network_used": false,
+    "network_target": "127.0.0.1:3900 (primary) / local SAPI (edge)"
+  }
+}

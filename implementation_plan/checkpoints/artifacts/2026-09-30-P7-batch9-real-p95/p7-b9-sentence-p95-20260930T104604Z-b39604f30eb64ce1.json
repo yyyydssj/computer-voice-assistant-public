@@ -1,0 +1,140 @@
+{
+  "batch_id": "p7-b9-sentence-p95-20260930T104604Z-b39604f30eb64ce1",
+  "evidence_kind": "real_sentence_timing_p95",
+  "live_opt_in": true,
+  "recorded_at_utc": "2026-09-30T10:46:04Z",
+  "host": "xunyang",
+  "platform": "Windows-11-10.0.26100-SP0",
+  "clock": "perf_counter",
+  "voicestudio": {
+    "status": "ok",
+    "device": "cuda (NVIDIA GeForce RTX 3050 Laptop GPU)",
+    "version": "0.5.6"
+  },
+  "voice_profile": {
+    "profile_id": "e8572e8e",
+    "speed": 1.0,
+    "pause_ms": 400,
+    "fade_ms": 80,
+    "version": 2
+  },
+  "sentence_set": {
+    "sentences": 20,
+    "warmup": true
+  },
+  "runs": [
+    {
+      "mode": "ws_pcm",
+      "pace": "burst",
+      "clock": "perf_counter",
+      "start_buffer_ms": 160,
+      "wall_seconds": 30.009,
+      "played_segments": 9,
+      "error": null,
+      "overloaded": true,
+      "late_events": [
+        "playback:STOP_ACKED@generation2"
+      ],
+      "pace_wait_ms_after_push": [],
+      "samples": [
+        {
+          "segment_index": 1,
+          "generation": 1,
+          "ready_to_submit_ms": 10.300899999947433,
+          "first_pcm_to_device_ms": 0.046800000291113975,
+          "first_pcm_to_gate_ms": 0.03550000019458821,
+          "gate_to_device_ms": 0.011300000096525764
+        },
+        {
+          "segment_index": 2,
+          "generation": 1,
+          "ready_to_submit_ms": 3429.4310000000223,
+          "first_pcm_to_device_ms": 0.046999999995023245,
+          "first_pcm_to_gate_ms": 0.03210000022590975,
+          "gate_to_device_ms": 0.014899999769113492
+        },
+        {
+          "segment_index": 3,
+          "generation": 1,
+          "ready_to_submit_ms": 6554.871800000001,
+          "first_pcm_to_device_ms": 0.04099999978279811,
+          "first_pcm_to_gate_ms": 0.02969999968627235,
+          "gate_to_device_ms": 0.011300000096525764
+        },
+        {
+          "segment_index": 4,
+          "generation": 1,
+          "ready_to_submit_ms": 9937.658699999702,
+          "first_pcm_to_device_ms": 0.06269999994401587,
+          "first_pcm_to_gate_ms": 0.044999999772699084,
+          "gate_to_device_ms": 0.017700000171316788
+        },
+        {
+          "segment_index": 5,
+          "generation": 1,
+          "ready_to_submit_ms": 12607.994599999984,
+          "first_pcm_to_device_ms": 0.047700000322947744,
+          "first_pcm_to_gate_ms": 0.035400000342633575,
+          "gate_to_device_ms": 0.012299999980314169
+        },
+        {
+          "segment_index": 6,
+          "generation": 1,
+          "ready_to_submit_ms": 15691.37929999988,
+          "first_pcm_to_device_ms": 0.07779999987178599,
+          "first_pcm_to_gate_ms": 0.06409999969037017,
+          "gate_to_device_ms": 0.013700000181415817
+        },
+        {
+          "segment_index": 7,
+          "generation": 1,
+          "ready_to_submit_ms": 18852.107700000033,
+          "first_pcm_to_device_ms": 0.04920000037600403,
+          "first_pcm_to_gate_ms": 0.03500000002532033,
+          "gate_to_device_ms": 0.014200000350683695
+        },
+        {
+          "segment_index": 8,
+          "generation": 1,
+          "ready_to_submit_ms": 22252.524999999878,
+          "first_pcm_to_device_ms": 0.046099999963189475,
+          "first_pcm_to_gate_ms": 0.03400000014153193,
+          "gate_to_device_ms": 0.012099999821657548
+        },
+        {
+          "segment_index": 9,
+          "generation": 1,
+          "ready_to_submit_ms": 25052.021000000423,
+          "first_pcm_to_device_ms": 0.061499999901570845,
+          "first_pcm_to_gate_ms": 0.04850000004807953,
+          "gate_to_device_ms": 0.012999999853491317
+        }
+      ],
+      "percentiles": {
+        "ready_to_submit": {
+          "count": 9,
+          "p50": 12607.994599999984,
+          "p95": 25052.021000000423
+        },
+        "first_pcm_to_device": {
+          "count": 9,
+          "p50": 0.047700000322947744,
+          "p95": 0.07779999987178599
+        },
+        "gate_to_device": {
+          "count": 9,
+          "p50": 0.012999999853491317,
+          "p95": 0.017700000171316788
+        }
+      }
+    }
+  ],
+  "boundary": {
+    "audio_written_to_disk": false,
+    "microphone_opened": false,
+    "network_target": "127.0.0.1:3900 only",
+    "speaker_acoustically_verified": false,
+    "user_heard": null,
+    "note": "backend completion is not evidence that a person heard the audio"
+  }
+}

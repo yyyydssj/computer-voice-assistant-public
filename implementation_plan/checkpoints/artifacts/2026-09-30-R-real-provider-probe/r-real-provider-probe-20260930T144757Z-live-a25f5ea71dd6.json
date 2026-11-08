@@ -1,0 +1,131 @@
+{
+  "schema": "r-real-provider-probe/v1",
+  "created_at": "2026-09-30T14:47:56Z",
+  "mode": "live",
+  "authorization": {
+    "scope": "minimal_live_probe_only",
+    "runtime_wiring": false,
+    "provider_ready_unchanged": true,
+    "model_id": "deepseek-flash",
+    "credential_source": "process environment DEEPSEEK_API_KEY",
+    "credential_value_logged": false,
+    "credential_written_to_disk": false,
+    "network_target": "https://api.deepseek.com/chat/completions",
+    "allowed_hosts": [
+      "api.deepseek.com"
+    ],
+    "max_requests": 3,
+    "max_retries": 0,
+    "timeout_seconds": 15.0,
+    "max_tokens": 256,
+    "cost_cap_cny": 0.05,
+    "log_redaction": "lengths+sha256+enumerated status only",
+    "payload_isolation": true,
+    "computer_side_effects": false
+  },
+  "boundaries": {
+    "default_runtime_touched": false,
+    "conversation_manager_touched": false,
+    "tool_registry_touched": false,
+    "execution_ledger_touched": false,
+    "executor_touched": false,
+    "verification_touched": false,
+    "audit_touched": false,
+    "plan_authorization_created": false,
+    "raw_request_text_persisted": false,
+    "raw_response_body_persisted": false,
+    "credentials_persisted": false
+  },
+  "preflight": {
+    "checks": [
+      {
+        "check": "config_valid",
+        "ok": true,
+        "detail": "host=api.deepseek.com enabled=True",
+        "required": true
+      },
+      {
+        "check": "host_allowlisted",
+        "ok": true,
+        "detail": "api.deepseek.com",
+        "required": true
+      },
+      {
+        "check": "timeout_bounded",
+        "ok": true,
+        "detail": "15.0s <= 15.0s",
+        "required": true
+      },
+      {
+        "check": "no_retry",
+        "ok": true,
+        "detail": "max_retries=0",
+        "required": true
+      },
+      {
+        "check": "max_tokens_sent",
+        "ok": true,
+        "detail": "max_tokens,messages,model,response_format",
+        "required": true
+      },
+      {
+        "check": "legacy_payload_unchanged",
+        "ok": true,
+        "detail": "messages,model,response_format",
+        "required": true
+      },
+      {
+        "check": "cost_within_cap",
+        "ok": true,
+        "detail": "estimated_upper=0.006694 CNY <= cap 0.05 CNY",
+        "required": true
+      },
+      {
+        "check": "credential_present",
+        "ok": true,
+        "detail": "DEEPSEEK_API_KEY available=True (value never logged)",
+        "required": false
+      }
+    ],
+    "passed": true,
+    "payload_keys": [
+      "max_tokens",
+      "messages",
+      "model",
+      "response_format"
+    ],
+    "estimated_upper_cny": 0.006694
+  },
+  "rounds": [
+    {
+      "index": 1,
+      "sample_id": "chat-1",
+      "input_chars": 11,
+      "elapsed_ms": 1411.9,
+      "router_status": "invalid_response",
+      "failure_code": "invalid_router_output",
+      "route": "ambiguous",
+      "intent": "invalid_router_output",
+      "handling_mode": "clarify",
+      "confidence": 0.0,
+      "slot_count": 0,
+      "tool_scope": [],
+      "required_confirmation": "must_clarify",
+      "strict_parse_passed": false
+    }
+  ],
+  "verdict": {
+    "requests_attempted": 1,
+    "strict_parse_passed_count": 0,
+    "routes_observed": [
+      "ambiguous"
+    ],
+    "failure_statuses": [
+      "invalid_response"
+    ],
+    "all_strict_parse_passed": false,
+    "provider_ready": false,
+    "runtime_wiring_authorized": false,
+    "note": "本轮只证明真实调用链与严格解析表现；未解除 NOT READY，未接入默认运行时。"
+  }
+}

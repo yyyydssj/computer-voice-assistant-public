@@ -1,0 +1,78 @@
+{
+  "artifact": "2026-10-09-pcm-seq-text-blank",
+  "created_at_local": "2026-10-09",
+  "what": "pcm_seq 长回复『只念开头』的根因确证：本地请求契约层 text_blank（请求从未发往 VoiceStudio）",
+  "environment": {
+    "command": "python -m app.main --voice --auto --tts-mode pcm_seq --barge-in-mode off --aec-reference-mode same_process --aec-engine webrtc --device-recovery-mode safe_point --silence-ms 1200",
+    "provider": "deepseek",
+    "route": "voicestudio_pcm_seq",
+    "log_source": "<USER_HOME>\\AppData\\Local\\ComputerVoiceAssistant\\logs\\runtime.jsonl",
+    "fields": "voice_turn 事件；仅脱敏机械事实，不含任何识别/回复文本"
+  },
+  "evidence": [
+    {
+      "turn": 2,
+      "occurred_at_local": "2026-10-09T18:34:17",
+      "reason": "speech_failed:VoiceStudioContractError",
+      "speech_route": "voicestudio_pcm_seq",
+      "speech_text_length": 294,
+      "speech_played_segments": 1,
+      "speech_played_chars": 41,
+      "speech_error": "VoiceStudioContractError",
+      "speech_error_code": "text_blank",
+      "speech_failed_sentence_index": 4,
+      "speech_request_chars": 1,
+      "speech_sentences_total": 13,
+      "speech_sentences_synthesized": 3,
+      "speech_sentences_played": 1,
+      "speech_pending_segments": 12,
+      "note": "第 1 句 41 字与用户实际听到的内容逐字吻合；第 4 段是空行切出的 1 字纯空白碎片；整条回复被 _fatal 中止，后 12 段全丢"
+    },
+    {
+      "turn": 1,
+      "occurred_at_local": "2026-10-09T18:40:49",
+      "reason": "speech_finished",
+      "speech_route": "voicestudio_pcm_seq",
+      "speech_text_length": 296,
+      "speech_played_chars": 286,
+      "speech_error_code": null,
+      "speech_sentences_total": 9,
+      "speech_sentences_synthesized": 9,
+      "speech_sentences_played": 9,
+      "note": "修复后验收：全文播出；296-286=10 个字符正是被丢弃的纯空白碎片"
+    },
+    {
+      "turn": 1,
+      "occurred_at_local": "2026-10-09T18:45:38",
+      "reason": "speech_finished",
+      "speech_route": "voicestudio_pcm_seq",
+      "speech_text_length": 17,
+      "speech_played_chars": 17,
+      "speech_error_code": null,
+      "speech_sentences_total": 2,
+      "speech_sentences_synthesized": 2,
+      "speech_sentences_played": 2,
+      "note": "HUD 播报状态修复后的真机轮次（弹窗状态经用户确认）"
+    }
+  ],
+  "root_cause": [
+    "split_for_push / split_sentences 把 '\\n' 当句末，并把换行本身作为独立碎片",
+    "SequentialVoiceSession 入队后由 _make_request 构造 VoiceStudioSentenceRequest",
+    "providers/contracts.py::_require_text 判 not text.strip() -> VoiceStudioContractError(code='text_blank')",
+    "异常在 provider 调用之外抛出，未被 _synthesize_one 包装 -> 日志记录裸 VoiceStudioContractError",
+    "_fatal 取消整条播报 -> 用户只听到开头；与文本长短无关，只与是否含空行有关"
+  ],
+  "fixes": [
+    "app/tts/sequential_session.py：入队处丢弃纯空白碎片（push_text_chunk + finish）",
+    "app/runtime/auto_voice.py + app/main.py：HUD 在真实 _speak 期间显示『播报』，轮次结束设 IDLE",
+    "app/tts/private_selection.py + app/main.py：verify_provider 固定短码 + voice_entry_unavailable.code"
+  ],
+  "verification": {
+    "tests/tts": "616 OK (skipped=3)",
+    "tests/foundation": "335 OK",
+    "tests/voice_loop": "144 OK",
+    "compileall": "exit 0",
+    "git_diff_check": "clean",
+    "real_machine": "两轮全文播出（9/9、2/2）；HUD 播报状态经用户确认"
+  }
+}

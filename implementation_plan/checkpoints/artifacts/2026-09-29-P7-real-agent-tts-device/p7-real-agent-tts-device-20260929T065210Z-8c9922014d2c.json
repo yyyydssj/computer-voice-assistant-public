@@ -1,0 +1,442 @@
+{
+  "batch_id": "p7-real-agent-tts-device-20260929T065210Z-8c9922014d2c",
+  "evidence_kind": "real_agent_tts_device",
+  "authorization": {
+    "scope": "one bounded run",
+    "live_opt_in": true,
+    "api_key_value_printed": false,
+    "existing_user_dsh_reused": false
+  },
+  "workspace": "<PROJECT_ROOT>",
+  "dsh_home": "<USER_HOME>\\AppData\\Local\\Temp\\p7-agent-dsh-live-zgami24k",
+  "profile": "sdk-minimal",
+  "provider": "deepseek-official",
+  "model": "deepseek-v4-flash",
+  "patch": "<PROJECT_ROOT>\\app\\agent\\p3-no-tools.patch.yml",
+  "request_id": "req-560a1e128a5866faf125",
+  "session_id": "session-8c21b5b26920b4de46c5",
+  "agent_prompt": "请严格只回复这一句，不要添加任何前后文字：P7 第二次真实语音链路测试完成。",
+  "result_exception": null,
+  "ledger": {
+    "batch_id": "p7-5726d67c629c44b6",
+    "evidence_kind": "real_device",
+    "request_id": "req-560a1e128a5866faf125",
+    "source_text_sha256": "0f0a1bcdfcd7f1b14d0237dfbb871b13c3387aee0017a52bc55947323e85eb40",
+    "audio_sha256": "a27394197e10c9556d9067137d6336a8ca0d8205efafa539f6b584f0b9c65baa",
+    "backend_stop_ack": true,
+    "loopback_output_stopped": null,
+    "acoustic_output_stopped": null,
+    "speaker_output_stopped": null,
+    "user_heard": null,
+    "status": "blocked",
+    "blocked_reasons": [
+      "capture_invalid",
+      "user_heard_pending",
+      "speaker_output_stop_not_established"
+    ],
+    "events": [
+      {
+        "name": "RUN_CREATED",
+        "observed_at": "2026-09-29T06:52:10.052311Z",
+        "monotonic_seconds": null,
+        "details": {
+          "request_id": "req-560a1e128a5866faf125",
+          "session_id": "session-8c21b5b26920b4de46c5"
+        }
+      },
+      {
+        "name": "AGENT_REQUEST_SUBMITTED",
+        "observed_at": "2026-09-29T06:52:10.052311Z",
+        "monotonic_seconds": null,
+        "details": {
+          "request_id": "req-560a1e128a5866faf125",
+          "session_id": "session-8c21b5b26920b4de46c5"
+        }
+      },
+      {
+        "name": "AGENT_REPLY_ACCEPTED",
+        "observed_at": "2026-09-29T06:52:12.510575Z",
+        "monotonic_seconds": null,
+        "details": {
+          "request_id": "req-560a1e128a5866faf125"
+        }
+      },
+      {
+        "name": "VOICESTUDIO_AUDIO_ACCEPTED",
+        "observed_at": "2026-09-29T06:52:14.459379Z",
+        "monotonic_seconds": null,
+        "details": {
+          "audio_id": "sha256:a27394197e10c9556d9067137d6336a8ca0d8205efafa539f6b584f0b9c65baa"
+        }
+      },
+      {
+        "name": "DEVICE_EVIDENCE_ACCEPTED",
+        "observed_at": "2026-09-29T06:52:18.866706Z",
+        "monotonic_seconds": null,
+        "details": {
+          "batch_id": "p7-5726d67c629c44b6",
+          "capture_valid": false,
+          "backend_stop_ack": true,
+          "loopback_output_stopped": null,
+          "acoustic_output_stopped": null
+        }
+      },
+      {
+        "name": "BLOCKED",
+        "observed_at": "2026-09-29T06:52:18.866706Z",
+        "monotonic_seconds": null,
+        "details": {
+          "reason": "capture_invalid"
+        }
+      }
+    ],
+    "metadata": {
+      "session_id": "session-8c21b5b26920b4de46c5",
+      "runner": "live_evidence_runner",
+      "serial": true,
+      "live_opt_in": true,
+      "agent_reply_text": "P7 第二次真实语音链路测试完成。",
+      "audio_id": "sha256:a27394197e10c9556d9067137d6336a8ca0d8205efafa539f6b584f0b9c65baa",
+      "voicestudio_diagnostics": {
+        "protocol": "local-voicestudio.v1",
+        "request_id": "req-560a1e128a5866faf125",
+        "session_id": "session-8c21b5b26920b4de46c5",
+        "content_type": "audio/wav",
+        "audio_bytes": 118604
+      },
+      "device_evidence": {
+        "backend_stop_ack": true,
+        "loopback_output_stopped": null,
+        "acoustic_output_stopped": null,
+        "capture_valid": false,
+        "diagnostics": {
+          "playback_state": "STOP_ACKED",
+          "ticket_id": "bbd0157c57729f3abdef",
+          "ticket_events": [
+            "PLAYING",
+            "STOP_REQUESTED",
+            "STOP_ACKED"
+          ],
+          "audio_sha256": "a27394197e10c9556d9067137d6336a8ca0d8205efafa539f6b584f0b9c65baa",
+          "endpoint_pair": {
+            "loopback": {
+              "index": 13,
+              "name": "扬声器 (Realtek(R) Audio) [Loopback]",
+              "host_api": "2",
+              "is_loopback": true,
+              "max_input_channels": 2,
+              "default_sample_rate": 48000.0,
+              "host_api_index": 2,
+              "channels": 2,
+              "capture_rate_hz": 48000
+            },
+            "microphone": {
+              "index": 11,
+              "name": "麦克风阵列 (Realtek(R) Audio)",
+              "host_api": "2",
+              "is_loopback": false,
+              "max_input_channels": 2,
+              "default_sample_rate": 48000.0,
+              "host_api_index": 2,
+              "channels": 2,
+              "capture_rate_hz": 48000
+            }
+          },
+          "capture_config": {
+            "lead_s": 0.45,
+            "active_s": 2.5,
+            "post_s": 1.0,
+            "quiet_dbfs": -55.0
+          },
+          "capture_errors": {},
+          "loopback_summary": {
+            "valid": true,
+            "reason": null,
+            "endpoint": {
+              "index": 13,
+              "name": "扬声器 (Realtek(R) Audio) [Loopback]",
+              "host_api": "2",
+              "is_loopback": true,
+              "max_input_channels": 2,
+              "default_sample_rate": 48000.0,
+              "host_api_index": 2
+            },
+            "sample_rate_hz": 48000,
+            "channels": 2,
+            "frames": 191488,
+            "lead_in_rms_dbfs": -12.972553566600183,
+            "active_rms_dbfs": -22.28091059286376,
+            "post_rms_dbfs": -96.70353788323271,
+            "active_nonzero": true,
+            "post_quiet": true,
+            "correlation_observed": null,
+            "raw_audio_retained": false,
+            "raw_bytes": 765952
+          },
+          "microphone_summary": {
+            "valid": false,
+            "reason": "insufficient_frames",
+            "endpoint": {
+              "index": 11,
+              "name": "麦克风阵列 (Realtek(R) Audio)",
+              "host_api": "2",
+              "is_loopback": false,
+              "max_input_channels": 2,
+              "default_sample_rate": 48000.0,
+              "host_api_index": 2
+            },
+            "sample_rate_hz": 48000,
+            "channels": 2,
+            "frames": 189440,
+            "lead_in_rms_dbfs": null,
+            "active_rms_dbfs": null,
+            "post_rms_dbfs": null,
+            "active_nonzero": false,
+            "post_quiet": null,
+            "correlation_observed": null,
+            "raw_audio_retained": false,
+            "raw_bytes": 757760
+          },
+          "raw_audio_retained": false,
+          "request_audio_sha256": "a27394197e10c9556d9067137d6336a8ca0d8205efafa539f6b584f0b9c65baa",
+          "waveout_diagnostic": {
+            "open_result": 0,
+            "prepare_result": 0,
+            "write_result": 0,
+            "reset_result": 0,
+            "unprepare_result": null,
+            "close_result": null,
+            "opened_at": 16105.093,
+            "prepared_at": 16105.093,
+            "submitted_at": 16105.093,
+            "reset_at": 16106.093,
+            "wom_done_at": 16106.093,
+            "unprepared_at": null,
+            "closed_at": null,
+            "header_address": 2905036788224,
+            "cleanup_verified": false
+          }
+        }
+      }
+    }
+  },
+  "agent_outcome": {
+    "request_id": "req-560a1e128a5866faf125",
+    "session_id": "session-8c21b5b26920b4de46c5",
+    "completed": true,
+    "text": "P7 第二次真实语音链路测试完成。",
+    "finish_reason": "completed",
+    "failure": null
+  },
+  "synthesis": {
+    "audio_id": "sha256:a27394197e10c9556d9067137d6336a8ca0d8205efafa539f6b584f0b9c65baa",
+    "audio_sha256": "a27394197e10c9556d9067137d6336a8ca0d8205efafa539f6b584f0b9c65baa",
+    "audio_bytes": 118604,
+    "diagnostics": {
+      "protocol": "local-voicestudio.v1",
+      "request_id": "req-560a1e128a5866faf125",
+      "session_id": "session-8c21b5b26920b4de46c5",
+      "content_type": "audio/wav",
+      "audio_bytes": 118604
+    }
+  },
+  "playback": {
+    "backend_stop_ack": true,
+    "loopback_output_stopped": null,
+    "acoustic_output_stopped": null,
+    "capture_valid": false,
+    "diagnostics": {
+      "playback_state": "STOP_ACKED",
+      "ticket_id": "bbd0157c57729f3abdef",
+      "ticket_events": [
+        "PLAYING",
+        "STOP_REQUESTED",
+        "STOP_ACKED"
+      ],
+      "audio_sha256": "a27394197e10c9556d9067137d6336a8ca0d8205efafa539f6b584f0b9c65baa",
+      "endpoint_pair": {
+        "loopback": {
+          "index": 13,
+          "name": "扬声器 (Realtek(R) Audio) [Loopback]",
+          "host_api": "2",
+          "is_loopback": true,
+          "max_input_channels": 2,
+          "default_sample_rate": 48000.0,
+          "host_api_index": 2,
+          "channels": 2,
+          "capture_rate_hz": 48000
+        },
+        "microphone": {
+          "index": 11,
+          "name": "麦克风阵列 (Realtek(R) Audio)",
+          "host_api": "2",
+          "is_loopback": false,
+          "max_input_channels": 2,
+          "default_sample_rate": 48000.0,
+          "host_api_index": 2,
+          "channels": 2,
+          "capture_rate_hz": 48000
+        }
+      },
+      "capture_config": {
+        "lead_s": 0.45,
+        "active_s": 2.5,
+        "post_s": 1.0,
+        "quiet_dbfs": -55.0
+      },
+      "capture_errors": {},
+      "loopback_summary": {
+        "valid": true,
+        "reason": null,
+        "endpoint": {
+          "index": 13,
+          "name": "扬声器 (Realtek(R) Audio) [Loopback]",
+          "host_api": "2",
+          "is_loopback": true,
+          "max_input_channels": 2,
+          "default_sample_rate": 48000.0,
+          "host_api_index": 2
+        },
+        "sample_rate_hz": 48000,
+        "channels": 2,
+        "frames": 191488,
+        "lead_in_rms_dbfs": -12.972553566600183,
+        "active_rms_dbfs": -22.28091059286376,
+        "post_rms_dbfs": -96.70353788323271,
+        "active_nonzero": true,
+        "post_quiet": true,
+        "correlation_observed": null,
+        "raw_audio_retained": false,
+        "raw_bytes": 765952
+      },
+      "microphone_summary": {
+        "valid": false,
+        "reason": "insufficient_frames",
+        "endpoint": {
+          "index": 11,
+          "name": "麦克风阵列 (Realtek(R) Audio)",
+          "host_api": "2",
+          "is_loopback": false,
+          "max_input_channels": 2,
+          "default_sample_rate": 48000.0,
+          "host_api_index": 2
+        },
+        "sample_rate_hz": 48000,
+        "channels": 2,
+        "frames": 189440,
+        "lead_in_rms_dbfs": null,
+        "active_rms_dbfs": null,
+        "post_rms_dbfs": null,
+        "active_nonzero": false,
+        "post_quiet": null,
+        "correlation_observed": null,
+        "raw_audio_retained": false,
+        "raw_bytes": 757760
+      },
+      "raw_audio_retained": false,
+      "request_audio_sha256": "a27394197e10c9556d9067137d6336a8ca0d8205efafa539f6b584f0b9c65baa",
+      "waveout_diagnostic": {
+        "open_result": 0,
+        "prepare_result": 0,
+        "write_result": 0,
+        "reset_result": 0,
+        "unprepare_result": null,
+        "close_result": null,
+        "opened_at": 16105.093,
+        "prepared_at": 16105.093,
+        "submitted_at": 16105.093,
+        "reset_at": 16106.093,
+        "wom_done_at": 16106.093,
+        "unprepared_at": null,
+        "closed_at": null,
+        "header_address": 2905036788224,
+        "cleanup_verified": false
+      }
+    }
+  },
+  "capture_meta": {
+    "endpoint_pair": {
+      "loopback": {
+        "index": 13,
+        "name": "扬声器 (Realtek(R) Audio) [Loopback]",
+        "host_api": "2",
+        "is_loopback": true,
+        "max_input_channels": 2,
+        "default_sample_rate": 48000.0,
+        "host_api_index": 2,
+        "channels": 2,
+        "capture_rate_hz": 48000
+      },
+      "microphone": {
+        "index": 11,
+        "name": "麦克风阵列 (Realtek(R) Audio)",
+        "host_api": "2",
+        "is_loopback": false,
+        "max_input_channels": 2,
+        "default_sample_rate": 48000.0,
+        "host_api_index": 2,
+        "channels": 2,
+        "capture_rate_hz": 48000
+      }
+    },
+    "capture_config": {
+      "lead_s": 0.45,
+      "active_s": 2.5,
+      "post_s": 1.0,
+      "quiet_dbfs": -55.0
+    },
+    "capture_errors": {},
+    "loopback_summary": {
+      "valid": true,
+      "reason": null,
+      "endpoint": {
+        "index": 13,
+        "name": "扬声器 (Realtek(R) Audio) [Loopback]",
+        "host_api": "2",
+        "is_loopback": true,
+        "max_input_channels": 2,
+        "default_sample_rate": 48000.0,
+        "host_api_index": 2
+      },
+      "sample_rate_hz": 48000,
+      "channels": 2,
+      "frames": 191488,
+      "lead_in_rms_dbfs": -12.972553566600183,
+      "active_rms_dbfs": -22.28091059286376,
+      "post_rms_dbfs": -96.70353788323271,
+      "active_nonzero": true,
+      "post_quiet": true,
+      "correlation_observed": null,
+      "raw_audio_retained": false,
+      "raw_bytes": 765952
+    },
+    "microphone_summary": {
+      "valid": false,
+      "reason": "insufficient_frames",
+      "endpoint": {
+        "index": 11,
+        "name": "麦克风阵列 (Realtek(R) Audio)",
+        "host_api": "2",
+        "is_loopback": false,
+        "max_input_channels": 2,
+        "default_sample_rate": 48000.0,
+        "host_api_index": 2
+      },
+      "sample_rate_hz": 48000,
+      "channels": 2,
+      "frames": 189440,
+      "lead_in_rms_dbfs": null,
+      "active_rms_dbfs": null,
+      "post_rms_dbfs": null,
+      "active_nonzero": false,
+      "post_quiet": null,
+      "correlation_observed": null,
+      "raw_audio_retained": false,
+      "raw_bytes": 757760
+    },
+    "raw_audio_retained": false,
+    "request_audio_sha256": "a27394197e10c9556d9067137d6336a8ca0d8205efafa539f6b584f0b9c65baa"
+  },
+  "user_heard": null,
+  "boundary": "user_heard remains null pending explicit confirmation for this exact batch_id."
+}

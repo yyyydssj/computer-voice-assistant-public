@@ -1,0 +1,70 @@
+{
+  "batch_id": "p7-f0676df6b6224357",
+  "evidence_kind": "real_device",
+  "request_id": "req-p7-real-20260929-69d199d8bcd2e203",
+  "source_text_sha256": "abe30b1b73e936acdb03656fcc4126a987007905c382fba4d27828abf295705d",
+  "audio_sha256": null,
+  "backend_stop_ack": null,
+  "loopback_output_stopped": null,
+  "acoustic_output_stopped": null,
+  "speaker_output_stopped": null,
+  "user_heard": null,
+  "status": "blocked",
+  "blocked_reasons": [
+    "agent_call_failed:HarnessConfigurationError",
+    "user_heard_pending",
+    "backend_stop_ack_missing",
+    "speaker_output_stop_not_established"
+  ],
+  "events": [
+    {
+      "name": "RUN_CREATED",
+      "observed_at": "2026-09-29T11:30:52.618877Z",
+      "monotonic_seconds": null,
+      "details": {
+        "request_id": "req-p7-real-20260929-69d199d8bcd2e203",
+        "session_id": "session-p7-real-20260929-c47cc3d8ea099116"
+      }
+    },
+    {
+      "name": "AGENT_REQUEST_SUBMITTED",
+      "observed_at": "2026-09-29T11:30:52.618877Z",
+      "monotonic_seconds": null,
+      "details": {
+        "request_id": "req-p7-real-20260929-69d199d8bcd2e203",
+        "session_id": "session-p7-real-20260929-c47cc3d8ea099116"
+      }
+    },
+    {
+      "name": "BLOCKED",
+      "observed_at": "2026-09-29T11:30:52.623741Z",
+      "monotonic_seconds": null,
+      "details": {
+        "reason": "agent_call_failed:HarnessConfigurationError"
+      }
+    }
+  ],
+  "metadata": {
+    "session_id": "session-p7-real-20260929-c47cc3d8ea099116",
+    "runner": "live_evidence_runner",
+    "serial": true,
+    "live_opt_in": true,
+    "workspace": "<PROJECT_ROOT>",
+    "dsh_home": "<USER_HOME>\\AppData\\Local\\Temp\\p7-agent-dsh-live-fresh-s9xejwdm",
+    "profile": "sdk-minimal",
+    "provider": "deepseek-official",
+    "model": "deepseek-v4-flash",
+    "patch": "<PROJECT_ROOT>\\app\\agent\\p3-no-tools.patch.yml",
+    "authorization": {
+      "scope": "one bounded run: one real Agent request, one VoiceStudio synthesis, one Windows playback, synchronized loopback and independent microphone capture",
+      "live_opt_in": true,
+      "api_key_value_printed": false,
+      "existing_user_dsh_reused": false
+    },
+    "agent_finish_reason": null,
+    "voice_profile_id": "e8572e8e",
+    "observed_at_local": "2026-09-29T19:30:52+0800",
+    "run_elapsed_seconds": 0.005,
+    "user_confirmation": null
+  }
+}

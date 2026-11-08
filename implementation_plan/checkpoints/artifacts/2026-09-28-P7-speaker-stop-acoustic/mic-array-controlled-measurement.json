@@ -1,0 +1,32 @@
+{
+  "measurement_id": "2026-09-28-P7-speaker-stop-acoustic-01",
+  "date_local": "2026-09-28",
+  "status": "Blocked ? measurement yielded no usable playback-correlated acoustic signal",
+  "input_endpoint": "Microphone Array (Realtek Audio), Windows MME input; device index 1 at enumeration time",
+  "output_endpoint": "Speakers (Realtek Audio), Windows MME output; device index 4 at enumeration time",
+  "source": "Existing local WAV eff172cb.wav; 2.0 seconds, 24 kHz mono; no new generation request",
+  "controlled_attempt": {
+    "ambient_lead_in_seconds": 1.0,
+    "playback_duration_seconds": 2.0,
+    "post_observation_seconds": 3.0,
+    "capture_rate_hz": 48000,
+    "capture_channels": 2
+  },
+  "redacted_acoustic_summary": {
+    "ambient_lead_in_rms_dbfs": -51.3,
+    "playback_interval_rms_dbfs": null,
+    "post_0_to_1s_rms_dbfs": null,
+    "post_1_to_3s_rms_dbfs": null,
+    "note": "Captured array was exactly zero for playback and post intervals. It is invalid to infer output cessation from these data; microphone may be muted/routed/isolated or the recording stream failed to reflect acoustic output."
+  },
+  "speaker_output_stopped": "None ? not established",
+  "user_heard": null,
+  "waveout_or_wom_done_used_as_acoustic_evidence": false,
+  "raw_audio_retained": false,
+  "raw_audio_disposition": "Deleted immediately because it was not a valid measurement and could contain unintended ambient speech.",
+  "limitations": [
+    "Device enumeration confirms available endpoints only; not proof of physical acoustic coupling.",
+    "No valid microphone signal was captured during playback, so no independent acoustic stop evidence exists.",
+    "One bounded playback attempt was made; no retry performed."
+  ]
+}

@@ -1,0 +1,77 @@
+{
+  "kind": "p10_aec_same_process_probe",
+  "created_at": "20261002T040204Z",
+  "preflight": {
+    "python": "3.12.10",
+    "platform": "Windows-11-10.0.26100-SP0"
+  },
+  "devices": {
+    "mic": {
+      "index": 11,
+      "name": "麦克风阵列 (Realtek(R) Audio)",
+      "rate": 48000,
+      "in": 2,
+      "out": 0,
+      "loopback": false
+    }
+  },
+  "reference_source": {
+    "sample_rate": 24000,
+    "frame_duration_ms": 20,
+    "frame_samples": 480,
+    "frames_submitted": 300,
+    "chunks_submitted": 30,
+    "frames_buffered": 300,
+    "pending_bytes": 0,
+    "device_epoch": 1,
+    "observer_errors": 0,
+    "last_observer_error": "",
+    "resets": 0
+  },
+  "playback": {
+    "backend": "windows_waveout_pcm",
+    "bytes": 288000,
+    "seconds": 6.0,
+    "drained": true,
+    "submit_calls": 30,
+    "submitted_bytes": 288000,
+    "blocked_waits": 1008,
+    "elapsed_seconds": 6.015
+  },
+  "analysis": {
+    "status": "alignment_failed",
+    "rate": 24000,
+    "reference_seconds": 6.0,
+    "reference_frames": 300,
+    "mic_seconds": 6.84,
+    "reference_start_seconds": 15831.873,
+    "mic_start_seconds": 0.0,
+    "mic_reference_offset_samples": 57112,
+    "mic_alignment": -0.0525,
+    "top_offsets": [
+      {
+        "offset_samples": 57112,
+        "offset_ms": 2379.7,
+        "normalized": -0.0525
+      },
+      {
+        "offset_samples": 56605,
+        "offset_ms": 2358.5,
+        "normalized": 0.0531
+      },
+      {
+        "offset_samples": 56606,
+        "offset_ms": 2358.6,
+        "normalized": 0.0531
+      }
+    ],
+    "mic_floor_rms": 0.008722,
+    "mic_active_rms": 0.025449,
+    "mic_level_vs_floor_db": 9.301,
+    "reason": "reference_not_found_in_mic",
+    "search_span_samples": 149760,
+    "reference_mode": "same_process_pcm",
+    "reference_frames_submitted": 300
+  },
+  "no_audio_persisted": true
+}

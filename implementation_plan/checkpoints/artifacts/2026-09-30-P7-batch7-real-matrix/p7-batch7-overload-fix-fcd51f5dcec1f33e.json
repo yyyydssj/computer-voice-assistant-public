@@ -1,0 +1,68 @@
+{
+  "batch_id": "p7-batch7-overload-fix-fcd51f5dcec1f33e",
+  "recorded_date": "2026-09-30",
+  "evidence_kind": "real_voicestudio_overload_and_cancel_recheck",
+  "live_opt_in": true,
+  "voice_studio": {
+    "status": "ok",
+    "device": "cuda (NVIDIA GeForce RTX 3050 Laptop GPU)",
+    "version": "0.5.6"
+  },
+  "fix": "sentence queue bound raised to 8 (runaway guard) and audio overload now signalled by PCMPlaybackBackpressure (8 s device queue)",
+  "cases": [
+    {
+      "case": "reply_5_sentences",
+      "pushed": 5,
+      "played": 5,
+      "error": null,
+      "elapsed_ms": 22391.0,
+      "audio_seconds": 13.08,
+      "overloaded": false,
+      "late_events": [],
+      "device_write_count": 67,
+      "device_uncertain": false,
+      "cleanup_verified_after_close": true
+    },
+    {
+      "case": "warm_20_sentences",
+      "pushed": 20,
+      "played": 9,
+      "error": null,
+      "elapsed_ms": 39000.0,
+      "audio_seconds": 24.25,
+      "overloaded": true,
+      "late_events": [],
+      "device_write_count": 126,
+      "device_uncertain": false,
+      "cleanup_verified_after_close": true
+    },
+    {
+      "case": "cancel_during_playback_after_3_5s",
+      "pushed": 2,
+      "played": 0,
+      "error": null,
+      "elapsed_ms": 4515.0,
+      "audio_seconds": 2.62,
+      "overloaded": false,
+      "late_events": [
+        "playback:STOP_ACKED@generation2"
+      ],
+      "device_write_count": 11,
+      "device_uncertain": false,
+      "cleanup_verified_after_close": true,
+      "cancel": {
+        "writes_before_cancel": 11,
+        "writes_1s_after_cancel": 11,
+        "no_new_device_submission_after_cancel": true,
+        "late_events": [
+          "playback:STOP_ACKED@generation2"
+        ]
+      }
+    }
+  ],
+  "claims": {
+    "speaker_acoustically_verified": false,
+    "user_heard": null
+  },
+  "audio_written_to_disk": false
+}

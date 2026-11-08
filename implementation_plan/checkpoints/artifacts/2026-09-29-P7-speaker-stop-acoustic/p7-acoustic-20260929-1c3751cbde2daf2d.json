@@ -1,0 +1,83 @@
+﻿{
+    "batch_id":  "p7-acoustic-20260929-1c3751cbde2daf2d",
+    "evidence_kind":  "real_device_acoustic",
+    "audio_path":  "implementation_plan\\checkpoints\\artifacts\\2026-09-28-P7-local-voicestudio\\eff172cb.wav",
+    "audio_sha256":  "2d4af518275bbfafe019321c13ba603cee5cf4b9a79508eabcdefa9f976249da",
+    "audio_bytes":  96044,
+    "audio_duration_s":  2.0,
+    "endpoint_pair":  {
+                          "loopback":  {
+                                           "index":  13,
+                                           "name":  "扬声器 (Realtek(R) Audio) [Loopback]",
+                                           "host_api":  2,
+                                           "is_loopback":  true,
+                                           "channels":  2,
+                                           "sample_rate_hz":  48000
+                                       },
+                          "microphone":  {
+                                             "index":  11,
+                                             "name":  "麦克风阵列 (Realtek(R) Audio)",
+                                             "host_api":  2,
+                                             "is_loopback":  false,
+                                             "channels":  2,
+                                             "sample_rate_hz":  48000
+                                         }
+                      },
+    "capture_config":  {
+                           "lead_in_s":  0.7,
+                           "post_s":  1.5,
+                           "total_s":  4.6000000000000005,
+                           "frames_requested":  220800,
+                           "quiet_dbfs":  -55.0
+                       },
+    "playback":  {
+                     "started":  true,
+                     "completed":  true,
+                     "start_relative_s":  0.7,
+                     "end_relative_s":  2.7160000000005313,
+                     "duration_observed_s":  2.016000000000531,
+                     "backend_stop_ack":  true,
+                     "stop_confirmation":  "backend_buffer_returned",
+                     "diagnostic":  "WaveOutDiagnostic(open_result=0, prepare_result=0, write_result=0, reset_result=0, unprepare_result=0, close_result=0, opened_at=4677.109, prepared_at=4677.109, submitted_at=4677.109, reset_at=4679.109, wom_done_at=4679.109, unprepared_at=4679.109, closed_at=4679.109, header_address=1399174540256, cleanup_verified=True)"
+                 },
+    "capture_errors":  {
+
+                       },
+    "raw_audio_retained":  false,
+    "loopback_summary":  {
+                             "bytes":  883200,
+                             "frames":  220800,
+                             "lead_in_rms_dbfs":  -96.70410142632298,
+                             "active_rms_dbfs":  -13.060512084530052,
+                             "post_rms_dbfs":  -89.63163453740562,
+                             "active_nonzero":  true,
+                             "post_quiet":  true,
+                             "active_envelope_points":  202,
+                             "active_envelope_correlation_with_loopback":  1.0
+                         },
+    "microphone_summary":  {
+                               "bytes":  883200,
+                               "frames":  220800,
+                               "lead_in_rms_dbfs":  -48.99254122672842,
+                               "active_rms_dbfs":  -25.717340783143058,
+                               "post_rms_dbfs":  -56.1711995188783,
+                               "active_nonzero":  true,
+                               "post_quiet":  true,
+                               "active_envelope_points":  202,
+                               "active_envelope_correlation_with_loopback":  0.4085148282606093
+                           },
+    "correlation_observed":  true,
+    "speaker_output_stopped":  true,
+    "loopback_output_stopped":  true,
+    "acoustic_output_stopped":  true,
+    "finished_at_utc":  "2026-09-29T03:41:50.637558+00:00",
+    "user_heard":  true,
+    "confirmation_event":  {
+                               "name":  "user_heard_confirmed",
+                               "observed_at":  "2026-09-29T03:44:28.7427957Z",
+                               "details":  {
+                                               "batch_id":  "p7-acoustic-20260929-1c3751cbde2daf2d",
+                                               "heard":  true
+                                           }
+                           }
+}

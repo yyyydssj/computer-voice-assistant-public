@@ -1,0 +1,23 @@
+{
+  "confirmation_kind": "p9_auto_voice_loop_user_heard",
+  "confirmed_at_utc": "2026-10-01T02:30:17Z",
+  "confirmed_by": "user",
+  "user_heard": true,
+  "user_heard_note": "用户本人确认：听到小饼的播报，声音清楚",
+  "run_artifact": "p9-auto-voice-loop-20261001T023017Z-a41a66c37ce244f2.json",
+  "recognized_text_length": 11,
+  "playback_route": "edge_sapi_local",
+  "playback_state": "COMPLETED",
+  "playback_error": null,
+  "throttle_waits": 129,
+  "queued_audio_ms_peak": 6000,
+  "gate_to_device_ms": 0.021,
+  "prior_failed_run_artifact": "p9-auto-voice-loop-20261001T022233Z-88878d31faa74358.json",
+  "prior_failure": "PCMPlaybackBackpressure（播报未出声），修复后复测通过",
+  "isolation_tests_heard": {
+    "sapi_direct_speak": true,
+    "raw_winmm_waveout_tone": true
+  },
+  "acoustic_measurement": false,
+  "note": "听感结论仅由用户本人确认；设备完成不等于有人听见；本件不做声学推断"
+}

@@ -1,0 +1,82 @@
+{
+  "batch_id": "p7-batch3-ws-preflight-default-84c7b9344590edee",
+  "recorded_date": "2026-09-30",
+  "batch": "P7 VoiceStudio dual-path Batch 3 (WebSocket client protocol preflight)",
+  "evidence_kind": "real_voicestudio_ws_protocol_preflight",
+  "live_opt_in": true,
+  "transport": "ws_pcm",
+  "endpoint": "ws://127.0.0.1:3900/ws/tts",
+  "client_config": {
+    "connect_timeout_s": 2.0,
+    "sentence_timeout_s": 18.0,
+    "frame_idle_timeout_s": 3.0,
+    "session_idle_s": 30.0,
+    "max_frame_bytes": 16777216,
+    "max_total_audio_bytes": 16777216
+  },
+  "voice_studio": {
+    "status": "ok",
+    "version": "0.5.6",
+    "device": "cuda (NVIDIA GeForce RTX 3050 Laptop GPU)",
+    "health_endpoint": "http://127.0.0.1:3900/health"
+  },
+  "voice_profile": {
+    "id_sha256_12": "fd9316f9483b",
+    "speed": 1.0,
+    "language": "Chinese",
+    "identity_checks": {
+      "profile_name_matches_confirmed": true,
+      "ref_audio_path": "e8572e8e.wav",
+      "kind": "design",
+      "reference_audio_bytes": 217484,
+      "reference_sha256_matches_local_selection": true
+    }
+  },
+  "connections": 1,
+  "sentences": [
+    {"index": 1, "chars": 11, "status": "ok", "chunks": 9, "pcm_bytes": 79680, "samples": 39840, "audio_s": 1.66, "last_is_final": true, "first_chunk_ms": 1688.0, "elapsed_ms": 1688.0},
+    {"index": 2, "chars": 15, "status": "ok", "chunks": 12, "pcm_bytes": 108000, "samples": 54000, "audio_s": 2.25, "last_is_final": true, "first_chunk_ms": 1562.0, "elapsed_ms": 1562.0},
+    {"index": 3, "chars": 13, "status": "ok", "chunks": 11, "pcm_bytes": 99360, "samples": 49680, "audio_s": 2.07, "last_is_final": true, "first_chunk_ms": 1625.0, "elapsed_ms": 1641.0}
+  ],
+  "all_ok": true,
+  "exit_criteria": {
+    "three_serial_sentences_on_real_voicestudio": true,
+    "single_connection_reused_across_sentences": true,
+    "pcm_format_24k_mono_pcm16": true,
+    "done_samples_equal_received_samples": true,
+    "playback_performed": false
+  },
+  "defect_reproduction_before_fix": {
+    "client_config": {"frame_idle_timeout_s": 3.0},
+    "result": {"index": 1, "chars": 11, "status": "error", "code": "frame_idle_timeout", "elapsed_ms": 3344.0},
+    "cause": "VoiceStudio emits start only after the first sentence finishes synthesizing; the client applied the 3 s inter-frame idle bound to the first recv as well.",
+    "intermediate_evidence_with_relaxed_frame_idle_s_20": {
+      "connections": 1,
+      "sentences": [
+        {"index": 1, "chunks": 9, "samples": 41760, "audio_s": 1.74, "first_chunk_ms": 2218.0, "last_is_final": true},
+        {"index": 2, "chunks": 11, "samples": 52080, "audio_s": 2.17, "first_chunk_ms": 1532.0, "last_is_final": true},
+        {"index": 3, "chunks": 10, "samples": 45600, "audio_s": 1.90, "first_chunk_ms": 1594.0, "last_is_final": true}
+      ]
+    },
+    "fix": "app/tts/providers/voicestudio_ws.py: the wait before start is bounded by the sentence budget; the frame-idle bound only applies between frames after start is received.",
+    "verification_after_fix": "this artifact (default client config, 3/3 sentences ok, 1 connection)"
+  },
+  "voice_selection_file_repair": {
+    "path_redacted": "%USERPROFILE%/AppData/Local/ComputerVoiceAssistant/xiaobing_voice_selection.json",
+    "issues_found": ["utf-8 BOM (read_text(encoding='utf-8') + json.loads failed)", "speed serialized as int 1 while VoiceSelection.validate requires float"],
+    "effect_before_repair": "read_selection() always failed, so CompletedReplySpeaker.start_stream() returned None and CompletedReplySpeaker.__call__ set _disabled=True; the real speech chain could not produce audio.",
+    "action": "backup written next to the file (xiaobing_voice_selection.json.bak-20260930), then atomic replace with identical values except speed=1.0 and no BOM",
+    "verification_after_repair": ["read_selection OK", "verify_reference OK", "verify_provider OK (profile identity + reference audio sha256)"],
+    "code_contract_relaxed": false
+  },
+  "privacy": {
+    "profile_id_logged_as": "sha256 prefix only",
+    "sentence_text_logged": false,
+    "sentence_char_counts_logged": true,
+    "pcm_written_to_disk": false,
+    "audio_files_created": 0
+  },
+  "playback": "none",
+  "user_heard": null,
+  "device_or_speaker_claim": "none"
+}

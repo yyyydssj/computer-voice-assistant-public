@@ -1,0 +1,160 @@
+{
+  "batch_id": "p7-5b78cf66c6a44eb6",
+  "evidence_kind": "real_device",
+  "request_id": "req-fb05175a1a664f1ba535",
+  "source_text_sha256": "6e841954cedc39a8eda79a83344b848acd62dcd530eb1922f6921640be2af0fd",
+  "audio_sha256": "00f9b6107166dac561674f6174b64f1d1d0edabd156f9a406fd1ff574381cded",
+  "backend_stop_ack": null,
+  "loopback_output_stopped": null,
+  "acoustic_output_stopped": null,
+  "speaker_output_stopped": null,
+  "user_heard": null,
+  "status": "blocked",
+  "blocked_reasons": [
+    "capture_invalid",
+    "user_heard_pending",
+    "backend_stop_ack_missing",
+    "speaker_output_stop_not_established"
+  ],
+  "events": [
+    {
+      "name": "RUN_CREATED",
+      "observed_at": "2026-09-29T09:19:24.069014Z",
+      "monotonic_seconds": null,
+      "details": {
+        "request_id": "req-fb05175a1a664f1ba535",
+        "session_id": "session-e38457619f5e43da940d"
+      }
+    },
+    {
+      "name": "AGENT_REQUEST_SUBMITTED",
+      "observed_at": "2026-09-29T09:19:24.069014Z",
+      "monotonic_seconds": null,
+      "details": {
+        "request_id": "req-fb05175a1a664f1ba535",
+        "session_id": "session-e38457619f5e43da940d"
+      }
+    },
+    {
+      "name": "AGENT_REPLY_ACCEPTED",
+      "observed_at": "2026-09-29T09:19:26.937429Z",
+      "monotonic_seconds": null,
+      "details": {
+        "request_id": "req-fb05175a1a664f1ba535"
+      }
+    },
+    {
+      "name": "VOICESTUDIO_AUDIO_ACCEPTED",
+      "observed_at": "2026-09-29T09:19:28.872656Z",
+      "monotonic_seconds": null,
+      "details": {
+        "audio_id": "sha256:00f9b6107166dac561674f6174b64f1d1d0edabd156f9a406fd1ff574381cded"
+      }
+    },
+    {
+      "name": "DEVICE_EVIDENCE_ACCEPTED",
+      "observed_at": "2026-09-29T09:19:31.414889Z",
+      "monotonic_seconds": null,
+      "details": {
+        "batch_id": "p7-5b78cf66c6a44eb6",
+        "capture_valid": false,
+        "backend_stop_ack": null,
+        "loopback_output_stopped": null,
+        "acoustic_output_stopped": null
+      }
+    },
+    {
+      "name": "BLOCKED",
+      "observed_at": "2026-09-29T09:19:31.414889Z",
+      "monotonic_seconds": null,
+      "details": {
+        "reason": "capture_invalid"
+      }
+    }
+  ],
+  "metadata": {
+    "session_id": "session-e38457619f5e43da940d",
+    "runner": "live_evidence_runner",
+    "serial": true,
+    "live_opt_in": true,
+    "agent_reply_text": "P7 第四次真实语音链路测试完成。",
+    "audio_id": "sha256:00f9b6107166dac561674f6174b64f1d1d0edabd156f9a406fd1ff574381cded",
+    "voicestudio_diagnostics": {
+      "protocol": "local-voicestudio.v1",
+      "request_id": "req-fb05175a1a664f1ba535",
+      "session_id": "session-e38457619f5e43da940d",
+      "content_type": "audio/wav",
+      "audio_bytes": 119564
+    },
+    "device_evidence": {
+      "backend_stop_ack": null,
+      "loopback_output_stopped": null,
+      "acoustic_output_stopped": null,
+      "capture_valid": false,
+      "diagnostics": {
+        "playback_state": "COMPLETED",
+        "ticket_id": "1a860e20c767c4271aa3",
+        "ticket_events": [
+          "PLAYING",
+          "COMPLETED"
+        ],
+        "audio_sha256": "00f9b6107166dac561674f6174b64f1d1d0edabd156f9a406fd1ff574381cded",
+        "capture_report": {
+          "dependency": {
+            "name": "pyaudiowpatch",
+            "available": false,
+            "device_io_enabled": true,
+            "reason": "pyaudiowpatch_not_installed",
+            "blocked": true
+          },
+          "loopback": null,
+          "microphone": null,
+          "blocked_reasons": [
+            "pyaudiowpatch_not_installed"
+          ],
+          "serial": true,
+          "blocked": true,
+          "valid": false
+        },
+        "request_batch_id": "p7-5b78cf66c6a44eb6",
+        "raw_audio_retained": false,
+        "waveout_diagnostic": {
+          "open_result": 0,
+          "prepare_result": 0,
+          "write_result": 0,
+          "reset_result": null,
+          "unprepare_result": null,
+          "close_result": null,
+          "opened_at": 24939.515,
+          "prepared_at": 24939.515,
+          "submitted_at": 24939.515,
+          "reset_at": null,
+          "wom_done_at": 24942.015,
+          "unprepared_at": null,
+          "closed_at": null,
+          "header_address": 2099011108080,
+          "cleanup_verified": false
+        }
+      }
+    },
+    "workspace": "<PROJECT_ROOT>",
+    "dsh_home": "<USER_HOME>\\AppData\\Local\\Temp\\p7-agent-dsh-live-ddb7712bdc22",
+    "profile": "sdk-minimal",
+    "provider": "deepseek-official",
+    "model": "deepseek-v4-flash",
+    "patch": "<PROJECT_ROOT>\\app\\agent\\p3-no-tools.patch.yml",
+    "authorization": {
+      "scope": "one bounded run",
+      "live_opt_in": true,
+      "api_key_value_printed": false,
+      "existing_user_dsh_reused": false
+    },
+    "agent_finish_reason": "completed",
+    "wav_format": {
+      "channels": 1,
+      "sample_width": 2,
+      "sample_rate": 24000,
+      "frames": 59760
+    }
+  }
+}

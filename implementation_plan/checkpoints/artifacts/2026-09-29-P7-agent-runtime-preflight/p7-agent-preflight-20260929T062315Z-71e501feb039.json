@@ -1,0 +1,200 @@
+{
+  "batch_id": "p7-agent-preflight-20260929T062315Z-71e501feb039",
+  "evidence_kind": "real_agent_text_preflight",
+  "started_at": "2026-09-29T06:23:15.206726Z",
+  "workspace": "<PROJECT_ROOT>",
+  "dsh_home": "<USER_HOME>\\AppData\\Local\\Temp\\p7-agent-dsh-ffqcufrb",
+  "profile": "sdk-minimal",
+  "provider": "deepseek-official",
+  "model": "deepseek-v4-flash",
+  "patch": "<PROJECT_ROOT>\\app\\agent\\p3-no-tools.patch.yml",
+  "api_key_present": true,
+  "request_id": "req-d23b8f621c804e61",
+  "session_id": "session-c3fa3d9276eb4132",
+  "request_text_sha256": "0655322fdf1bc451634754afd61fa756be8eb0613859828aef0f20b6baf29245",
+  "request_text": "?????P7-AGENT-PREFLIGHT-OK?????????????????????",
+  "status": "blocked",
+  "sdk_start": "ok",
+  "agent_reply": "",
+  "agent_reply_sha256": null,
+  "finish_reason": "error",
+  "event_count": 11,
+  "notification_count": 13,
+  "events": [
+    {
+      "type": "agent/inbox/spliced",
+      "seq": 0,
+      "time": 1790662997822,
+      "data": {
+        "target": "next-turn",
+        "start": 0,
+        "inserted": [
+          {
+            "content": [
+              {
+                "type": "text",
+                "text": "?????P7-AGENT-PREFLIGHT-OK?????????????????????"
+              }
+            ],
+            "source": {
+              "kind": "user"
+            },
+            "role": "user",
+            "id": "e7986d42-9a04-4972-b05b-69915680b4b6"
+          }
+        ]
+      }
+    },
+    {
+      "type": "turn/start",
+      "seq": 1,
+      "time": 1790662997825,
+      "data": {
+        "turn": 1
+      }
+    },
+    {
+      "type": "agent/inbox/spliced",
+      "seq": 2,
+      "time": 1790662997825,
+      "data": {
+        "target": "next-turn",
+        "start": 0,
+        "removedCount": 1,
+        "inserted": []
+      }
+    },
+    {
+      "type": "step/start",
+      "seq": 3,
+      "time": 1790662997826,
+      "data": {
+        "turn": 1,
+        "step": 1
+      }
+    },
+    {
+      "type": "system/message",
+      "seq": 4,
+      "time": 1790662997827,
+      "data": {
+        "turn": 1,
+        "step": 1,
+        "message": {
+          "role": "system",
+          "content": [
+            {
+              "type": "text",
+              "text": "????? P7 ?? Agent?????????????????????????"
+            }
+          ],
+          "source": {
+            "kind": "plugin",
+            "plugin": "@deepseek-ai/dsh-system-prompt"
+          },
+          "id": "2563d5f3-1f72-4c33-8a21-5773cfb14692"
+        }
+      },
+      "surfaceOp": "append"
+    },
+    {
+      "type": "user/message",
+      "seq": 5,
+      "time": 1790662997827,
+      "data": {
+        "content": [
+          {
+            "type": "text",
+            "text": "?????P7-AGENT-PREFLIGHT-OK?????????????????????"
+          }
+        ],
+        "source": {
+          "kind": "user"
+        },
+        "role": "user",
+        "id": "e7986d42-9a04-4972-b05b-69915680b4b6"
+      },
+      "surfaceOp": "append"
+    },
+    {
+      "type": "request/header",
+      "seq": 6,
+      "time": 1790662997827,
+      "data": {
+        "header": {
+          "config": {
+            "provider": "deepseek-official",
+            "model": "deepseek-v4-flash",
+            "maxTokens": 256000,
+            "reasoningEffort": "high"
+          },
+          "adapterDefaults": {
+            "reasoningEffort": true,
+            "maxTokens": true
+          }
+        },
+        "reason": "initial"
+      }
+    },
+    {
+      "type": "request/context",
+      "seq": 7,
+      "time": 1790662997828,
+      "data": {
+        "provider": "deepseek-official",
+        "model": "deepseek-v4-flash",
+        "contextWindow": 1000000
+      }
+    },
+    {
+      "type": "assistant/attempt",
+      "seq": 8,
+      "time": 1790662997830,
+      "data": {
+        "turn": 1,
+        "step": 1,
+        "stream": [
+          {
+            "type": "chunk",
+            "time": 1790662997829,
+            "chunk": {
+              "type": "finish",
+              "reason": {
+                "kind": "error",
+                "failure": {
+                  "message": "llm-deepseek: the API key resolved from DEEPSEEK_API_KEY contains characters no HTTP header can carry; set DEEPSEEK_API_KEY to the raw key alone (the web Models page writes it)",
+                  "code": "INVALID_CREDENTIAL"
+                }
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "step/end",
+      "seq": 9,
+      "time": 1790662997830,
+      "data": {
+        "turn": 1,
+        "step": 1
+      }
+    },
+    {
+      "type": "turn/end",
+      "seq": 10,
+      "time": 1790662997830,
+      "data": {
+        "turn": 1,
+        "reason": {
+          "kind": "error",
+          "error": {
+            "message": "llm-deepseek: the API key resolved from DEEPSEEK_API_KEY contains characters no HTTP header can carry; set DEEPSEEK_API_KEY to the raw key alone (the web Models page writes it)",
+            "code": "INVALID_CREDENTIAL"
+          }
+        }
+      }
+    }
+  ],
+  "finished_at": "2026-09-29T06:23:17.859813Z"
+}
